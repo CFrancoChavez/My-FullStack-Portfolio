@@ -5,7 +5,7 @@ export const API_CONFIG = {
     process.env.NEXT_PUBLIC_API_URL ||
     (process.env.NODE_ENV === "development" 
       ? "http://localhost:5000" 
-      : "https://tu-backend.onrender.com"),
+      : "https://my-fullstack-portfolio-znq1.onrender.com"),
 
   endpoints: {
     contact: "/api/contact",
