@@ -84,11 +84,15 @@ console.log("[Email Service] Initializing with config:", {
 
 // Configurar el transporter de Nodemailer con Gmail
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  host: "smtp.gmail.com",
+  port: 465,
+  secure: true, // Use SSL
   auth: {
-    user: process.env.EMAIL_USER, // Tu email de Gmail
-    pass: process.env.EMAIL_APP_PASSWORD, // Reverted to EMAIL_APP_PASSWORD to match Render config
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_APP_PASSWORD,
   },
+  connectionTimeout: 10000, // 10 seconds timeout
+  greetingTimeout: 10000,
 })
 
 const sendContactNotification = async (contactData) => {
