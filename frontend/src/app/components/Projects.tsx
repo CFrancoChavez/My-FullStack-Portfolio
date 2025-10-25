@@ -26,13 +26,14 @@ export default function Projects() {
       demo: "#",
     },
     {
-      title: "API REST Escalable",
-      description: "API robusta con autenticación JWT, validaciones y documentación completa",
-      image: "/placeholder.svg?height=300&width=400",
-      technologies: ["Express", "SQL Server", "JWT", "Swagger"],
-      status: "En desarrollo",
-      github: "#",
-      demo: "#",
+      title: "OCR Marcación",
+      description:
+        "Sistema inteligente de reconocimiento óptico de caracteres con múltiples estrategias de preprocesamiento. Usa Tesseract y EasyOCR para extraer texto de etiquetas con alta precisión.",
+      image: "/ocr-text-recognition-scanner.jpg",
+      technologies: ["Python", "Flask", "OpenCV", "Tesseract", "EasyOCR"],
+      status: "Completado",
+      github: "https://github.com/CFrancoChavez/OCR-Marcacion",
+      demo: "https://huggingface.co/spaces/FrancoCH/ocr-marcacion",
     },
   ]
 
