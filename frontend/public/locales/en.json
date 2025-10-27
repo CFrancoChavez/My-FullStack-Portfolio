@@ -1,57 +1,146 @@
 {
-  "hero.title": "Franco Chavez",
-  "hero.subtitle": "Full Stack Developer specialized in creating modern web solutions and intelligent applications",
-  "hero.contact": "Contact",
-  "hero.viewProjects": "View Projects",
-
-  "projects.title": "Featured Projects",
-  "projects.subtitle": "Explore my projects and try the live applications",
-
-  "project.ocr.title": "OCR Marcacion",
-  "project.ocr.description": "Optical character recognition system with multiple processing strategies",
-  "project.ocr.tech": "Technologies:",
-  "project.ocr.features": "Features:",
-  "project.ocr.feature1": "Multiple preprocessing strategies",
-  "project.ocr.feature2": "Intelligent text correction",
-  "project.ocr.feature3": "Results comparison with confidence",
-  "project.ocr.feature4": "Interactive web interface",
-  "project.ocr.tryApp": "Try App",
-  "project.ocr.viewCode": "View Code",
-
-  "project.portfolio.title": "Full Stack Portfolio",
-  "project.portfolio.description": "Personal portfolio with Node.js backend, MongoDB database and email notifications",
-  "project.portfolio.feature1": "Contact form with validation",
-  "project.portfolio.feature2": "Modular backend with Express",
-  "project.portfolio.feature3": "Persistence in MongoDB Atlas",
-  "project.portfolio.feature4": "Automatic email notifications",
-  "project.portfolio.contact": "Contact",
-  "project.portfolio.github": "GitHub",
-
-  "skills.title": "Technologies",
-  "skills.frontend": "Frontend",
-  "skills.frontend.desc": "Next.js, React, TypeScript, Tailwind CSS",
-  "skills.backend": "Backend",
-  "skills.backend.desc": "Node.js, Express, Python, Flask",
-  "skills.database": "Database & AI",
-  "skills.database.desc": "MongoDB, PostgreSQL, OpenCV, OCR",
-
-  "cta.title": "Let's work together",
-  "cta.subtitle": "Have a project in mind? Let's talk and make it happen",
-  "cta.contact": "Contact",
-
-  "projects.component.title": "My Projects",
-  "projects.component.subtitle": "A selection of projects that demonstrate my full stack development skills",
-  "projects.component.status.completed": "Completed",
-  "projects.component.status.inProgress": "In Progress",
-  "projects.component.github": "GitHub",
-  "projects.component.demo": "Demo",
-
-  "projects.webscraper.title": "Advanced Web Scraper",
-  "projects.webscraper.description": "Automated scraping system for web data extraction with Node.js, Puppeteer and SQL Server. Includes React web interface for product management.",
-
-  "projects.portfolio.title": "Full Stack Portfolio",
-  "projects.portfolio.description": "Professional portfolio with Next.js on the frontend and Express.js + SQL Server on the backend. Includes functional contact form and interactive chatbot.",
-
-  "projects.ocr.title": "OCR Marcación",
-  "projects.ocr.description": "Intelligent optical character recognition system with multiple preprocessing strategies. Uses Tesseract and EasyOCR to extract text from labels with high precision."
+  "nav": {
+    "home": "Home",
+    "technologies": "Technologies",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Franco Chavez",
+    "title": "Full Stack Developer",
+    "animation": {
+      "nextjs": "Specialized in Next.js",
+      "express": "Expert in Express.js",
+      "mongodb": "Working with MongoDB",
+      "solutions": "Creating innovative solutions"
+    },
+    "description": "Passionate developer creating modern and scalable web applications. Specialized in the MERN stack and cutting-edge technologies.",
+    "cta": {
+      "projects": "View Projects",
+      "contact": "Contact"
+    }
+  },
+  "technologies": {
+    "title": "Technologies I Master",
+    "description": "Tools and technologies I use to create modern and efficient web applications"
+  },
+  "projects": {
+    "title": "My Projects",
+    "description": "A selection of projects that demonstrate my skills and experience in web development",
+    "status": {
+      "completed": "Completed",
+      "inProgress": "In Progress"
+    },
+    "buttons": {
+      "github": "GitHub",
+      "demo": "Demo"
+    },
+    "items": {
+      "webScraper": {
+        "title": "Web Scraper",
+        "description": "Automated web data extraction system with Puppeteer and SQL Server storage"
+      },
+      "portfolio": {
+        "title": "Full Stack Portfolio",
+        "description": "Personal portfolio developed with Next.js, Express and MongoDB, featuring modern design and animations"
+      },
+      "ocr": {
+        "title": "OCR Marking",
+        "description": "Optical character recognition system for automatic document processing using Python and OpenCV"
+      }
+    }
+  },
+  "footer": {
+    "title": "Let's Connect!",
+    "description": "I'm always interested in new opportunities and exciting projects.",
+    "copyright": "© 2025 My Portfolio. Built with Next.js and Tailwind CSS."
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Have a project in mind? Let's talk and make it happen!",
+    "info": {
+      "title": "Contact Information",
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location"
+    },
+    "social": "Social Media",
+    "form": {
+      "title": "Send me a message",
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "required": "*",
+      "placeholders": {
+        "name": "Your full name",
+        "email": "your@email.com",
+        "subject": "What do you want to talk about?",
+        "message": "Tell me about your project or idea..."
+      },
+      "button": {
+        "send": "Send Message",
+        "sending": "Sending..."
+      },
+      "errors": {
+        "nameRequired": "Name is required",
+        "nameMin": "Name must be at least 2 characters",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Invalid email",
+        "subjectRequired": "Subject is required",
+        "subjectMin": "Subject must be at least 3 characters",
+        "messageRequired": "Message is required",
+        "messageMin": "Message must be at least 10 characters"
+      },
+      "success": "Message sent successfully!",
+      "error": "Error sending message. Please try again."
+    }
+  },
+  "contactSuccess": {
+    "title": "Message Sent!",
+    "description": "Thank you for contacting me. I have received your message and will respond as soon as possible.",
+    "buttons": {
+      "sendAnother": "Send another message",
+      "backHome": "Back to Home"
+    },
+    "responseTime": "Average response time: 24 hours"
+  },
+  "chatbot": {
+    "title": "Virtual Assistant",
+    "placeholder": "Type your message...",
+    "send": "Send",
+    "welcome": {
+      "greeting": "Hello! 👋 I'm Franco's virtual assistant.",
+      "question": "How can I help you today?",
+      "options": {
+        "skills": "View skills",
+        "projects": "View projects",
+        "contact": "Contact information"
+      }
+    },
+    "skills": {
+      "title": "Technical Skills",
+      "frontend": "Frontend: React, Next.js, TypeScript, Tailwind CSS",
+      "backend": "Backend: Node.js, Express.js",
+      "databases": "Databases: MongoDB, PostgreSQL, SQL Server",
+      "languages": "Languages: JavaScript, TypeScript, Python",
+      "question": "Would you like to know more about any specific project?"
+    },
+    "projects": {
+      "title": "Featured Projects",
+      "webScraper": "Web Scraper - Data extraction system with Puppeteer, Node.js and SQL Server",
+      "portfolio": "Full Stack Portfolio - Complete application with Next.js, Node.js, Express and MongoDB",
+      "ocr": "OCR Marking - Optical recognition system with Python, Flask and OpenCV",
+      "question": "Want to see more details about any project?"
+    },
+    "contact": {
+      "title": "Contact Information",
+      "email": "Email: franco.chavez@example.com",
+      "phone": "Phone: +54 9 11 1234-5678",
+      "location": "Location: Buenos Aires, Argentina",
+      "question": "Would you like to send a direct message?"
+    },
+    "error": "Sorry, I didn't understand your message. Could you rephrase it?"
+  }
 }

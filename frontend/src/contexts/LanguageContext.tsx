@@ -14,7 +14,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language>("en")
-  const [translations, setTranslations] = useState<Record<string, string>>({})
+  const [translations, setTranslations] = useState<Record<string, unknown>>({})
 
   // Load translations when language changes
   useEffect(() => {
@@ -45,7 +45,18 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   }
 
   const t = (key: string): string => {
-    return translations[key] || key
+    const keys = key.split(".")
+    let value: unknown = translations
+
+    for (const k of keys) {
+      if (value && typeof value === "object" && k in value) {
+        value = (value as Record<string, unknown>)[k]
+      } else {
+        return key // Return the key if translation not found
+      }
+    }
+
+    return typeof value === "string" ? value : key
   }
 
   return <LanguageContext.Provider value={{ language, setLanguage, t }}>{children}</LanguageContext.Provider>

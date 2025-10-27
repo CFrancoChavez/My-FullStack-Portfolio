@@ -1,57 +1,146 @@
 {
-  "hero.title": "Franco Chavez",
-  "hero.subtitle": "Full Stack Developer especializado en crear soluciones web modernas y aplicaciones inteligentes",
-  "hero.contact": "Contacto",
-  "hero.viewProjects": "Ver Proyectos",
-
-  "projects.title": "Proyectos Destacados",
-  "projects.subtitle": "Explora mis proyectos y prueba las aplicaciones en vivo",
-
-  "project.ocr.title": "OCR Marcacion",
-  "project.ocr.description": "Sistema de reconocimiento óptico de caracteres con múltiples estrategias de procesamiento",
-  "project.ocr.tech": "Tecnologías:",
-  "project.ocr.features": "Características:",
-  "project.ocr.feature1": "Múltiples estrategias de preprocesamiento",
-  "project.ocr.feature2": "Corrección inteligente de texto",
-  "project.ocr.feature3": "Comparación de resultados con confianza",
-  "project.ocr.feature4": "Interfaz web interactiva",
-  "project.ocr.tryApp": "Probar App",
-  "project.ocr.viewCode": "Ver Código",
-
-  "project.portfolio.title": "Portfolio Full Stack",
-  "project.portfolio.description": "Portfolio personal con backend Node.js, base de datos MongoDB y notificaciones por email",
-  "project.portfolio.feature1": "Formulario de contacto con validación",
-  "project.portfolio.feature2": "Backend modular con Express",
-  "project.portfolio.feature3": "Persistencia en MongoDB Atlas",
-  "project.portfolio.feature4": "Notificaciones por email automáticas",
-  "project.portfolio.contact": "Contactar",
-  "project.portfolio.github": "GitHub",
-
-  "skills.title": "Tecnologías",
-  "skills.frontend": "Frontend",
-  "skills.frontend.desc": "Next.js, React, TypeScript, Tailwind CSS",
-  "skills.backend": "Backend",
-  "skills.backend.desc": "Node.js, Express, Python, Flask",
-  "skills.database": "Database & AI",
-  "skills.database.desc": "MongoDB, PostgreSQL, OpenCV, OCR",
-
-  "cta.title": "Trabajemos juntos",
-  "cta.subtitle": "¿Tienes un proyecto en mente? Hablemos y hagámoslo realidad",
-  "cta.contact": "Contactar",
-
-  "projects.component.title": "Mis Proyectos",
-  "projects.component.subtitle": "Una selección de proyectos que demuestran mis habilidades en desarrollo full stack",
-  "projects.component.status.completed": "Completado",
-  "projects.component.status.inProgress": "En Progreso",
-  "projects.component.github": "GitHub",
-  "projects.component.demo": "Demo",
-
-  "projects.webscraper.title": "Web Scraper Avanzado",
-  "projects.webscraper.description": "Sistema de scraping automatizado para extracción de datos web con Node.js, Puppeteer y SQL Server. Incluye interface web con React para gestión de productos.",
-
-  "projects.portfolio.title": "Portfolio Full Stack",
-  "projects.portfolio.description": "Portfolio profesional con Next.js en el frontend y Express.js + SQL Server en el backend. Incluye formulario de contacto funcional y chatbot interactivo.",
-
-  "projects.ocr.title": "OCR Marcación",
-  "projects.ocr.description": "Sistema inteligente de reconocimiento óptico de caracteres con múltiples estrategias de preprocesamiento. Usa Tesseract y EasyOCR para extraer texto de etiquetas con alta precisión."
+  "nav": {
+    "home": "Inicio",
+    "technologies": "Tecnologías",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "name": "Franco Chavez",
+    "title": "Desarrollador Full Stack",
+    "animation": {
+      "nextjs": "Especializado en Next.js",
+      "express": "Experto en Express.js",
+      "mongodb": "Trabajando con MongoDB",
+      "solutions": "Creando soluciones innovadoras"
+    },
+    "description": "Desarrollador apasionado por crear aplicaciones web modernas y escalables. Especializado en el stack MERN y tecnologías de vanguardia.",
+    "cta": {
+      "projects": "Ver Proyectos",
+      "contact": "Contactar"
+    }
+  },
+  "technologies": {
+    "title": "Tecnologías que domino",
+    "description": "Herramientas y tecnologías que utilizo para crear aplicaciones web modernas y eficientes"
+  },
+  "projects": {
+    "title": "Mis Proyectos",
+    "description": "Una selección de proyectos que demuestran mis habilidades y experiencia en desarrollo web",
+    "status": {
+      "completed": "Completado",
+      "inProgress": "En Progreso"
+    },
+    "buttons": {
+      "github": "GitHub",
+      "demo": "Demo"
+    },
+    "items": {
+      "webScraper": {
+        "title": "Web Scraper",
+        "description": "Sistema automatizado de extracción de datos web con Puppeteer y almacenamiento en SQL Server"
+      },
+      "portfolio": {
+        "title": "Portfolio Full Stack",
+        "description": "Portfolio personal desarrollado con Next.js, Express y MongoDB, con diseño moderno y animaciones"
+      },
+      "ocr": {
+        "title": "OCR Marcación",
+        "description": "Sistema de reconocimiento óptico de caracteres para procesamiento automático de documentos usando Python y OpenCV"
+      }
+    }
+  },
+  "footer": {
+    "title": "¡Conectemos!",
+    "description": "Siempre estoy interesado en nuevas oportunidades y proyectos emocionantes.",
+    "copyright": "© 2025 Mi Portfolio. Desarrollado con Next.js y Tailwind CSS."
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "¿Tienes un proyecto en mente? ¡Hablemos y hagámoslo realidad!",
+    "info": {
+      "title": "Información de Contacto",
+      "email": "Email",
+      "phone": "Teléfono",
+      "location": "Ubicación"
+    },
+    "social": "Redes Sociales",
+    "form": {
+      "title": "Envíame un mensaje",
+      "name": "Nombre",
+      "email": "Email",
+      "subject": "Asunto",
+      "message": "Mensaje",
+      "required": "*",
+      "placeholders": {
+        "name": "Tu nombre completo",
+        "email": "tu@email.com",
+        "subject": "¿De qué quieres hablar?",
+        "message": "Cuéntame sobre tu proyecto o idea..."
+      },
+      "button": {
+        "send": "Enviar Mensaje",
+        "sending": "Enviando..."
+      },
+      "errors": {
+        "nameRequired": "El nombre es requerido",
+        "nameMin": "El nombre debe tener al menos 2 caracteres",
+        "emailRequired": "El email es requerido",
+        "emailInvalid": "Email inválido",
+        "subjectRequired": "El asunto es requerido",
+        "subjectMin": "El asunto debe tener al menos 3 caracteres",
+        "messageRequired": "El mensaje es requerido",
+        "messageMin": "El mensaje debe tener al menos 10 caracteres"
+      },
+      "success": "¡Mensaje enviado exitosamente!",
+      "error": "Error al enviar el mensaje. Por favor, intenta nuevamente."
+    }
+  },
+  "contactSuccess": {
+    "title": "¡Mensaje Enviado!",
+    "description": "Gracias por contactarme. He recibido tu mensaje y te responderé lo antes posible.",
+    "buttons": {
+      "sendAnother": "Enviar otro mensaje",
+      "backHome": "Volver al Inicio"
+    },
+    "responseTime": "Tiempo de respuesta promedio: 24 horas"
+  },
+  "chatbot": {
+    "title": "Asistente Virtual",
+    "placeholder": "Escribe tu mensaje...",
+    "send": "Enviar",
+    "welcome": {
+      "greeting": "¡Hola! 👋 Soy el asistente virtual de Franco.",
+      "question": "¿En qué puedo ayudarte hoy?",
+      "options": {
+        "skills": "Ver habilidades",
+        "projects": "Ver proyectos",
+        "contact": "Información de contacto"
+      }
+    },
+    "skills": {
+      "title": "Habilidades Técnicas",
+      "frontend": "Frontend: React, Next.js, TypeScript, Tailwind CSS",
+      "backend": "Backend: Node.js, Express.js",
+      "databases": "Bases de datos: MongoDB, PostgreSQL, SQL Server",
+      "languages": "Lenguajes: JavaScript, TypeScript, Python",
+      "question": "¿Te gustaría saber más sobre algún proyecto específico?"
+    },
+    "projects": {
+      "title": "Proyectos Destacados",
+      "webScraper": "Web Scraper - Sistema de extracción de datos con Puppeteer, Node.js y SQL Server",
+      "portfolio": "Portfolio Full Stack - Aplicación completa con Next.js, Node.js, Express y MongoDB",
+      "ocr": "OCR Marcación - Sistema de reconocimiento óptico con Python, Flask y OpenCV",
+      "question": "¿Quieres ver más detalles de algún proyecto?"
+    },
+    "contact": {
+      "title": "Información de Contacto",
+      "email": "Email: franco.chavez@example.com",
+      "phone": "Teléfono: +54 9 11 1234-5678",
+      "location": "Ubicación: Buenos Aires, Argentina",
+      "question": "¿Te gustaría enviar un mensaje directo?"
+    },
+    "error": "Lo siento, no entendí tu mensaje. ¿Podrías reformularlo?"
+  }
 }
