@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useTranslation } from "@/hooks/useTranslation"
 
@@ -20,12 +20,18 @@ export default function ChatBot() {
   const { t } = useTranslation()
   const [isOpen, setIsOpen] = useState(false)
   const [currentStep, setCurrentStep] = useState<ChatStep>("welcome")
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      type: "bot",
-      content: t("chatbot.welcome.greeting"),
-    },
-  ])
+  const [messages, setMessages] = useState<Message[]>([])
+
+  useEffect(() => {
+    if (messages.length === 0) {
+      setMessages([
+        {
+          type: "bot",
+          content: t("chatbot.welcome.greeting"),
+        },
+      ])
+    }
+  }, [t, messages.length])
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
