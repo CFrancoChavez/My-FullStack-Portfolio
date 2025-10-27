@@ -23,7 +23,7 @@ export default function ChatBot() {
   const [messages, setMessages] = useState<Message[]>([
     {
       type: "bot",
-      content: t("chatbot.welcome"),
+      content: t("chatbot.welcome.greeting"),
     },
   ])
 
@@ -162,8 +162,8 @@ export default function ChatBot() {
             className="fixed bottom-24 right-6 w-80 h-96 bg-white rounded-lg shadow-2xl border z-50 flex flex-col"
           >
             <div className="bg-blue-600 text-white p-4 rounded-t-lg">
-              <h3 className="font-semibold">{t("chatbot.header.title")}</h3>
-              <p className="text-sm opacity-90">{t("chatbot.header.subtitle")}</p>
+              <h3 className="font-semibold">{t("chatbot.title")}</h3>
+              <p className="text-sm opacity-90">{t("chatbot.welcome.question")}</p>
             </div>
 
             <div className="flex-1 p-4 overflow-y-auto space-y-3">
