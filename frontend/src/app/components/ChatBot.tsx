@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { useTranslation } from "@/hooks/useTranslation"
+import { useLanguage } from "@/contexts/LanguageContext"
 
 type ChatStep = "welcome" | "projects" | "skills" | "contact"
 
@@ -17,13 +17,13 @@ interface ChatOption {
 }
 
 export default function ChatBot() {
-  const { t } = useTranslation()
+  const { t, isLoading } = useLanguage()
   const [isOpen, setIsOpen] = useState(false)
   const [currentStep, setCurrentStep] = useState<ChatStep>("welcome")
   const [messages, setMessages] = useState<Message[]>([])
 
   useEffect(() => {
-    if (messages.length === 0) {
+    if (!isLoading && messages.length === 0) {
       setMessages([
         {
           type: "bot",
@@ -31,7 +31,7 @@ export default function ChatBot() {
         },
       ])
     }
-  }, [t, messages.length])
+  }, [t, isLoading, messages.length])
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
@@ -131,6 +131,10 @@ export default function ChatBot() {
   const resetToWelcome = () => {
     setCurrentStep("welcome")
     setMessages((prev) => [...prev, { type: "bot", content: t("chatbot.responses.helpMore") }])
+  }
+
+  if (isLoading) {
+    return null
   }
 
   return (

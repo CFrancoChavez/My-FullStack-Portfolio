@@ -8,6 +8,7 @@ interface LanguageContextType {
   language: Language
   setLanguage: (lang: Language) => void
   t: (key: string) => string
+  isLoading: boolean
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
@@ -15,13 +16,21 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language>("en")
   const [translations, setTranslations] = useState<Record<string, unknown>>({})
+  const [isLoading, setIsLoading] = useState(true)
 
   // Load translations when language changes
   useEffect(() => {
     const loadTranslations = async () => {
-      const response = await fetch(`/locales/${language}.json`)
-      const data = await response.json()
-      setTranslations(data)
+      setIsLoading(true)
+      try {
+        const response = await fetch(`/locales/${language}.json`)
+        const data = await response.json()
+        setTranslations(data)
+      } catch (error) {
+        console.error("[v0] Error loading translations:", error)
+      } finally {
+        setIsLoading(false)
+      }
     }
     loadTranslations()
   }, [language])
@@ -45,6 +54,8 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   }
 
   const t = (key: string): string => {
+    if (isLoading) return ""
+
     const keys = key.split(".")
     let value: unknown = translations
 
@@ -52,6 +63,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       if (value && typeof value === "object" && k in value) {
         value = (value as Record<string, unknown>)[k]
       } else {
+        console.warn(`[v0] Translation key not found: ${key}`)
         return key // Return the key if translation not found
       }
     }
@@ -59,7 +71,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     return typeof value === "string" ? value : key
   }
 
-  return <LanguageContext.Provider value={{ language, setLanguage, t }}>{children}</LanguageContext.Provider>
+  return <LanguageContext.Provider value={{ language, setLanguage, t, isLoading }}>{children}</LanguageContext.Provider>
 }
 
 export function useLanguage() {
