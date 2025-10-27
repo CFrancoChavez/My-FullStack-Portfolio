@@ -34,13 +34,13 @@ export default function Hero() {
                 href="#projects"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200"
               >
-                {t("hero.viewProjects")}
+                {t("hero.cta.projects")}
               </Link>
               <Link
                 href="/contact"
                 className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-colors duration-200"
               >
-                {t("hero.contact")}
+                {t("hero.cta.contact")}
               </Link>
             </div>
           </div>
@@ -85,13 +85,13 @@ export default function Hero() {
               href="#projects"
               className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200"
             >
-              {t("hero.viewProjects")}
+              {t("hero.cta.projects")}
             </Link>
             <Link
               href="/contact"
               className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-colors duration-200"
             >
-              {t("hero.contact")}
+              {t("hero.cta.contact")}
             </Link>
           </div>
         </motion.div>

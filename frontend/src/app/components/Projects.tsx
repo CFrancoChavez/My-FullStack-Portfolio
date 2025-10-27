@@ -9,29 +9,29 @@ export default function Projects() {
 
   const projects = [
     {
-      title: t("projects.webscraper.title"),
-      description: t("projects.webscraper.description"),
+      title: t("projects.items.webScraper.title"),
+      description: t("projects.items.webScraper.description"),
       image: "/img-webscraperR.png?height=300&width=400",
       technologies: ["Node.js", "Puppeteer", "SQL Server", "React", "Express"],
-      status: t("projects.component.status.completed"),
+      status: t("projects.status.completed"),
       github: "https://github.com/CFrancoChavez/Mi-App-Webscraper",
       demo: "https://github.com/CFrancoChavez/Mi-App-Webscraper#readme",
     },
     {
-      title: t("projects.portfolio.title"),
-      description: t("projects.portfolio.description"),
+      title: t("projects.items.portfolio.title"),
+      description: t("projects.items.portfolio.description"),
       image: "/img-portfolioR.png?height=300&width=400",
       technologies: ["Next.js", "Node.js", "Express", "MongoDB", "Tailwind", "Framer Motion"],
-      status: t("projects.component.status.completed"),
+      status: t("projects.status.completed"),
       github: "#",
       demo: "#",
     },
     {
-      title: t("projects.ocr.title"),
-      description: t("projects.ocr.description"),
+      title: t("projects.items.ocr.title"),
+      description: t("projects.items.ocr.description"),
       image: "/ocr-text-recognition-scanner.jpg",
       technologies: ["Python", "Flask", "OpenCV", "Tesseract", "EasyOCR"],
-      status: t("projects.component.status.completed"),
+      status: t("projects.status.completed"),
       github: "https://github.com/CFrancoChavez/OCR-Marcacion",
       demo: "https://huggingface.co/spaces/FrancoCH/ocr-marcacion",
     },
@@ -46,8 +46,8 @@ export default function Projects() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t("projects.component.title")}</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">{t("projects.component.subtitle")}</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t("projects.title")}</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">{t("projects.description")}</p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -64,7 +64,7 @@ export default function Projects() {
                 <div className="absolute top-4 right-4">
                   <span
                     className={`px-3 py-1 rounded-full text-sm font-medium ${
-                      project.status === t("projects.component.status.completed")
+                      project.status === t("projects.status.completed")
                         ? "bg-green-100 text-green-800"
                         : "bg-yellow-100 text-yellow-800"
                     }`}
@@ -100,7 +100,7 @@ export default function Projects() {
                       }
                     }}
                   >
-                    {t("projects.component.github")}
+                    {t("projects.buttons.github")}
                   </a>
                   <a
                     href={project.demo}
@@ -115,7 +115,7 @@ export default function Projects() {
                       }
                     }}
                   >
-                    {t("projects.component.demo")}
+                    {t("projects.buttons.demo")}
                   </a>
                 </div>
               </div>

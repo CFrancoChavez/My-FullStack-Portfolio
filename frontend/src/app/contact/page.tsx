@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 import { useRouter } from "next/navigation"
 import { getApiUrl } from "../../lib/config"
 import { useTranslation } from "../../hooks/useTranslation"
-import type { FormErrors, FormData } from "./types" // Declare FormErrors and FormData
+import type { FormErrors, FormData } from "./types"
 
 export default function ContactPage() {
   const { t } = useTranslation()
@@ -28,28 +28,28 @@ export default function ContactPage() {
     const newErrors: FormErrors = {}
 
     if (!formData.name.trim()) {
-      newErrors.name = t("contact.validation.nameRequired")
+      newErrors.name = t("contact.form.errors.nameRequired")
     } else if (formData.name.trim().length < 2) {
-      newErrors.name = t("contact.validation.nameMinLength")
+      newErrors.name = t("contact.form.errors.nameMin")
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!formData.email.trim()) {
-      newErrors.email = t("contact.validation.emailRequired")
+      newErrors.email = t("contact.form.errors.emailRequired")
     } else if (!emailRegex.test(formData.email)) {
-      newErrors.email = t("contact.validation.emailInvalid")
+      newErrors.email = t("contact.form.errors.emailInvalid")
     }
 
     if (!formData.subject.trim()) {
-      newErrors.subject = t("contact.validation.subjectRequired")
+      newErrors.subject = t("contact.form.errors.subjectRequired")
     } else if (formData.subject.trim().length < 5) {
-      newErrors.subject = t("contact.validation.subjectMinLength")
+      newErrors.subject = t("contact.form.errors.subjectMin")
     }
 
     if (!formData.message.trim()) {
-      newErrors.message = t("contact.validation.messageRequired")
+      newErrors.message = t("contact.form.errors.messageRequired")
     } else if (formData.message.trim().length < 10) {
-      newErrors.message = t("contact.validation.messageMinLength")
+      newErrors.message = t("contact.form.errors.messageMin")
     }
 
     setErrors(newErrors)
@@ -58,7 +58,7 @@ export default function ContactPage() {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
-    setFormData((prevState) => ({
+    setFormData((prevState: FormData) => ({
       ...prevState,
       [name]: value,
     }))
@@ -92,19 +92,19 @@ export default function ContactPage() {
 
       if (response.ok) {
         setSubmitStatus("success")
-        setSubmitMessage(t("contact.messages.success"))
+        setSubmitMessage(t("contact.form.success"))
         setFormData({ name: "", email: "", subject: "", message: "" })
 
         setTimeout(() => {
           router.push("/contact/success")
         }, 2000)
       } else {
-        throw new Error(data.message || t("contact.messages.error"))
+        throw new Error(data.message || t("contact.form.error"))
       }
     } catch (error) {
       console.error("Error:", error)
       setSubmitStatus("error")
-      setSubmitMessage(error instanceof Error ? error.message : t("contact.messages.error"))
+      setSubmitMessage(error instanceof Error ? error.message : t("contact.form.error"))
     } finally {
       setIsSubmitting(false)
     }
@@ -194,7 +194,7 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">{t("contact.social.title")}</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">{t("contact.social")}</h3>
               <div className="flex space-x-4"></div>
             </div>
           </motion.div>
@@ -233,7 +233,7 @@ export default function ContactPage() {
                     className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
                       errors.name ? "border-red-500" : "border-gray-300"
                     }`}
-                    placeholder={t("contact.form.namePlaceholder")}
+                    placeholder={t("contact.form.placeholders.name")}
                   />
                   {errors.name && <p className="mt-1 text-sm text-red-600">{errors.name}</p>}
                 </div>
@@ -251,7 +251,7 @@ export default function ContactPage() {
                     className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
                       errors.email ? "border-red-500" : "border-gray-300"
                     }`}
-                    placeholder={t("contact.form.emailPlaceholder")}
+                    placeholder={t("contact.form.placeholders.email")}
                   />
                   {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email}</p>}
                 </div>
@@ -269,7 +269,7 @@ export default function ContactPage() {
                     className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
                       errors.subject ? "border-red-500" : "border-gray-300"
                     }`}
-                    placeholder={t("contact.form.subjectPlaceholder")}
+                    placeholder={t("contact.form.placeholders.subject")}
                   />
                   {errors.subject && <p className="mt-1 text-sm text-red-600">{errors.subject}</p>}
                 </div>
@@ -287,7 +287,7 @@ export default function ContactPage() {
                     className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none ${
                       errors.message ? "border-red-500" : "border-gray-300"
                     }`}
-                    placeholder={t("contact.form.messagePlaceholder")}
+                    placeholder={t("contact.form.placeholders.message")}
                   />
                   {errors.message && <p className="mt-1 text-sm text-red-600">{errors.message}</p>}
                 </div>
@@ -319,10 +319,10 @@ export default function ContactPage() {
                           d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                         ></path>
                       </svg>
-                      {t("contact.form.submitting")}
+                      {t("contact.form.button.sending")}
                     </span>
                   ) : (
-                    t("contact.form.submit")
+                    t("contact.form.button.send")
                   )}
                 </button>
               </div>
