@@ -43,3 +43,6 @@ export function getApiUrl(endpoint: string): string {
   console.log("[v0] getApiUrl called with endpoint:", endpoint, "-> Full URL:", fullUrl)
   return fullUrl
 }
+
+export const HUGGINGFACE_SPACE_URL =
+  process.env.NEXT_PUBLIC_HUGGINGFACE_SPACE_URL || "https://huggingface.co/spaces/FrancoCH/ocr-marcacion"
