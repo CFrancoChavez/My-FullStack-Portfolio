@@ -7,7 +7,6 @@
   },
   "hero": {
     "greeting": "Hola, soy",
-    "name": "Franco Chavez",
     "title": "Desarrollador Full Stack",
     "animation": {
       "nextjs": "Especializado en Next.js",
@@ -21,13 +20,9 @@
       "contact": "Contactar"
     }
   },
-  "technologies": {
-    "title": "Tecnologías que domino",
-    "description": "Herramientas y tecnologías que utilizo para crear aplicaciones web modernas y eficientes"
-  },
   "projects": {
     "title": "Mis Proyectos",
-    "description": "Una selección de proyectos que demuestran mis habilidades y experiencia en desarrollo web",
+    "description": "Una selección de proyectos que demuestran mis habilidades en desarrollo full stack",
     "status": {
       "completed": "Completado",
       "inProgress": "En Progreso"
@@ -38,23 +33,22 @@
     },
     "items": {
       "webScraper": {
-        "title": "Web Scraper",
-        "description": "Sistema automatizado de extracción de datos web con Puppeteer y almacenamiento en SQL Server"
+        "title": "Web Scraper Avanzado",
+        "description": "Sistema de scraping automatizado para extracción de datos web con Node.js, Puppeteer y SQL Server. Incluye interface web con React para gestión de productos."
       },
       "portfolio": {
         "title": "Portfolio Full Stack",
-        "description": "Portfolio personal desarrollado con Next.js, Express y MongoDB, con diseño moderno y animaciones"
+        "description": "Portfolio profesional con Next.js en el frontend y Express.js + MongoDB en el backend. Incluye formulario de contacto funcional y chatbot interactivo."
       },
       "ocr": {
         "title": "OCR Marcación",
-        "description": "Sistema de reconocimiento óptico de caracteres para procesamiento automático de documentos usando Python y OpenCV"
+        "description": "Sistema inteligente de reconocimiento óptico de caracteres con múltiples estrategias de preprocesamiento. Usa Tesseract y EasyOCR para extraer texto de etiquetas con alta precisión."
       }
     }
   },
-  "footer": {
-    "title": "¡Conectemos!",
-    "description": "Siempre estoy interesado en nuevas oportunidades y proyectos emocionantes.",
-    "copyright": "© 2025 Mi Portfolio. Desarrollado con Next.js y Tailwind CSS."
+  "technologies": {
+    "title": "Tecnologías que domino",
+    "description": "Herramientas y tecnologías que utilizo para crear aplicaciones web modernas y eficientes"
   },
   "contact": {
     "title": "Contacto",
@@ -95,16 +89,14 @@
       },
       "success": "¡Mensaje enviado exitosamente!",
       "error": "Error al enviar el mensaje. Por favor, intenta nuevamente."
-    }
-  },
-  "contactSuccess": {
-    "title": "¡Mensaje Enviado!",
-    "description": "Gracias por contactarme. He recibido tu mensaje y te responderé lo antes posible.",
-    "buttons": {
-      "sendAnother": "Enviar otro mensaje",
-      "backHome": "Volver al Inicio"
     },
-    "responseTime": "Tiempo de respuesta promedio: 24 horas"
+    "success": {
+      "title": "¡Mensaje Enviado!",
+      "description": "Gracias por contactarme. He recibido tu mensaje y te responderé lo antes posible.",
+      "sendAnother": "Enviar otro mensaje",
+      "backHome": "Volver al Inicio",
+      "responseTime": "Tiempo de respuesta promedio: 24 horas"
+    }
   },
   "chatbot": {
     "title": "Asistente Virtual",
@@ -119,28 +111,51 @@
         "contact": "Información de contacto"
       }
     },
-    "skills": {
-      "title": "Habilidades Técnicas",
-      "frontend": "Frontend: React, Next.js, TypeScript, Tailwind CSS",
-      "backend": "Backend: Node.js, Express.js",
-      "databases": "Bases de datos: MongoDB, PostgreSQL, SQL Server",
-      "languages": "Lenguajes: JavaScript, TypeScript, Python",
-      "question": "¿Te gustaría saber más sobre algún proyecto específico?"
+    "menu": {
+      "projects": "💼 Ver mis proyectos",
+      "skills": "🛠️ Conocer mis habilidades",
+      "contact": "📧 Contactar conmigo"
     },
     "projects": {
-      "title": "Proyectos Destacados",
-      "webScraper": "Web Scraper - Sistema de extracción de datos con Puppeteer, Node.js y SQL Server",
-      "portfolio": "Portfolio Full Stack - Aplicación completa con Next.js, Node.js, Express y MongoDB",
-      "ocr": "OCR Marcación - Sistema de reconocimiento óptico con Python, Flask y OpenCV",
-      "question": "¿Quieres ver más detalles de algún proyecto?"
+      "title": "🚀 Aquí tienes mis proyectos principales. ¿Cuál te interesa más?",
+      "webscraper": "🕷️ Web Scraper",
+      "portfolio": "💼 Portfolio Full Stack",
+      "ocr": "🔍 OCR Marcación",
+      "viewAll": "👀 Ver todos los proyectos",
+      "back": "⬅️ Volver al menú"
+    },
+    "skills": {
+      "title": "💪 Estas son mis principales áreas de expertise. ¿Sobre cuál quieres saber más?",
+      "frontend": "⚛️ Frontend (React/Next.js)",
+      "backend": "🖥️ Backend (Node.js/Express)",
+      "database": "🗄️ Bases de datos",
+      "python": "🐍 Python & AI/ML",
+      "viewAll": "👀 Ver todas las tecnologías",
+      "back": "⬅️ Volver al menú"
     },
     "contact": {
-      "title": "Información de Contacto",
-      "email": "Email: franco.chavez@example.com",
-      "phone": "Teléfono: +54 9 11 1234-5678",
-      "location": "Ubicación: Buenos Aires, Argentina",
-      "question": "¿Te gustaría enviar un mensaje directo?"
+      "title": "📧 ¡Perfecto! Te puedo ayudar a contactarme de varias formas:",
+      "email": "📧 Enviar email",
+      "whatsapp": "💬 WhatsApp",
+      "linkedin": "💼 LinkedIn",
+      "back": "⬅️ Volver al menú"
     },
-    "error": "Lo siento, no entendí tu mensaje. ¿Podrías reformularlo?"
+    "responses": {
+      "webscraper": "🕷️ Sistema de scraping automatizado con Node.js, Puppeteer y SQL Server. Extrae datos de múltiples sitios web con interface React para gestión.",
+      "portfolio": "💼 Portfolio profesional con Next.js, Express.js y MongoDB. Incluye formulario de contacto funcional y chatbot interactivo.",
+      "ocr": "🔍 Sistema inteligente de OCR con Python, Flask y OpenCV. Múltiples estrategias de preprocesamiento para alta precisión en extracción de texto.",
+      "frontend": "⚛️ Especializado en React, Next.js, TypeScript y Tailwind CSS para crear interfaces modernas, responsivas y de alto rendimiento.",
+      "backend": "🖥️ Experto en Node.js, Express.js y arquitecturas escalables. Enfocado en APIs REST, seguridad y optimización de rendimiento.",
+      "database": "🗄️ Trabajo con MongoDB, PostgreSQL y SQL Server. Diseño de esquemas eficientes y optimización de consultas para máximo rendimiento.",
+      "python": "🐍 Desarrollo con Python, Flask y librerías de IA/ML como OpenCV, Tesseract y EasyOCR para proyectos de visión por computadora.",
+      "viewProjects": "¡Perfecto! Te llevo a la sección de proyectos 🚀",
+      "viewTechnologies": "¡Excelente! Te muestro todas mis habilidades técnicas 💪",
+      "helpMore": "¿En qué más puedo ayudarte?"
+    }
+  },
+  "footer": {
+    "title": "¡Conectemos!",
+    "description": "Siempre estoy interesado en nuevas oportunidades y proyectos emocionantes.",
+    "copyright": "© 2025 Franco Chavez. Desarrollado con Next.js y Tailwind CSS."
   }
 }
