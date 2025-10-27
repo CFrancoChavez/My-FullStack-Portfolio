@@ -2,10 +2,10 @@
 
 import { motion } from "framer-motion"
 import Image from "next/image"
-import { useTranslation } from "@/hooks/useTranslation"
+import { useLanguage } from "@/contexts/LanguageContext"
 
 export default function Projects() {
-  const { t } = useTranslation()
+  const { t } = useLanguage()
 
   const projects = [
     {
