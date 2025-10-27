@@ -5,7 +5,11 @@ import Image from "next/image"
 import { useLanguage } from "@/contexts/LanguageContext"
 
 export default function Projects() {
-  const { t } = useLanguage()
+  const { t, isLoading } = useLanguage()
+
+  if (isLoading) {
+    return null
+  }
 
   const projects = [
     {
