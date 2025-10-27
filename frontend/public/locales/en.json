@@ -1,0 +1,57 @@
+{
+  "hero.title": "Franco Chavez",
+  "hero.subtitle": "Full Stack Developer specialized in creating modern web solutions and intelligent applications",
+  "hero.contact": "Contact",
+  "hero.viewProjects": "View Projects",
+
+  "projects.title": "Featured Projects",
+  "projects.subtitle": "Explore my projects and try the live applications",
+
+  "project.ocr.title": "OCR Marcacion",
+  "project.ocr.description": "Optical character recognition system with multiple processing strategies",
+  "project.ocr.tech": "Technologies:",
+  "project.ocr.features": "Features:",
+  "project.ocr.feature1": "Multiple preprocessing strategies",
+  "project.ocr.feature2": "Intelligent text correction",
+  "project.ocr.feature3": "Results comparison with confidence",
+  "project.ocr.feature4": "Interactive web interface",
+  "project.ocr.tryApp": "Try App",
+  "project.ocr.viewCode": "View Code",
+
+  "project.portfolio.title": "Full Stack Portfolio",
+  "project.portfolio.description": "Personal portfolio with Node.js backend, MongoDB database and email notifications",
+  "project.portfolio.feature1": "Contact form with validation",
+  "project.portfolio.feature2": "Modular backend with Express",
+  "project.portfolio.feature3": "Persistence in MongoDB Atlas",
+  "project.portfolio.feature4": "Automatic email notifications",
+  "project.portfolio.contact": "Contact",
+  "project.portfolio.github": "GitHub",
+
+  "skills.title": "Technologies",
+  "skills.frontend": "Frontend",
+  "skills.frontend.desc": "Next.js, React, TypeScript, Tailwind CSS",
+  "skills.backend": "Backend",
+  "skills.backend.desc": "Node.js, Express, Python, Flask",
+  "skills.database": "Database & AI",
+  "skills.database.desc": "MongoDB, PostgreSQL, OpenCV, OCR",
+
+  "cta.title": "Let's work together",
+  "cta.subtitle": "Have a project in mind? Let's talk and make it happen",
+  "cta.contact": "Contact",
+
+  "projects.component.title": "My Projects",
+  "projects.component.subtitle": "A selection of projects that demonstrate my full stack development skills",
+  "projects.component.status.completed": "Completed",
+  "projects.component.status.inProgress": "In Progress",
+  "projects.component.github": "GitHub",
+  "projects.component.demo": "Demo",
+
+  "projects.webscraper.title": "Advanced Web Scraper",
+  "projects.webscraper.description": "Automated scraping system for web data extraction with Node.js, Puppeteer and SQL Server. Includes React web interface for product management.",
+
+  "projects.portfolio.title": "Full Stack Portfolio",
+  "projects.portfolio.description": "Professional portfolio with Next.js on the frontend and Express.js + SQL Server on the backend. Includes functional contact form and interactive chatbot.",
+
+  "projects.ocr.title": "OCR Marcación",
+  "projects.ocr.description": "Intelligent optical character recognition system with multiple preprocessing strategies. Uses Tesseract and EasyOCR to extract text from labels with high precision."
+}

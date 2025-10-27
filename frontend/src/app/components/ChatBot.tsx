@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import { useTranslation } from "@/hooks/useTranslation"
 
 type ChatStep = "welcome" | "projects" | "skills" | "contact"
 
@@ -16,12 +17,13 @@ interface ChatOption {
 }
 
 export default function ChatBot() {
+  const { t } = useTranslation()
   const [isOpen, setIsOpen] = useState(false)
   const [currentStep, setCurrentStep] = useState<ChatStep>("welcome")
   const [messages, setMessages] = useState<Message[]>([
     {
       type: "bot",
-      content: "¡Hola! 👋 Soy tu asistente virtual. ¿En qué puedo ayudarte?",
+      content: t("chatbot.welcome"),
     },
   ])
 
@@ -40,52 +42,50 @@ export default function ChatBot() {
 
   const chatOptions: Record<ChatStep, ChatOption[]> = {
     welcome: [
-      { text: "💼 Ver mis proyectos", action: "projects" },
-      { text: "🛠️ Conocer mis habilidades", action: "skills" },
-      { text: "📧 Contactar conmigo", action: "contact" },
-      { text: "📄 Descargar CV", action: "cv" },
+      { text: t("chatbot.menu.projects"), action: "projects" },
+      { text: t("chatbot.menu.skills"), action: "skills" },
+      { text: t("chatbot.menu.contact"), action: "contact" },
     ],
     projects: [
-      { text: "🕷️ Web Scraper", action: "scraper" },
-      { text: "📊 Sistema de Gestión", action: "management" },
-      { text: "🔗 API REST", action: "api" },
-      { text: "👀 Ver todos los proyectos", action: "view-projects" },
-      { text: "⬅️ Volver al menú", action: "welcome" },
+      { text: t("chatbot.projects.webscraper"), action: "webscraper" },
+      { text: t("chatbot.projects.portfolio"), action: "portfolio" },
+      { text: t("chatbot.projects.ocr"), action: "ocr" },
+      { text: t("chatbot.projects.viewAll"), action: "view-projects" },
+      { text: t("chatbot.projects.back"), action: "welcome" },
     ],
     skills: [
-      { text: "⚛️ Frontend (React/Next.js)", action: "frontend" },
-      { text: "🖥️ Backend (Node.js/Express)", action: "backend" },
-      { text: "🗄️ Bases de datos", action: "database" },
-      { text: "👀 Ver todas las tecnologías", action: "view-technologies" },
-      { text: "⬅️ Volver al menú", action: "welcome" },
+      { text: t("chatbot.skills.frontend"), action: "frontend" },
+      { text: t("chatbot.skills.backend"), action: "backend" },
+      { text: t("chatbot.skills.database"), action: "database" },
+      { text: t("chatbot.skills.python"), action: "python" },
+      { text: t("chatbot.skills.viewAll"), action: "view-technologies" },
+      { text: t("chatbot.skills.back"), action: "welcome" },
     ],
     contact: [],
   }
 
-  const responses: Record<string, string> = {
-    projects: "🚀 Aquí tienes mis proyectos principales. ¿Cuál te interesa más?",
-    skills: "💪 Estas son mis principales áreas de expertise. ¿Sobre cuál quieres saber más?",
-    scraper:
-      "🕷️ Mi Web Scraper puede extraer datos de múltiples sitios web de forma automatizada usando Puppeteer y Node.js.",
-    management:
-      "📊 Sistema completo de gestión empresarial con dashboard interactivo, reportes en tiempo real y autenticación segura.",
-    api: "🔗 API REST escalable con autenticación JWT, validaciones robustas y documentación completa con Swagger.",
-    frontend:
-      "⚛️ Especializado en React, Next.js, Tailwind CSS y TypeScript para crear interfaces modernas y responsivas.",
-    backend:
-      "🖥️ Experto en Node.js, Express.js, APIs REST y arquitecturas escalables. Enfocado en rendimiento y seguridad.",
-    database:
-      "🗄️ Trabajo con MongoDB, diseño de esquemas eficientes y optimización de consultas para máximo rendimiento.",
-    contact: "📧 ¡Perfecto! Te puedo ayudar a contactarme de varias formas:",
-    cv: "📄 Mi CV está disponible para descarga. Contáctame y te enviaré la versión más actualizada con todos mis proyectos.",
+  const getResponse = (action: string): string => {
+    const responseMap: Record<string, string> = {
+      projects: t("chatbot.projects.title"),
+      skills: t("chatbot.skills.title"),
+      webscraper: t("chatbot.responses.webscraper"),
+      portfolio: t("chatbot.responses.portfolio"),
+      ocr: t("chatbot.responses.ocr"),
+      frontend: t("chatbot.responses.frontend"),
+      backend: t("chatbot.responses.backend"),
+      database: t("chatbot.responses.database"),
+      python: t("chatbot.responses.python"),
+      contact: t("chatbot.contact.title"),
+    }
+    return responseMap[action] || ""
   }
 
   const handleOptionClick = (action: string) => {
     if (action === "view-projects") {
       setMessages((prev) => [
         ...prev,
-        { type: "user", content: "Ver todos los proyectos" },
-        { type: "bot", content: "¡Perfecto! Te llevo a la sección de proyectos 🚀" },
+        { type: "user", content: t("chatbot.projects.viewAll") },
+        { type: "bot", content: t("chatbot.responses.viewProjects") },
       ])
       setTimeout(() => scrollToSection("projects"), 500)
       return
@@ -94,8 +94,8 @@ export default function ChatBot() {
     if (action === "view-technologies") {
       setMessages((prev) => [
         ...prev,
-        { type: "user", content: "Ver todas las tecnologías" },
-        { type: "bot", content: "¡Excelente! Te muestro todas mis habilidades técnicas 💪" },
+        { type: "user", content: t("chatbot.skills.viewAll") },
+        { type: "bot", content: t("chatbot.responses.viewTechnologies") },
       ])
       setTimeout(() => scrollToSection("technologies"), 500)
       return
@@ -104,16 +104,17 @@ export default function ChatBot() {
     if (action === "contact") {
       setMessages((prev) => [
         ...prev,
-        { type: "user", content: "Contactar contigo" },
-        { type: "bot", content: responses.contact },
+        { type: "user", content: t("chatbot.menu.contact") },
+        { type: "bot", content: getResponse("contact") },
       ])
       setCurrentStep("contact")
       return
     }
 
-    if (responses[action]) {
+    const response = getResponse(action)
+    if (response) {
       const userText = chatOptions[currentStep]?.find((opt) => opt.action === action)?.text || ""
-      setMessages((prev) => [...prev, { type: "user", content: userText }, { type: "bot", content: responses[action] }])
+      setMessages((prev) => [...prev, { type: "user", content: userText }, { type: "bot", content: response }])
     }
 
     if (chatOptions[action as ChatStep]) {
@@ -123,7 +124,7 @@ export default function ChatBot() {
 
   const resetToWelcome = () => {
     setCurrentStep("welcome")
-    setMessages((prev) => [...prev, { type: "bot", content: "¿En qué más puedo ayudarte?" }])
+    setMessages((prev) => [...prev, { type: "bot", content: t("chatbot.responses.helpMore") }])
   }
 
   return (
@@ -161,8 +162,8 @@ export default function ChatBot() {
             className="fixed bottom-24 right-6 w-80 h-96 bg-white rounded-lg shadow-2xl border z-50 flex flex-col"
           >
             <div className="bg-blue-600 text-white p-4 rounded-t-lg">
-              <h3 className="font-semibold">Asistente Virtual</h3>
-              <p className="text-sm opacity-90">¿En qué puedo ayudarte?</p>
+              <h3 className="font-semibold">{t("chatbot.header.title")}</h3>
+              <p className="text-sm opacity-90">{t("chatbot.header.subtitle")}</p>
             </div>
 
             <div className="flex-1 p-4 overflow-y-auto space-y-3">
@@ -186,25 +187,25 @@ export default function ChatBot() {
                     onClick={() => navigateToPage("/contact")}
                     className="w-full text-left p-2 text-sm bg-white border rounded hover:bg-gray-50 transition-colors"
                   >
-                    📧 Enviar email
+                    {t("chatbot.contact.email")}
                   </button>
                   <button
                     onClick={() => window.open("https://wa.me/1234567890", "_blank")}
                     className="w-full text-left p-2 text-sm bg-white border rounded hover:bg-gray-50 transition-colors"
                   >
-                    💬 WhatsApp
+                    {t("chatbot.contact.whatsapp")}
                   </button>
                   <button
                     onClick={() => window.open("https://linkedin.com/in/tu-perfil", "_blank")}
                     className="w-full text-left p-2 text-sm bg-white border rounded hover:bg-gray-50 transition-colors"
                   >
-                    💼 LinkedIn
+                    {t("chatbot.contact.linkedin")}
                   </button>
                   <button
                     onClick={resetToWelcome}
                     className="w-full text-left p-2 text-sm bg-white border rounded hover:bg-gray-50 transition-colors"
                   >
-                    ⬅️ Volver al menú
+                    {t("chatbot.contact.back")}
                   </button>
                 </div>
               ) : (

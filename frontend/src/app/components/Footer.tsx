@@ -1,8 +1,11 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { useTranslation } from "@/hooks/useTranslation"
 
 export default function Footer() {
+  const { t } = useTranslation()
+
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -12,10 +15,8 @@ export default function Footer() {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <h3 className="text-2xl font-bold mb-4">¡Conectemos!</h3>
-          <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-            Siempre estoy interesado en nuevas oportunidades y proyectos emocionantes.
-          </p>
+          <h3 className="text-2xl font-bold mb-4">{t("footer.title")}</h3>
+          <p className="text-gray-400 mb-8 max-w-2xl mx-auto">{t("footer.description")}</p>
 
           <div className="flex justify-center space-x-6 mb-8">
             <a
@@ -41,7 +42,7 @@ export default function Footer() {
           </div>
 
           <div className="border-t border-gray-800 pt-8">
-            <p className="text-gray-400">© 2024 Mi Portfolio. Desarrollado con Next.js y Tailwind CSS.</p>
+            <p className="text-gray-400">{t("footer.copyright")}</p>
           </div>
         </motion.div>
       </div>

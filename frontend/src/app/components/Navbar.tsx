@@ -4,8 +4,11 @@ import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { useTranslation } from "@/hooks/useTranslation"
+import LanguageToggle from "./LanguageToggle"
 
 export default function Navbar() {
+  const { t } = useTranslation()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
@@ -35,10 +38,10 @@ export default function Navbar() {
   }
 
   const navItems = [
-    { name: "Inicio", href: "#home" },
-    { name: "Tecnologías", href: "#technologies" },
-    { name: "Proyectos", href: "#projects" },
-    { name: "Contacto", href: "/contact" },
+    { name: t("nav.home"), href: "#home" },
+    { name: t("nav.technologies"), href: "#technologies" },
+    { name: t("nav.projects"), href: "#projects" },
+    { name: t("nav.contact"), href: "/contact" },
   ]
 
   if (!mounted) {
@@ -76,7 +79,7 @@ export default function Navbar() {
             Portfolio
           </Link>
 
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.name}
@@ -86,6 +89,7 @@ export default function Navbar() {
                 {item.name}
               </button>
             ))}
+            <LanguageToggle />
           </div>
 
           <button className="md:hidden" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
@@ -118,6 +122,9 @@ export default function Navbar() {
                 {item.name}
               </button>
             ))}
+            <div className="pt-2 border-t border-gray-200 mt-2">
+              <LanguageToggle />
+            </div>
           </motion.div>
         )}
       </div>

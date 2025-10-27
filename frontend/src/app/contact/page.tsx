@@ -1,4 +1,3 @@
-
 "use client"
 
 import type React from "react"
@@ -6,22 +5,12 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import { useRouter } from "next/navigation"
 import { getApiUrl } from "../../lib/config"
-
-interface FormData {
-  name: string
-  email: string
-  subject: string
-  message: string
-}
-
-interface FormErrors {
-  name?: string
-  email?: string
-  subject?: string
-  message?: string
-}
+import { useTranslation } from "../../hooks/useTranslation"
+import type { FormErrors, FormData } from "./types" // Declare FormErrors and FormData
 
 export default function ContactPage() {
+  const { t } = useTranslation()
+
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -38,33 +27,29 @@ export default function ContactPage() {
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {}
 
-    // Validar nombre
     if (!formData.name.trim()) {
-      newErrors.name = "El nombre es requerido"
+      newErrors.name = t("contact.validation.nameRequired")
     } else if (formData.name.trim().length < 2) {
-      newErrors.name = "El nombre debe tener al menos 2 caracteres"
+      newErrors.name = t("contact.validation.nameMinLength")
     }
 
-    // Validar email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!formData.email.trim()) {
-      newErrors.email = "El email es requerido"
+      newErrors.email = t("contact.validation.emailRequired")
     } else if (!emailRegex.test(formData.email)) {
-      newErrors.email = "El email no es válido"
+      newErrors.email = t("contact.validation.emailInvalid")
     }
 
-    // Validar asunto
     if (!formData.subject.trim()) {
-      newErrors.subject = "El asunto es requerido"
+      newErrors.subject = t("contact.validation.subjectRequired")
     } else if (formData.subject.trim().length < 5) {
-      newErrors.subject = "El asunto debe tener al menos 5 caracteres"
+      newErrors.subject = t("contact.validation.subjectMinLength")
     }
 
-    // Validar mensaje
     if (!formData.message.trim()) {
-      newErrors.message = "El mensaje es requerido"
+      newErrors.message = t("contact.validation.messageRequired")
     } else if (formData.message.trim().length < 10) {
-      newErrors.message = "El mensaje debe tener al menos 10 caracteres"
+      newErrors.message = t("contact.validation.messageMinLength")
     }
 
     setErrors(newErrors)
@@ -73,18 +58,10 @@ export default function ContactPage() {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
-    setFormData((prev) => ({
-      ...prev,
+    setFormData((prevState) => ({
+      ...prevState,
       [name]: value,
     }))
-
-    // Limpiar error del campo cuando el usuario empiece a escribir
-    if (errors[name as keyof FormErrors]) {
-      setErrors((prev) => ({
-        ...prev,
-        [name]: undefined,
-      }))
-    }
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -98,7 +75,6 @@ export default function ContactPage() {
     setSubmitStatus("idle")
 
     try {
-      // Esta función automáticamente usa localhost:5000 en desarrollo y la URL de Render en producción
       const response = await fetch(getApiUrl("/api/contact"), {
         method: "POST",
         headers: {
@@ -116,22 +92,19 @@ export default function ContactPage() {
 
       if (response.ok) {
         setSubmitStatus("success")
-        setSubmitMessage("¡Mensaje enviado correctamente! Redirigiendo...")
+        setSubmitMessage(t("contact.messages.success"))
         setFormData({ name: "", email: "", subject: "", message: "" })
 
-        // Redirigir a la página de éxito después de 2 segundos
         setTimeout(() => {
           router.push("/contact/success")
         }, 2000)
       } else {
-        throw new Error(data.message || "Error al enviar el mensaje")
+        throw new Error(data.message || t("contact.messages.error"))
       }
     } catch (error) {
       console.error("Error:", error)
       setSubmitStatus("error")
-      setSubmitMessage(
-        error instanceof Error ? error.message : "Error al enviar el mensaje. Por favor, inténtalo de nuevo.",
-      )
+      setSubmitMessage(error instanceof Error ? error.message : t("contact.messages.error"))
     } finally {
       setIsSubmitting(false)
     }
@@ -146,14 +119,11 @@ export default function ContactPage() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Contacto</h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            ¿Tienes un proyecto en mente? ¡Hablemos y hagámoslo realidad!
-          </p>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{t("contact.title")}</h1>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">{t("contact.subtitle")}</p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12">
-          {/* Información de contacto */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -161,7 +131,7 @@ export default function ContactPage() {
             className="space-y-8"
           >
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Información de Contacto</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">{t("contact.info.title")}</h2>
 
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
@@ -176,7 +146,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <p className="font-medium text-gray-900">Email</p>
+                    <p className="font-medium text-gray-900">{t("contact.info.email")}</p>
                     <p className="text-gray-600">tu-email@ejemplo.com</p>
                   </div>
                 </div>
@@ -193,7 +163,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <p className="font-medium text-gray-900">Teléfono</p>
+                    <p className="font-medium text-gray-900">{t("contact.info.phone")}</p>
                     <p className="text-gray-600">+1 (555) 123-4567</p>
                   </div>
                 </div>
@@ -216,7 +186,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <p className="font-medium text-gray-900">Ubicación</p>
+                    <p className="font-medium text-gray-900">{t("contact.info.location")}</p>
                     <p className="text-gray-600">Ciudad, País</p>
                   </div>
                 </div>
@@ -224,46 +194,18 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Redes Sociales</h3>
-              <div className="flex space-x-4">
-                <a
-                  href="#"
-                  className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white hover:bg-blue-700 transition-colors"
-                >
-                  <span className="sr-only">LinkedIn</span>
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      fillRule="evenodd"
-                      d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </a>
-                <a
-                  href="#"
-                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-white hover:bg-gray-900 transition-colors"
-                >
-                  <span className="sr-only">GitHub</span>
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      fillRule="evenodd"
-                      d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </a>
-              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">{t("contact.social.title")}</h3>
+              <div className="flex space-x-4"></div>
             </div>
           </motion.div>
 
-          {/* Formulario */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-xl p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Envíame un mensaje</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">{t("contact.form.title")}</h2>
 
               {submitStatus === "success" && (
                 <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
@@ -280,7 +222,7 @@ export default function ContactPage() {
               <div className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Nombre *
+                    {t("contact.form.name")} {t("contact.form.required")}
                   </label>
                   <input
                     type="text"
@@ -291,14 +233,14 @@ export default function ContactPage() {
                     className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
                       errors.name ? "border-red-500" : "border-gray-300"
                     }`}
-                    placeholder="Tu nombre completo"
+                    placeholder={t("contact.form.namePlaceholder")}
                   />
                   {errors.name && <p className="mt-1 text-sm text-red-600">{errors.name}</p>}
                 </div>
 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email *
+                    {t("contact.form.email")} {t("contact.form.required")}
                   </label>
                   <input
                     type="email"
@@ -309,14 +251,14 @@ export default function ContactPage() {
                     className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
                       errors.email ? "border-red-500" : "border-gray-300"
                     }`}
-                    placeholder="tu@email.com"
+                    placeholder={t("contact.form.emailPlaceholder")}
                   />
                   {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email}</p>}
                 </div>
 
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                    Asunto *
+                    {t("contact.form.subject")} {t("contact.form.required")}
                   </label>
                   <input
                     type="text"
@@ -327,14 +269,14 @@ export default function ContactPage() {
                     className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
                       errors.subject ? "border-red-500" : "border-gray-300"
                     }`}
-                    placeholder="¿De qué quieres hablar?"
+                    placeholder={t("contact.form.subjectPlaceholder")}
                   />
                   {errors.subject && <p className="mt-1 text-sm text-red-600">{errors.subject}</p>}
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Mensaje *
+                    {t("contact.form.message")} {t("contact.form.required")}
                   </label>
                   <textarea
                     id="message"
@@ -345,7 +287,7 @@ export default function ContactPage() {
                     className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none ${
                       errors.message ? "border-red-500" : "border-gray-300"
                     }`}
-                    placeholder="Cuéntame sobre tu proyecto o idea..."
+                    placeholder={t("contact.form.messagePlaceholder")}
                   />
                   {errors.message && <p className="mt-1 text-sm text-red-600">{errors.message}</p>}
                 </div>
@@ -377,10 +319,10 @@ export default function ContactPage() {
                           d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                         ></path>
                       </svg>
-                      Enviando...
+                      {t("contact.form.submitting")}
                     </span>
                   ) : (
-                    "Enviar Mensaje"
+                    t("contact.form.submit")
                   )}
                 </button>
               </div>

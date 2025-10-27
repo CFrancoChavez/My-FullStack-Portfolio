@@ -2,8 +2,11 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
+import { useTranslation } from "@/hooks/useTranslation"
 
 export default function ContactSuccess() {
+  const { t } = useTranslation()
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 flex items-center justify-center pt-20">
       <motion.div
@@ -18,28 +21,26 @@ export default function ContactSuccess() {
           </svg>
         </div>
 
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">¡Mensaje Enviado!</h1>
+        <h1 className="text-3xl font-bold text-gray-900 mb-4">{t("contact.success.title")}</h1>
 
-        <p className="text-gray-600 mb-8">
-          Gracias por contactarme. He recibido tu mensaje y te responderé lo antes posible.
-        </p>
+        <p className="text-gray-600 mb-8">{t("contact.success.description")}</p>
 
         <div className="space-y-4">
           <Link
             href="/contact"
             className="block bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-200"
           >
-            Enviar otro mensaje
+            {t("contact.success.sendAnother")}
           </Link>
 
           <Link
             href="/"
             className="block bg-gray-100 text-gray-700 py-3 px-6 rounded-lg hover:bg-gray-200 transition-colors duration-200"
           >
-            Volver al Inicio
+            {t("contact.success.backHome")}
           </Link>
 
-          <p className="text-sm text-gray-500">Tiempo de respuesta promedio: 24 horas</p>
+          <p className="text-sm text-gray-500">{t("contact.success.responseTime")}</p>
         </div>
       </motion.div>
     </div>

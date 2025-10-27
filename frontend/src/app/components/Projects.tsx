@@ -2,36 +2,36 @@
 
 import { motion } from "framer-motion"
 import Image from "next/image"
+import { useTranslation } from "@/hooks/useTranslation"
 
 export default function Projects() {
+  const { t } = useTranslation()
+
   const projects = [
     {
-      title: "Web Scraper Avanzado",
-      description:
-        "Sistema de scraping automatizado para extracción de datos web con Node.js, Puppeteer y SQL Server. Incluye interface web con React para gestión de productos.",
+      title: t("projects.webscraper.title"),
+      description: t("projects.webscraper.description"),
       image: "/img-webscraperR.png?height=300&width=400",
       technologies: ["Node.js", "Puppeteer", "SQL Server", "React", "Express"],
-      status: "Completado",
+      status: t("projects.component.status.completed"),
       github: "https://github.com/CFrancoChavez/Mi-App-Webscraper",
       demo: "https://github.com/CFrancoChavez/Mi-App-Webscraper#readme",
     },
     {
-      title: "Portfolio Full Stack",
-      description:
-        "Portfolio profesional con Next.js en el frontend y Express.js + SQL Server en el backend. Incluye formulario de contacto funcional y chatbot interactivo.",
+      title: t("projects.portfolio.title"),
+      description: t("projects.portfolio.description"),
       image: "/img-portfolioR.png?height=300&width=400",
-      technologies: ["Next.js", "Express", "SQL Server", "Tailwind", "Framer Motion"],
-      status: "Completado",
+      technologies: ["Next.js", "Node.js", "Express", "MongoDB", "Tailwind", "Framer Motion"],
+      status: t("projects.component.status.completed"),
       github: "#",
       demo: "#",
     },
     {
-      title: "OCR Marcación",
-      description:
-        "Sistema inteligente de reconocimiento óptico de caracteres con múltiples estrategias de preprocesamiento. Usa Tesseract y EasyOCR para extraer texto de etiquetas con alta precisión.",
+      title: t("projects.ocr.title"),
+      description: t("projects.ocr.description"),
       image: "/ocr-text-recognition-scanner.jpg",
       technologies: ["Python", "Flask", "OpenCV", "Tesseract", "EasyOCR"],
-      status: "Completado",
+      status: t("projects.component.status.completed"),
       github: "https://github.com/CFrancoChavez/OCR-Marcacion",
       demo: "https://huggingface.co/spaces/FrancoCH/ocr-marcacion",
     },
@@ -46,10 +46,8 @@ export default function Projects() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Mis Proyectos</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Una selección de proyectos que demuestran mis habilidades en desarrollo full stack
-          </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t("projects.component.title")}</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">{t("projects.component.subtitle")}</p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -66,7 +64,9 @@ export default function Projects() {
                 <div className="absolute top-4 right-4">
                   <span
                     className={`px-3 py-1 rounded-full text-sm font-medium ${
-                      project.status === "Completado" ? "bg-green-100 text-green-800" : "bg-yellow-100 text-yellow-800"
+                      project.status === t("projects.component.status.completed")
+                        ? "bg-green-100 text-green-800"
+                        : "bg-yellow-100 text-yellow-800"
                     }`}
                   >
                     {project.status}
@@ -100,7 +100,7 @@ export default function Projects() {
                       }
                     }}
                   >
-                    GitHub
+                    {t("projects.component.github")}
                   </a>
                   <a
                     href={project.demo}
@@ -115,7 +115,7 @@ export default function Projects() {
                       }
                     }}
                   >
-                    Demo
+                    {t("projects.component.demo")}
                   </a>
                 </div>
               </div>
