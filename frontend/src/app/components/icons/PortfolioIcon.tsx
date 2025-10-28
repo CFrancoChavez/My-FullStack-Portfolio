@@ -3,12 +3,52 @@
 export default function PortfolioIcon({ className = "w-full h-full" }: { className?: string }) {
   return (
     <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+      <style>
+        {`
+          @keyframes slideIn {
+            0% { transform: translateX(-5px); opacity: 0.3; }
+            100% { transform: translateX(0); opacity: 1; }
+          }
+          @keyframes fadeInOut {
+            0%, 100% { opacity: 0.25; }
+            50% { opacity: 0.8; }
+          }
+          @keyframes scaleUp {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+          }
+          @keyframes glow {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+          }
+          .back-card { animation: fadeInOut 3s ease-in-out infinite; }
+          .middle-card { animation: fadeInOut 3s ease-in-out 0.5s infinite; }
+          .profile-circle { animation: scaleUp 2s ease-in-out infinite; }
+          .tech-icon { animation: glow 2s ease-in-out infinite; }
+          .info-line { animation: slideIn 1s ease-in-out infinite; }
+          svg:hover .profile-circle { animation: scaleUp 1s ease-in-out infinite; }
+          svg:hover .tech-icon { transform: translateY(-3px); transition: transform 0.3s; }
+        `}
+      </style>
+
       {/* Back card - third layer */}
-      <rect x="80" y="45" width="95" height="120" rx="8" stroke="url(#gradient2)" strokeWidth="2.5" opacity="0.25" />
+      <rect
+        x="80"
+        y="45"
+        width="95"
+        height="120"
+        rx="8"
+        stroke="url(#gradient2)"
+        strokeWidth="2.5"
+        opacity="0.25"
+        className="back-card"
+      />
 
       {/* Middle card - second layer */}
-      <rect x="60" y="55" width="95" height="120" rx="8" stroke="url(#gradient2)" strokeWidth="2.5" opacity="0.5" />
-      <line x1="60" y1="75" x2="155" y2="75" stroke="url(#gradient2)" strokeWidth="2" opacity="0.5" />
+      <g className="middle-card">
+        <rect x="60" y="55" width="95" height="120" rx="8" stroke="url(#gradient2)" strokeWidth="2.5" opacity="0.5" />
+        <line x1="60" y1="75" x2="155" y2="75" stroke="url(#gradient2)" strokeWidth="2" opacity="0.5" />
+      </g>
 
       {/* Front card - main layer */}
       <rect
@@ -33,30 +73,101 @@ export default function PortfolioIcon({ className = "w-full h-full" }: { classNa
       <circle cx="68" cy="74" r="2.5" fill="url(#gradient2)" opacity="0.7" />
 
       {/* User profile section with more detail */}
-      <circle cx="87.5" cy="110" r="20" stroke="url(#gradient2)" strokeWidth="3" fill="none" />
-      <circle cx="87.5" cy="110" r="18" fill="url(#gradient2)" fillOpacity="0.05" />
-
-      {/* User avatar head */}
-      <circle cx="87.5" cy="105" r="7" stroke="url(#gradient2)" strokeWidth="2.5" fill="none" />
-
-      {/* User avatar body */}
-      <path
-        d="M 70 125 Q 70 117 76 114 Q 82 111 87.5 111 Q 93 111 99 114 Q 105 117 105 125"
-        stroke="url(#gradient2)"
-        strokeWidth="2.5"
-        fill="none"
-      />
+      <g className="profile-circle" style={{ transformOrigin: "87.5px 110px" }}>
+        <circle cx="87.5" cy="110" r="20" stroke="url(#gradient2)" strokeWidth="3" fill="none" />
+        <circle cx="87.5" cy="110" r="18" fill="url(#gradient2)" fillOpacity="0.05" />
+        <circle cx="87.5" cy="105" r="7" stroke="url(#gradient2)" strokeWidth="2.5" fill="none" />
+        <path
+          d="M 70 125 Q 70 117 76 114 Q 82 111 87.5 111 Q 93 111 99 114 Q 105 117 105 125"
+          stroke="url(#gradient2)"
+          strokeWidth="2.5"
+          fill="none"
+        />
+      </g>
 
       {/* Profile info lines */}
-      <line x1="52" y1="142" x2="123" y2="142" stroke="url(#gradient2)" strokeWidth="2.5" opacity="0.7" />
-      <line x1="60" y1="152" x2="115" y2="152" stroke="url(#gradient2)" strokeWidth="2" opacity="0.5" />
-      <line x1="55" y1="162" x2="120" y2="162" stroke="url(#gradient2)" strokeWidth="2" opacity="0.5" />
-      <line x1="65" y1="172" x2="110" y2="172" stroke="url(#gradient2)" strokeWidth="2" opacity="0.5" />
+      <line
+        x1="52"
+        y1="142"
+        x2="123"
+        y2="142"
+        stroke="url(#gradient2)"
+        strokeWidth="2.5"
+        opacity="0.7"
+        className="info-line"
+        style={{ animationDelay: "0s" }}
+      />
+      <line
+        x1="60"
+        y1="152"
+        x2="115"
+        y2="152"
+        stroke="url(#gradient2)"
+        strokeWidth="2"
+        opacity="0.5"
+        className="info-line"
+        style={{ animationDelay: "0.2s" }}
+      />
+      <line
+        x1="55"
+        y1="162"
+        x2="120"
+        y2="162"
+        stroke="url(#gradient2)"
+        strokeWidth="2"
+        opacity="0.5"
+        className="info-line"
+        style={{ animationDelay: "0.4s" }}
+      />
+      <line
+        x1="65"
+        y1="172"
+        x2="110"
+        y2="172"
+        stroke="url(#gradient2)"
+        strokeWidth="2"
+        opacity="0.5"
+        className="info-line"
+        style={{ animationDelay: "0.6s" }}
+      />
 
       {/* Tech stack icons representation */}
-      <rect x="52" y="95" width="12" height="12" rx="2" stroke="url(#gradient2)" strokeWidth="1.5" opacity="0.6" />
-      <rect x="68" y="95" width="12" height="12" rx="2" stroke="url(#gradient2)" strokeWidth="1.5" opacity="0.6" />
-      <rect x="111" y="95" width="12" height="12" rx="2" stroke="url(#gradient2)" strokeWidth="1.5" opacity="0.6" />
+      <rect
+        x="52"
+        y="95"
+        width="12"
+        height="12"
+        rx="2"
+        stroke="url(#gradient2)"
+        strokeWidth="1.5"
+        opacity="0.6"
+        className="tech-icon"
+        style={{ animationDelay: "0s" }}
+      />
+      <rect
+        x="68"
+        y="95"
+        width="12"
+        height="12"
+        rx="2"
+        stroke="url(#gradient2)"
+        strokeWidth="1.5"
+        opacity="0.6"
+        className="tech-icon"
+        style={{ animationDelay: "0.3s" }}
+      />
+      <rect
+        x="111"
+        y="95"
+        width="12"
+        height="12"
+        rx="2"
+        stroke="url(#gradient2)"
+        strokeWidth="1.5"
+        opacity="0.6"
+        className="tech-icon"
+        style={{ animationDelay: "0.6s" }}
+      />
 
       {/* Code brackets decoration */}
       <path

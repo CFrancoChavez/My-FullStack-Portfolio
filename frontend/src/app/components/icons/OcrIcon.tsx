@@ -3,6 +3,36 @@
 export default function OcrIcon({ className = "w-full h-full" }: { className?: string }) {
   return (
     <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+      <style>
+        {`
+          @keyframes scan {
+            0% { transform: translateY(0); opacity: 0.3; }
+            50% { opacity: 1; }
+            100% { transform: translateY(60px); opacity: 0.3; }
+          }
+          @keyframes blink {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+          }
+          @keyframes checkmark {
+            0% { stroke-dashoffset: 10; }
+            100% { stroke-dashoffset: 0; }
+          }
+          @keyframes cornerPulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; transform: scale(1.1); }
+          }
+          .scan-line { animation: scan 3s ease-in-out infinite; }
+          .text-line { animation: blink 2s ease-in-out infinite; }
+          .check { 
+            stroke-dasharray: 10;
+            animation: checkmark 1s ease-in-out infinite;
+          }
+          .corner { animation: cornerPulse 2s ease-in-out infinite; }
+          svg:hover .scan-line { animation: scan 1.5s ease-in-out infinite; }
+        `}
+      </style>
+
       {/* Smartphone outer frame */}
       <rect x="55" y="25" width="90" height="150" rx="10" stroke="url(#gradient3)" strokeWidth="3" />
       <rect x="55" y="25" width="90" height="150" rx="10" fill="url(#gradient3)" fillOpacity="0.03" />
@@ -23,10 +53,38 @@ export default function OcrIcon({ className = "w-full h-full" }: { className?: s
       </text>
 
       {/* Scanning frame with animated corners */}
-      <path d="M 70 70 L 65 70 L 65 80" stroke="url(#gradient3)" strokeWidth="3" strokeLinecap="round" />
-      <path d="M 130 70 L 135 70 L 135 80" stroke="url(#gradient3)" strokeWidth="3" strokeLinecap="round" />
-      <path d="M 70 150 L 65 150 L 65 140" stroke="url(#gradient3)" strokeWidth="3" strokeLinecap="round" />
-      <path d="M 130 150 L 135 150 L 135 140" stroke="url(#gradient3)" strokeWidth="3" strokeLinecap="round" />
+      <path
+        d="M 70 70 L 65 70 L 65 80"
+        stroke="url(#gradient3)"
+        strokeWidth="3"
+        strokeLinecap="round"
+        className="corner"
+        style={{ transformOrigin: "67.5px 75px", animationDelay: "0s" }}
+      />
+      <path
+        d="M 130 70 L 135 70 L 135 80"
+        stroke="url(#gradient3)"
+        strokeWidth="3"
+        strokeLinecap="round"
+        className="corner"
+        style={{ transformOrigin: "132.5px 75px", animationDelay: "0.2s" }}
+      />
+      <path
+        d="M 70 150 L 65 150 L 65 140"
+        stroke="url(#gradient3)"
+        strokeWidth="3"
+        strokeLinecap="round"
+        className="corner"
+        style={{ transformOrigin: "67.5px 145px", animationDelay: "0.4s" }}
+      />
+      <path
+        d="M 130 150 L 135 150 L 135 140"
+        stroke="url(#gradient3)"
+        strokeWidth="3"
+        strokeLinecap="round"
+        className="corner"
+        style={{ transformOrigin: "132.5px 145px", animationDelay: "0.6s" }}
+      />
 
       {/* Scanning line effect */}
       <line
@@ -38,6 +96,7 @@ export default function OcrIcon({ className = "w-full h-full" }: { className?: s
         strokeWidth="2"
         opacity="0.6"
         strokeDasharray="4 4"
+        className="scan-line"
       />
 
       {/* Document content being scanned */}
@@ -54,11 +113,61 @@ export default function OcrIcon({ className = "w-full h-full" }: { className?: s
       />
 
       {/* Text lines being recognized */}
-      <line x1="75" y1="105" x2="120" y2="105" stroke="url(#gradient3)" strokeWidth="2.5" opacity="0.7" />
-      <line x1="75" y1="113" x2="115" y2="113" stroke="url(#gradient3)" strokeWidth="2.5" opacity="0.7" />
-      <line x1="75" y1="121" x2="125" y2="121" stroke="url(#gradient3)" strokeWidth="2.5" opacity="0.7" />
-      <line x1="75" y1="129" x2="110" y2="129" stroke="url(#gradient3)" strokeWidth="2.5" opacity="0.7" />
-      <line x1="75" y1="137" x2="118" y2="137" stroke="url(#gradient3)" strokeWidth="2.5" opacity="0.7" />
+      <line
+        x1="75"
+        y1="105"
+        x2="120"
+        y2="105"
+        stroke="url(#gradient3)"
+        strokeWidth="2.5"
+        opacity="0.7"
+        className="text-line"
+        style={{ animationDelay: "0s" }}
+      />
+      <line
+        x1="75"
+        y1="113"
+        x2="115"
+        y2="113"
+        stroke="url(#gradient3)"
+        strokeWidth="2.5"
+        opacity="0.7"
+        className="text-line"
+        style={{ animationDelay: "0.2s" }}
+      />
+      <line
+        x1="75"
+        y1="121"
+        x2="125"
+        y2="121"
+        stroke="url(#gradient3)"
+        strokeWidth="2.5"
+        opacity="0.7"
+        className="text-line"
+        style={{ animationDelay: "0.4s" }}
+      />
+      <line
+        x1="75"
+        y1="129"
+        x2="110"
+        y2="129"
+        stroke="url(#gradient3)"
+        strokeWidth="2.5"
+        opacity="0.7"
+        className="text-line"
+        style={{ animationDelay: "0.6s" }}
+      />
+      <line
+        x1="75"
+        y1="137"
+        x2="118"
+        y2="137"
+        stroke="url(#gradient3)"
+        strokeWidth="2.5"
+        opacity="0.7"
+        className="text-line"
+        style={{ animationDelay: "0.8s" }}
+      />
 
       {/* Recognition indicators (checkmarks) */}
       <path
@@ -67,6 +176,8 @@ export default function OcrIcon({ className = "w-full h-full" }: { className?: s
         strokeWidth="2"
         strokeLinecap="round"
         fill="none"
+        className="check"
+        style={{ animationDelay: "0s" }}
       />
       <path
         d="M 117 115 L 120 118 L 123 112"
@@ -74,6 +185,8 @@ export default function OcrIcon({ className = "w-full h-full" }: { className?: s
         strokeWidth="2"
         strokeLinecap="round"
         fill="none"
+        className="check"
+        style={{ animationDelay: "0.5s" }}
       />
 
       {/* Document/Image icon with more detail */}
