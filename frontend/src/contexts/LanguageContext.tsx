@@ -8,6 +8,7 @@ interface LanguageContextType {
   language: Language
   setLanguage: (lang: Language) => void
   t: (key: string) => string
+  tObject: <T = unknown>(key: string) => T | null
   isLoading: boolean
 }
 
@@ -71,7 +72,29 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     return typeof value === "string" ? value : key
   }
 
-  return <LanguageContext.Provider value={{ language, setLanguage, t, isLoading }}>{children}</LanguageContext.Provider>
+  const tObject = <T = unknown>(key: string): T | null => {
+    if (isLoading) return null
+
+    const keys = key.split(".")
+    let value: unknown = translations
+
+    for (const k of keys) {
+      if (value && typeof value === "object" && k in value) {
+        value = (value as Record<string, unknown>)[k]
+      } else {
+        console.warn(`[v0] Translation key not found: ${key}`)
+        return null
+      }
+    }
+
+    return value as T
+  }
+
+  return (
+    <LanguageContext.Provider value={{ language, setLanguage, t, tObject, isLoading }}>
+      {children}
+    </LanguageContext.Provider>
+  )
 }
 
 export function useLanguage() {

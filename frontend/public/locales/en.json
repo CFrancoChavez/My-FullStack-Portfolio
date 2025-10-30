@@ -151,6 +151,53 @@
       "viewProjects": "Perfect! Taking you to the projects section 🚀",
       "viewTechnologies": "Excellent! Showing you all my technical skills 💪",
       "helpMore": "What else can I help you with?"
+    },
+    "projectDetails": {
+      "webscraper": {
+        "title": "🕷️ Advanced Web Scraper",
+        "description": "Automated scraping system for web data extraction with Node.js, Puppeteer and SQL Server. Includes React web interface for product management.",
+        "features": "✨ Key Features:",
+        "featuresList": [
+          "• Automated data extraction from multiple websites",
+          "• SQL Server database for efficient storage",
+          "• React interface for product management",
+          "• Puppeteer for dynamic content handling"
+        ],
+        "tech": "🛠️ Technologies:",
+        "buttons": "🔗 Links:",
+        "github": "View on GitHub",
+        "demo": "See Demo"
+      },
+      "portfolio": {
+        "title": "💼 Full Stack Portfolio",
+        "description": "Professional portfolio with Next.js on the frontend and Express.js + MongoDB on the backend. Includes functional contact form and interactive chatbot.",
+        "features": "✨ Key Features:",
+        "featuresList": [
+          "• Modern responsive design with Next.js",
+          "• REST API with Express.js and MongoDB",
+          "• Functional contact form with validation",
+          "• Interactive chatbot for navigation"
+        ],
+        "tech": "🛠️ Technologies:",
+        "buttons": "🔗 Links:",
+        "github": "View on GitHub",
+        "demo": "See Demo"
+      },
+      "ocr": {
+        "title": "🔍 OCR Marcación",
+        "description": "Intelligent optical character recognition system with multiple preprocessing strategies. Uses Tesseract and EasyOCR to extract text from labels with high precision.",
+        "features": "✨ Key Features:",
+        "featuresList": [
+          "• Multiple preprocessing strategies",
+          "• High precision text extraction",
+          "• Support for Tesseract and EasyOCR",
+          "• Flask API for easy integration"
+        ],
+        "tech": "🛠️ Technologies:",
+        "buttons": "🔗 Links:",
+        "github": "View on GitHub",
+        "demo": "See Demo"
+      }
     }
   },
   "footer": {

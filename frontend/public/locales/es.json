@@ -44,6 +44,53 @@
         "title": "OCR Marcación",
         "description": "Sistema inteligente de reconocimiento óptico de caracteres con múltiples estrategias de preprocesamiento. Usa Tesseract y EasyOCR para extraer texto de etiquetas con alta precisión."
       }
+    },
+    "projectDetails": {
+      "webscraper": {
+        "title": "🕷️ Web Scraper Avanzado",
+        "description": "Sistema de scraping automatizado para extracción de datos web con Node.js, Puppeteer y SQL Server. Incluye interface web con React para gestión de productos.",
+        "features": "✨ Características principales:",
+        "featuresList": [
+          "• Extracción automatizada de datos de múltiples sitios",
+          "• Base de datos SQL Server para almacenamiento eficiente",
+          "• Interface React para gestión de productos",
+          "• Puppeteer para manejo de contenido dinámico"
+        ],
+        "tech": "🛠️ Tecnologías:",
+        "buttons": "🔗 Enlaces:",
+        "github": "Ver en GitHub",
+        "demo": "Ver Demo"
+      },
+      "portfolio": {
+        "title": "💼 Portfolio Full Stack",
+        "description": "Portfolio profesional con Next.js en el frontend y Express.js + MongoDB en el backend. Incluye formulario de contacto funcional y chatbot interactivo.",
+        "features": "✨ Características principales:",
+        "featuresList": [
+          "• Diseño moderno y responsivo con Next.js",
+          "• API REST con Express.js y MongoDB",
+          "• Formulario de contacto funcional con validación",
+          "• Chatbot interactivo para navegación"
+        ],
+        "tech": "🛠️ Tecnologías:",
+        "buttons": "🔗 Enlaces:",
+        "github": "Ver en GitHub",
+        "demo": "Ver Demo"
+      },
+      "ocr": {
+        "title": "🔍 OCR Marcación",
+        "description": "Sistema inteligente de reconocimiento óptico de caracteres con múltiples estrategias de preprocesamiento. Usa Tesseract y EasyOCR para extraer texto de etiquetas con alta precisión.",
+        "features": "✨ Características principales:",
+        "featuresList": [
+          "• Múltiples estrategias de preprocesamiento",
+          "• Alta precisión en extracción de texto",
+          "• Soporte para Tesseract y EasyOCR",
+          "• API Flask para fácil integración"
+        ],
+        "tech": "🛠️ Tecnologías:",
+        "buttons": "🔗 Enlaces:",
+        "github": "Ver en GitHub",
+        "demo": "Ver Demo"
+      }
     }
   },
   "technologies": {
@@ -151,6 +198,53 @@
       "viewProjects": "¡Perfecto! Te llevo a la sección de proyectos 🚀",
       "viewTechnologies": "¡Excelente! Te muestro todas mis habilidades técnicas 💪",
       "helpMore": "¿En qué más puedo ayudarte?"
+    },
+    "projectDetails": {
+      "webscraper": {
+        "title": "🕷️ Web Scraper Avanzado",
+        "description": "Sistema de scraping automatizado para extracción de datos web con Node.js, Puppeteer y SQL Server. Incluye interface web con React para gestión de productos.",
+        "features": "✨ Características principales:",
+        "featuresList": [
+          "• Extracción automatizada de datos de múltiples sitios",
+          "• Base de datos SQL Server para almacenamiento eficiente",
+          "• Interface React para gestión de productos",
+          "• Puppeteer para manejo de contenido dinámico"
+        ],
+        "tech": "🛠️ Tecnologías:",
+        "buttons": "🔗 Enlaces:",
+        "github": "Ver en GitHub",
+        "demo": "Ver Demo"
+      },
+      "portfolio": {
+        "title": "💼 Portfolio Full Stack",
+        "description": "Portfolio profesional con Next.js en el frontend y Express.js + MongoDB en el backend. Incluye formulario de contacto funcional y chatbot interactivo.",
+        "features": "✨ Características principales:",
+        "featuresList": [
+          "• Diseño moderno y responsivo con Next.js",
+          "• API REST con Express.js y MongoDB",
+          "• Formulario de contacto funcional con validación",
+          "• Chatbot interactivo para navegación"
+        ],
+        "tech": "🛠️ Tecnologías:",
+        "buttons": "🔗 Enlaces:",
+        "github": "Ver en GitHub",
+        "demo": "Ver Demo"
+      },
+      "ocr": {
+        "title": "🔍 OCR Marcación",
+        "description": "Sistema inteligente de reconocimiento óptico de caracteres con múltiples estrategias de preprocesamiento. Usa Tesseract y EasyOCR para extraer texto de etiquetas con alta precisión.",
+        "features": "✨ Características principales:",
+        "featuresList": [
+          "• Múltiples estrategias de preprocesamiento",
+          "• Alta precisión en extracción de texto",
+          "• Soporte para Tesseract y EasyOCR",
+          "• API Flask para fácil integración"
+        ],
+        "tech": "🛠️ Tecnologías:",
+        "buttons": "🔗 Enlaces:",
+        "github": "Ver en GitHub",
+        "demo": "Ver Demo"
+      }
     }
   },
   "footer": {

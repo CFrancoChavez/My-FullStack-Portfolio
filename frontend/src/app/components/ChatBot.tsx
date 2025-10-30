@@ -3,12 +3,13 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useLanguage } from "@/contexts/LanguageContext"
+import type { JSX } from "react/jsx-runtime" // Import JSX to fix the undeclared variable error
 
-type ChatStep = "welcome" | "projects" | "skills" | "contact"
+type ChatStep = "welcome" | "projects" | "skills" | "contact" | "projectDetail"
 
 interface Message {
   type: "bot" | "user"
-  content: string
+  content: string | JSX.Element
 }
 
 interface ChatOption {
@@ -17,9 +18,10 @@ interface ChatOption {
 }
 
 export default function ChatBot() {
-  const { t, isLoading } = useLanguage()
+  const { t, tObject, isLoading } = useLanguage()
   const [isOpen, setIsOpen] = useState(false)
   const [currentStep, setCurrentStep] = useState<ChatStep>("welcome")
+  const [currentProject, setCurrentProject] = useState<string | null>(null)
   const [messages, setMessages] = useState<Message[]>([])
 
   useEffect(() => {
@@ -68,15 +70,88 @@ export default function ChatBot() {
       { text: t("chatbot.skills.back"), action: "welcome" },
     ],
     contact: [],
+    projectDetail: [{ text: t("chatbot.projects.back"), action: "projects" }],
+  }
+
+  const renderProjectDetail = (projectKey: string) => {
+    const projectData = {
+      webscraper: {
+        tech: ["Node.js", "Puppeteer", "SQL Server", "React", "Express"],
+        github: "https://github.com/tu-usuario/web-scraper",
+        demo: "#",
+      },
+      portfolio: {
+        tech: ["Next.js", "Node.js", "Express", "MongoDB", "Tailwind"],
+        github: "https://github.com/tu-usuario/portfolio",
+        demo: "https://my-full-stack-portfolio-smoky.vercel.app/",
+      },
+      ocr: {
+        tech: ["Python", "Flask", "OpenCV", "Tesseract", "EasyOCR"],
+        github: "https://github.com/tu-usuario/ocr-marcacion",
+        demo: "#",
+      },
+    }
+
+    const project = projectData[projectKey as keyof typeof projectData]
+
+    const features = tObject<string[]>(`chatbot.projectDetails.${projectKey}.featuresList`) || []
+
+    return (
+      <div className="space-y-3 text-sm">
+        <div>
+          <p className="font-semibold mb-1">{t(`chatbot.projectDetails.${projectKey}.title`)}</p>
+          <p className="text-gray-700">{t(`chatbot.projectDetails.${projectKey}.description`)}</p>
+        </div>
+
+        <div>
+          <p className="font-semibold mb-1">{t(`chatbot.projectDetails.${projectKey}.features`)}</p>
+          <div className="text-gray-700 space-y-1">
+            {features.map((feature: string, idx: number) => (
+              <p key={idx}>{feature}</p>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <p className="font-semibold mb-1">{t(`chatbot.projectDetails.${projectKey}.tech`)}</p>
+          <div className="flex flex-wrap gap-1">
+            {project.tech.map((tech, idx) => (
+              <span key={idx} className="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs">
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <p className="font-semibold mb-2">{t(`chatbot.projectDetails.${projectKey}.buttons`)}</p>
+          <div className="flex gap-2">
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 text-center px-3 py-2 bg-gray-800 text-white rounded text-xs hover:bg-gray-700 transition-colors"
+            >
+              {t(`chatbot.projectDetails.${projectKey}.github`)}
+            </a>
+            <a
+              href={project.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 text-center px-3 py-2 bg-blue-600 text-white rounded text-xs hover:bg-blue-700 transition-colors"
+            >
+              {t(`chatbot.projectDetails.${projectKey}.demo`)}
+            </a>
+          </div>
+        </div>
+      </div>
+    )
   }
 
   const getResponse = (action: string): string => {
     const responseMap: Record<string, string> = {
       projects: t("chatbot.projects.title"),
       skills: t("chatbot.skills.title"),
-      webscraper: t("chatbot.responses.webscraper"),
-      portfolio: t("chatbot.responses.portfolio"),
-      ocr: t("chatbot.responses.ocr"),
       frontend: t("chatbot.responses.frontend"),
       backend: t("chatbot.responses.backend"),
       database: t("chatbot.responses.database"),
@@ -87,6 +162,18 @@ export default function ChatBot() {
   }
 
   const handleOptionClick = (action: string) => {
+    if (action === "webscraper" || action === "portfolio" || action === "ocr") {
+      const userText = chatOptions[currentStep]?.find((opt) => opt.action === action)?.text || ""
+      setMessages((prev) => [
+        ...prev,
+        { type: "user", content: userText },
+        { type: "bot", content: renderProjectDetail(action) },
+      ])
+      setCurrentProject(action)
+      setCurrentStep("projectDetail")
+      return
+    }
+
     if (action === "view-projects") {
       setMessages((prev) => [
         ...prev,
@@ -125,11 +212,15 @@ export default function ChatBot() {
 
     if (chatOptions[action as ChatStep]) {
       setCurrentStep(action as ChatStep)
+      if (action === "projects" || action === "welcome") {
+        setCurrentProject(null)
+      }
     }
   }
 
   const resetToWelcome = () => {
     setCurrentStep("welcome")
+    setCurrentProject(null)
     setMessages((prev) => [...prev, { type: "bot", content: t("chatbot.responses.helpMore") }])
   }
 
@@ -218,6 +309,8 @@ export default function ChatBot() {
                     {t("chatbot.contact.back")}
                   </button>
                 </div>
+              ) : currentStep === "projectDetail" ? (
+                <div className="space-y-2">{renderProjectDetail(currentProject as string)}</div>
               ) : (
                 <div className="space-y-2">
                   {chatOptions[currentStep]?.map((option, index) => (
