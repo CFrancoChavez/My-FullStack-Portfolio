@@ -104,7 +104,8 @@
       "title": "Información de Contacto",
       "email": "Email",
       "phone": "Teléfono",
-      "location": "Ubicación"
+      "location": "Ubicación",
+      "whatsapp": "WhatsApp"
     },
     "social": "Redes Sociales",
     "form": {
@@ -181,11 +182,13 @@
       "back": "⬅️ Volver al menú"
     },
     "contact": {
-      "title": "📧 ¡Perfecto! Te puedo ayudar a contactarme de varias formas:",
+      "title": "📧 ¡Perfecto! Puedes contactarme a través de:",
       "email": "📧 Enviar email",
       "whatsapp": "💬 WhatsApp",
       "linkedin": "💼 LinkedIn",
-      "back": "⬅️ Volver al menú"
+      "github": "🐙 GitHub",
+      "back": "⬅️ Volver al menú",
+      "whatsappMessage": "Hola Franco, me gustaría contactarte sobre un proyecto"
     },
     "responses": {
       "webscraper": "🕷️ Sistema de scraping automatizado con Node.js, Puppeteer y SQL Server. Extrae datos de múltiples sitios web con interface React para gestión.",

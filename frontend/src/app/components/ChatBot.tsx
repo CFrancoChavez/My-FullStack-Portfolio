@@ -386,16 +386,25 @@ export default function ChatBot() {
                     {t("chatbot.contact.email")}
                   </button>
                   <button
-                    onClick={() => window.open("https://wa.me/1234567890", "_blank")}
+                    onClick={() => {
+                      const message = encodeURIComponent(t("chatbot.contact.whatsappMessage"))
+                      window.open(`https://wa.me/5493516273976?text=${message}`, "_blank")
+                    }}
                     className="w-full text-left p-2 text-sm bg-white border rounded hover:bg-gray-50 transition-colors"
                   >
                     {t("chatbot.contact.whatsapp")}
                   </button>
                   <button
-                    onClick={() => window.open("https://linkedin.com/in/tu-perfil", "_blank")}
+                    onClick={() => window.open("https://www.linkedin.com/in/franco-chavez-548b0a56/", "_blank")}
                     className="w-full text-left p-2 text-sm bg-white border rounded hover:bg-gray-50 transition-colors"
                   >
                     {t("chatbot.contact.linkedin")}
+                  </button>
+                  <button
+                    onClick={() => window.open("https://github.com/CFrancoChavez", "_blank")}
+                    className="w-full text-left p-2 text-sm bg-white border rounded hover:bg-gray-50 transition-colors"
+                  >
+                    {t("chatbot.contact.github")}
                   </button>
                   <button
                     onClick={resetToWelcome}

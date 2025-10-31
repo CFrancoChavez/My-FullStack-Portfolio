@@ -57,7 +57,8 @@
       "title": "Contact Information",
       "email": "Email",
       "phone": "Phone",
-      "location": "Location"
+      "location": "Location",
+      "whatsapp": "WhatsApp"
     },
     "social": "Social Media",
     "form": {
@@ -134,11 +135,13 @@
       "back": "⬅️ Back to menu"
     },
     "contact": {
-      "title": "📧 Perfect! I can help you contact me in several ways:",
+      "title": "📧 Perfect! You can contact me through:",
       "email": "📧 Send email",
       "whatsapp": "💬 WhatsApp",
       "linkedin": "💼 LinkedIn",
-      "back": "⬅️ Back to menu"
+      "github": "🐙 GitHub",
+      "back": "⬅️ Back to menu",
+      "whatsappMessage": "Hi Franco, I would like to contact you about a project"
     },
     "responses": {
       "webscraper": "🕷️ Automated scraping system with Node.js, Puppeteer and SQL Server. Extracts data from multiple websites with React interface for management.",
@@ -256,3 +259,4 @@
     "copyright": "© 2025 Franco Chavez. Built with Next.js and Tailwind CSS."
   }
 }
+
