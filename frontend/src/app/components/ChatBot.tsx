@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { useLanguage } from "@/contexts/LanguageContext"
 import type { JSX } from "react/jsx-runtime" // Import JSX to fix the undeclared variable error
 
-type ChatStep = "welcome" | "projects" | "skills" | "contact" | "projectDetail"
+type ChatStep = "welcome" | "projects" | "skills" | "contact" | "projectDetail" | "skillDetail"
 
 interface Message {
   type: "bot" | "user"
@@ -22,6 +22,7 @@ export default function ChatBot() {
   const [isOpen, setIsOpen] = useState(false)
   const [currentStep, setCurrentStep] = useState<ChatStep>("welcome")
   const [currentProject, setCurrentProject] = useState<string | null>(null)
+  const [currentSkill, setCurrentSkill] = useState<string | null>(null)
   const [messages, setMessages] = useState<Message[]>([])
 
   useEffect(() => {
@@ -71,6 +72,7 @@ export default function ChatBot() {
     ],
     contact: [],
     projectDetail: [{ text: t("chatbot.projects.back"), action: "projects" }],
+    skillDetail: [{ text: t("chatbot.skills.back"), action: "skills" }],
   }
 
   const renderProjectDetail = (projectKey: string) => {
@@ -148,6 +150,55 @@ export default function ChatBot() {
     )
   }
 
+  const renderSkillDetail = (skillKey: string) => {
+    const skillData = {
+      frontend: {
+        tech: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+      },
+      backend: {
+        tech: ["Node.js", "Express", "REST APIs", "JWT", "Microservices"],
+      },
+      database: {
+        tech: ["MongoDB", "PostgreSQL", "SQL Server"],
+      },
+      python: {
+        tech: ["Python", "Flask", "OpenCV", "Tesseract", "EasyOCR"],
+      },
+    }
+
+    const skill = skillData[skillKey as keyof typeof skillData]
+    const skills = tObject<string[]>(`chatbot.skillDetails.${skillKey}.skillsList`) || []
+
+    return (
+      <div className="space-y-3 text-sm">
+        <div>
+          <p className="font-semibold mb-1">{t(`chatbot.skillDetails.${skillKey}.title`)}</p>
+          <p className="text-gray-700">{t(`chatbot.skillDetails.${skillKey}.description`)}</p>
+        </div>
+
+        <div>
+          <p className="font-semibold mb-1">{t(`chatbot.skillDetails.${skillKey}.skills`)}</p>
+          <div className="text-gray-700 space-y-1">
+            {skills.map((skillItem: string, idx: number) => (
+              <p key={idx}>{skillItem}</p>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <p className="font-semibold mb-1">{t(`chatbot.skillDetails.${skillKey}.tech`)}</p>
+          <div className="flex flex-wrap gap-1">
+            {skill.tech.map((tech, idx) => (
+              <span key={idx} className="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs">
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    )
+  }
+
   const getResponse = (action: string): string => {
     const responseMap: Record<string, string> = {
       projects: t("chatbot.projects.title"),
@@ -162,6 +213,18 @@ export default function ChatBot() {
   }
 
   const handleOptionClick = (action: string) => {
+    if (action === "frontend" || action === "backend" || action === "database" || action === "python") {
+      const userText = chatOptions[currentStep]?.find((opt) => opt.action === action)?.text || ""
+      setMessages((prev) => [
+        ...prev,
+        { type: "user", content: userText },
+        { type: "bot", content: renderSkillDetail(action) },
+      ])
+      setCurrentSkill(action)
+      setCurrentStep("skillDetail")
+      return
+    }
+
     if (action === "webscraper" || action === "portfolio" || action === "ocr") {
       const userText = chatOptions[currentStep]?.find((opt) => opt.action === action)?.text || ""
       setMessages((prev) => [
@@ -215,12 +278,16 @@ export default function ChatBot() {
       if (action === "projects" || action === "welcome") {
         setCurrentProject(null)
       }
+      if (action === "skills" || action === "welcome") {
+        setCurrentSkill(null)
+      }
     }
   }
 
   const resetToWelcome = () => {
     setCurrentStep("welcome")
     setCurrentProject(null)
+    setCurrentSkill(null)
     setMessages((prev) => [...prev, { type: "bot", content: t("chatbot.responses.helpMore") }])
   }
 
@@ -262,12 +329,23 @@ export default function ChatBot() {
             exit={{ opacity: 0, y: 100, scale: 0.3 }}
             className="fixed bottom-24 right-6 w-80 h-96 bg-white rounded-lg shadow-2xl border z-50 flex flex-col"
           >
-            <div className="bg-blue-600 text-white p-4 rounded-t-lg">
-              <h3 className="font-semibold">{t("chatbot.title")}</h3>
-              <p className="text-sm opacity-90">{t("chatbot.welcome.question")}</p>
+            <div className="bg-blue-600 text-white p-4 rounded-t-lg flex justify-between items-start">
+              <div>
+                <h3 className="font-semibold">{t("chatbot.title")}</h3>
+                <p className="text-sm opacity-90">{t("chatbot.welcome.question")}</p>
+              </div>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="ml-2 hover:bg-blue-700 rounded p-1 transition-colors"
+                aria-label="Close chat"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
             </div>
 
-            <div className="flex-1 p-4 overflow-y-auto space-y-3">
+            <div className="flex-1 p-4 overflow-y-auto space-y-3 max-h-64 relative">
               {messages.map((message, index) => (
                 <div key={index} className={`flex ${message.type === "user" ? "justify-end" : "justify-start"}`}>
                   <div
@@ -279,9 +357,10 @@ export default function ChatBot() {
                   </div>
                 </div>
               ))}
+              <div className="sticky bottom-0 left-0 right-0 h-4 bg-gradient-to-t from-white to-transparent pointer-events-none" />
             </div>
 
-            <div className="p-4 border-t bg-gray-50 rounded-b-lg">
+            <div className="p-4 border-t bg-gray-50 rounded-b-lg max-h-48 overflow-y-auto">
               {currentStep === "contact" ? (
                 <div className="space-y-2">
                   <button
@@ -311,6 +390,8 @@ export default function ChatBot() {
                 </div>
               ) : currentStep === "projectDetail" ? (
                 <div className="space-y-2">{renderProjectDetail(currentProject as string)}</div>
+              ) : currentStep === "skillDetail" ? (
+                <div className="space-y-2">{renderSkillDetail(currentSkill as string)}</div>
               ) : (
                 <div className="space-y-2">
                   {chatOptions[currentStep]?.map((option, index) => (

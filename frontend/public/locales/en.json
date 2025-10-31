@@ -198,6 +198,56 @@
         "github": "View on GitHub",
         "demo": "See Demo"
       }
+    },
+    "skillDetails": {
+      "frontend": {
+        "title": "⚛️ Frontend Development",
+        "description": "Specialized in creating modern, responsive and high-performance user interfaces.",
+        "skills": "🎯 Main Skills:",
+        "skillsList": [
+          "• React & Next.js for modern applications",
+          "• TypeScript for type-safe code",
+          "• Tailwind CSS for responsive design",
+          "• Framer Motion for smooth animations"
+        ],
+        "tech": "🛠️ Technologies:"
+      },
+      "backend": {
+        "title": "🖥️ Backend Development",
+        "description": "Expert in building scalable and secure server-side applications.",
+        "skills": "🎯 Main Skills:",
+        "skillsList": [
+          "• Node.js & Express.js for REST APIs",
+          "• Authentication and authorization",
+          "• Performance optimization",
+          "• Scalable architecture design"
+        ],
+        "tech": "🛠️ Technologies:"
+      },
+      "database": {
+        "title": "🗄️ Database Management",
+        "description": "Working with SQL and NoSQL databases for efficient data storage.",
+        "skills": "🎯 Main Skills:",
+        "skillsList": [
+          "• MongoDB for flexible NoSQL storage",
+          "• PostgreSQL for relational data",
+          "• SQL Server for enterprise solutions",
+          "• Query optimization and indexing"
+        ],
+        "tech": "🛠️ Technologies:"
+      },
+      "python": {
+        "title": "🐍 Python & AI/ML",
+        "description": "Development with Python for AI, ML and computer vision projects.",
+        "skills": "🎯 Main Skills:",
+        "skillsList": [
+          "• Flask for web APIs",
+          "• OpenCV for image processing",
+          "• Tesseract & EasyOCR for text extraction",
+          "• Computer vision applications"
+        ],
+        "tech": "🛠️ Technologies:"
+      }
     }
   },
   "footer": {

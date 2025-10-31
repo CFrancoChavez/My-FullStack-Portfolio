@@ -245,6 +245,56 @@
         "github": "Ver en GitHub",
         "demo": "Ver Demo"
       }
+    },
+    "skillDetails": {
+      "frontend": {
+        "title": "⚛️ Desarrollo Frontend",
+        "description": "Especializado en crear interfaces de usuario modernas, responsivas y de alto rendimiento.",
+        "skills": "🎯 Habilidades principales:",
+        "skillsList": [
+          "• React & Next.js para aplicaciones modernas",
+          "• TypeScript para código type-safe",
+          "• Tailwind CSS para diseño responsivo",
+          "• Framer Motion para animaciones fluidas"
+        ],
+        "tech": "🛠️ Tecnologías:"
+      },
+      "backend": {
+        "title": "🖥️ Desarrollo Backend",
+        "description": "Experto en construir aplicaciones del lado del servidor escalables y seguras.",
+        "skills": "🎯 Habilidades principales:",
+        "skillsList": [
+          "• Node.js & Express.js para APIs REST",
+          "• Autenticación y autorización",
+          "• Optimización de rendimiento",
+          "• Diseño de arquitecturas escalables"
+        ],
+        "tech": "🛠️ Tecnologías:"
+      },
+      "database": {
+        "title": "🗄️ Gestión de Bases de Datos",
+        "description": "Trabajo con bases de datos SQL y NoSQL para almacenamiento eficiente de datos.",
+        "skills": "🎯 Habilidades principales:",
+        "skillsList": [
+          "• MongoDB para almacenamiento NoSQL flexible",
+          "• PostgreSQL para datos relacionales",
+          "• SQL Server para soluciones empresariales",
+          "• Optimización de consultas e indexación"
+        ],
+        "tech": "🛠️ Tecnologías:"
+      },
+      "python": {
+        "title": "🐍 Python & IA/ML",
+        "description": "Desarrollo con Python para proyectos de IA, ML y visión por computadora.",
+        "skills": "🎯 Habilidades principales:",
+        "skillsList": [
+          "• Flask para APIs web",
+          "• OpenCV para procesamiento de imágenes",
+          "• Tesseract & EasyOCR para extracción de texto",
+          "• Aplicaciones de visión por computadora"
+        ],
+        "tech": "🛠️ Tecnologías:"
+      }
     }
   },
   "footer": {
