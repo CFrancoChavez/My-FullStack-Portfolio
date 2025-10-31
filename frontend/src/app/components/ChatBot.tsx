@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useLanguage } from "@/contexts/LanguageContext"
-import type { JSX } from "react/jsx-runtime" // Import JSX to fix the undeclared variable error
+import type { JSX } from "react/jsx-runtime"
 
 type ChatStep = "welcome" | "projects" | "skills" | "contact" | "projectDetail" | "skillDetail"
 
@@ -21,8 +21,6 @@ export default function ChatBot() {
   const { t, tObject, isLoading } = useLanguage()
   const [isOpen, setIsOpen] = useState(false)
   const [currentStep, setCurrentStep] = useState<ChatStep>("welcome")
-  const [currentProject, setCurrentProject] = useState<string | null>(null)
-  const [currentSkill, setCurrentSkill] = useState<string | null>(null)
   const [messages, setMessages] = useState<Message[]>([])
 
   useEffect(() => {
@@ -35,6 +33,17 @@ export default function ChatBot() {
       ])
     }
   }, [t, isLoading, messages.length])
+
+  const handleClose = () => {
+    setIsOpen(false)
+    setCurrentStep("welcome")
+    setMessages([
+      {
+        type: "bot",
+        content: t("chatbot.welcome.greeting"),
+      },
+    ])
+  }
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
@@ -79,18 +88,18 @@ export default function ChatBot() {
     const projectData = {
       webscraper: {
         tech: ["Node.js", "Puppeteer", "SQL Server", "React", "Express"],
-        github: "https://github.com/tu-usuario/web-scraper",
-        demo: "#",
+        github: "https://github.com/CFrancoChavez/Mi-App-Webscraper",
+        demo: "https://github.com/CFrancoChavez/Mi-App-Webscraper#readme",
       },
       portfolio: {
         tech: ["Next.js", "Node.js", "Express", "MongoDB", "Tailwind"],
-        github: "https://github.com/tu-usuario/portfolio",
-        demo: "https://my-full-stack-portfolio-smoky.vercel.app/",
+        github: "#",
+        demo: "#",
       },
       ocr: {
         tech: ["Python", "Flask", "OpenCV", "Tesseract", "EasyOCR"],
-        github: "https://github.com/tu-usuario/ocr-marcacion",
-        demo: "#",
+        github: "https://github.com/CFrancoChavez/OCR-Marcacion",
+        demo: "https://huggingface.co/spaces/FrancoCH/ocr-marcacion",
       },
     }
 
@@ -130,17 +139,31 @@ export default function ChatBot() {
           <div className="flex gap-2">
             <a
               href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 text-center px-3 py-2 bg-gray-800 text-white rounded text-xs hover:bg-gray-700 transition-colors"
+              target={project.github !== "#" ? "_blank" : undefined}
+              rel={project.github !== "#" ? "noopener noreferrer" : undefined}
+              className={`flex-1 text-center px-3 py-2 bg-gray-800 text-white rounded text-xs transition-colors ${
+                project.github !== "#" ? "hover:bg-gray-700" : "opacity-50 cursor-not-allowed"
+              }`}
+              onClick={(e) => {
+                if (project.github === "#") {
+                  e.preventDefault()
+                }
+              }}
             >
               {t(`chatbot.projectDetails.${projectKey}.github`)}
             </a>
             <a
               href={project.demo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 text-center px-3 py-2 bg-blue-600 text-white rounded text-xs hover:bg-blue-700 transition-colors"
+              target={project.demo !== "#" ? "_blank" : undefined}
+              rel={project.demo !== "#" ? "noopener noreferrer" : undefined}
+              className={`flex-1 text-center px-3 py-2 bg-blue-600 text-white rounded text-xs transition-colors ${
+                project.demo !== "#" ? "hover:bg-blue-700" : "opacity-50 cursor-not-allowed"
+              }`}
+              onClick={(e) => {
+                if (project.demo === "#") {
+                  e.preventDefault()
+                }
+              }}
             >
               {t(`chatbot.projectDetails.${projectKey}.demo`)}
             </a>
@@ -220,7 +243,6 @@ export default function ChatBot() {
         { type: "user", content: userText },
         { type: "bot", content: renderSkillDetail(action) },
       ])
-      setCurrentSkill(action)
       setCurrentStep("skillDetail")
       return
     }
@@ -232,7 +254,6 @@ export default function ChatBot() {
         { type: "user", content: userText },
         { type: "bot", content: renderProjectDetail(action) },
       ])
-      setCurrentProject(action)
       setCurrentStep("projectDetail")
       return
     }
@@ -275,19 +296,11 @@ export default function ChatBot() {
 
     if (chatOptions[action as ChatStep]) {
       setCurrentStep(action as ChatStep)
-      if (action === "projects" || action === "welcome") {
-        setCurrentProject(null)
-      }
-      if (action === "skills" || action === "welcome") {
-        setCurrentSkill(null)
-      }
     }
   }
 
   const resetToWelcome = () => {
     setCurrentStep("welcome")
-    setCurrentProject(null)
-    setCurrentSkill(null)
     setMessages((prev) => [...prev, { type: "bot", content: t("chatbot.responses.helpMore") }])
   }
 
@@ -329,13 +342,13 @@ export default function ChatBot() {
             exit={{ opacity: 0, y: 100, scale: 0.3 }}
             className="fixed bottom-24 right-6 w-80 h-96 bg-white rounded-lg shadow-2xl border z-50 flex flex-col"
           >
-            <div className="bg-blue-600 text-white p-4 rounded-t-lg flex justify-between items-start">
+            <div className="bg-blue-600 text-white p-4 rounded-t-lg flex justify-between items-start flex-shrink-0">
               <div>
                 <h3 className="font-semibold">{t("chatbot.title")}</h3>
                 <p className="text-sm opacity-90">{t("chatbot.welcome.question")}</p>
               </div>
               <button
-                onClick={() => setIsOpen(false)}
+                onClick={handleClose}
                 className="ml-2 hover:bg-blue-700 rounded p-1 transition-colors"
                 aria-label="Close chat"
               >
@@ -345,7 +358,7 @@ export default function ChatBot() {
               </button>
             </div>
 
-            <div className="flex-1 p-4 overflow-y-auto space-y-3 max-h-64 relative">
+            <div className="flex-1 p-4 overflow-y-auto space-y-3 relative" style={{ maxHeight: "256px" }}>
               {messages.map((message, index) => (
                 <div key={index} className={`flex ${message.type === "user" ? "justify-end" : "justify-start"}`}>
                   <div
@@ -357,10 +370,13 @@ export default function ChatBot() {
                   </div>
                 </div>
               ))}
-              <div className="sticky bottom-0 left-0 right-0 h-4 bg-gradient-to-t from-white to-transparent pointer-events-none" />
+              <div className="sticky bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
             </div>
 
-            <div className="p-4 border-t bg-gray-50 rounded-b-lg max-h-48 overflow-y-auto">
+            <div
+              className="p-4 border-t bg-gray-50 rounded-b-lg flex-shrink-0"
+              style={{ maxHeight: "200px", overflowY: "auto" }}
+            >
               {currentStep === "contact" ? (
                 <div className="space-y-2">
                   <button
@@ -388,10 +404,15 @@ export default function ChatBot() {
                     {t("chatbot.contact.back")}
                   </button>
                 </div>
-              ) : currentStep === "projectDetail" ? (
-                <div className="space-y-2">{renderProjectDetail(currentProject as string)}</div>
-              ) : currentStep === "skillDetail" ? (
-                <div className="space-y-2">{renderSkillDetail(currentSkill as string)}</div>
+              ) : currentStep === "projectDetail" || currentStep === "skillDetail" ? (
+                <div className="space-y-2">
+                  <button
+                    onClick={() => handleOptionClick(currentStep === "projectDetail" ? "projects" : "skills")}
+                    className="w-full text-left p-2 text-sm bg-gray-800 text-white border rounded hover:bg-gray-700 transition-colors font-medium"
+                  >
+                    ← {t("chatbot.projects.back")}
+                  </button>
+                </div>
               ) : (
                 <div className="space-y-2">
                   {chatOptions[currentStep]?.map((option, index) => (
