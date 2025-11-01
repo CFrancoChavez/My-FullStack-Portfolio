@@ -238,8 +238,8 @@ export default function ChatBot() {
   const handleOptionClick = (action: string) => {
     if (action === "frontend" || action === "backend" || action === "database" || action === "python") {
       const userText = chatOptions[currentStep]?.find((opt) => opt.action === action)?.text || ""
-      setMessages((prev) => [
-        ...prev,
+      setMessages([
+        { type: "bot", content: t("chatbot.welcome.greeting") },
         { type: "user", content: userText },
         { type: "bot", content: renderSkillDetail(action) },
       ])
@@ -249,8 +249,8 @@ export default function ChatBot() {
 
     if (action === "webscraper" || action === "portfolio" || action === "ocr") {
       const userText = chatOptions[currentStep]?.find((opt) => opt.action === action)?.text || ""
-      setMessages((prev) => [
-        ...prev,
+      setMessages([
+        { type: "bot", content: t("chatbot.welcome.greeting") },
         { type: "user", content: userText },
         { type: "bot", content: renderProjectDetail(action) },
       ])
