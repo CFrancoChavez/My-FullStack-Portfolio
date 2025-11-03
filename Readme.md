@@ -31,65 +31,6 @@ A modern, bilingual (English/Spanish) full-stack portfolio website showcasing pr
 - **Email Service**: Brevo (formerly Sendinblue)
 - **CORS**: Enabled for cross-origin requests
 
-## Project Structure
-
-\`\`\`
-portfolio/
-├── app/                          # Next.js App Router pages
-│   ├── api/                      # API routes
-│   │   ├── contact/              # Contact form endpoint
-│   │   ├── cron/                 # Cron jobs
-│   │   └── health/               # Health check endpoint
-│   ├── contact/                  # Contact page
-│   ├── layout.tsx                # Root layout
-│   ├── page.tsx                  # Home page
-│   └── globals.css               # Global styles
-├── backend/                      # Express.js backend
-│   ├── config/                   # Configuration files
-│   ├── controllers/              # Route controllers
-│   ├── middleware/               # Custom middleware
-│   ├── models/                   # MongoDB models
-│   ├── routes/                   # API routes
-│   ├── services/                 # Business logic
-│   └── server.js                 # Server entry point
-├── components/                   # Shared React components
-│   ├── ui/                       # shadcn/ui components
-│   ├── LanguageToggle.tsx        # Language switcher
-│   └── theme-provider.tsx        # Theme provider
-├── contexts/                     # React contexts
-│   └── LanguageContext.tsx       # Language context
-├── frontend/                     # Additional frontend structure
-│   ├── public/locales/           # Translation files
-│   │   ├── en.json               # English translations
-│   │   └── es.json               # Spanish translations
-│   └── src/
-│       ├── app/components/       # Page-specific components
-│       │   ├── ChatBot.tsx       # Virtual assistant
-│       │   ├── Footer.tsx        # Footer component
-│       │   ├── Hero.tsx          # Hero section
-│       │   ├── Navbar.tsx        # Navigation bar
-│       │   ├── Projects.tsx      # Projects showcase
-│       │   └── Technologies.tsx  # Tech stack display
-│       └── contexts/             # Additional contexts
-├── hooks/                        # Custom React hooks
-│   ├── use-mobile.ts             # Mobile detection
-│   ├── use-toast.ts              # Toast notifications
-│   └── useTranslation.ts         # Translation hook
-├── lib/                          # Utility functions
-│   ├── config.ts                 # App configuration
-│   └── utils.ts                  # Helper functions
-├── public/                       # Static assets
-│   ├── locales/                  # Root-level translations
-│   └── *.jpg, *.svg              # Images and icons
-├── HuggingFace-Deploy/           # HuggingFace deployment files
-├── HuggingFace-OCR/              # OCR project deployment
-├── OCR-deployment/               # OCR deployment guides
-├── .env.example                  # Environment variables template
-├── next.config.mjs               # Next.js configuration
-├── tailwind.config.ts            # Tailwind configuration
-└── tsconfig.json                 # TypeScript configuration
-\`\`\`
-
 ## Getting Started
 
 ### Prerequisites
@@ -102,26 +43,25 @@ portfolio/
 
 1. **Clone the repository**
    \`\`\`bash
-   git clone https://github.com/CFrancoChavez/your-portfolio-repo.git
-   cd your-portfolio-repo
+   git clone https://github.com/CFrancoChavez/My-FullStack-Portfolio.git
+   cd My-FullStack-Portfolio
    \`\`\`
 
 2. **Install frontend dependencies**
    \`\`\`bash
-   cd frontend
    npm install
    \`\`\`
 
 3. **Install backend dependencies**
    \`\`\`bash
-   cd ../backend
+   cd backend
    npm install
    \`\`\`
 
 ### Environment Variables
 
 #### Frontend (.env.local)
-Create a `.env.local` file in the `frontend` directory:
+Create a `.env.local` file in the root directory:
 
 \`\`\`env
 NEXT_PUBLIC_API_URL=http://localhost:5000
@@ -137,6 +77,7 @@ BREVO_API_KEY=your_brevo_api_key
 SENDER_EMAIL=your_verified_sender_email
 SENDER_NAME=Your Name
 RECIPIENT_EMAIL=your_email_to_receive_messages
+FRONTEND_URL=http://localhost:3000
 \`\`\`
 
 ### Running Locally
@@ -150,7 +91,6 @@ RECIPIENT_EMAIL=your_email_to_receive_messages
 
 2. **Start the frontend development server**
    \`\`\`bash
-   cd frontend
    npm run dev
    \`\`\`
    Frontend will run on `http://localhost:3000`
@@ -164,7 +104,6 @@ RECIPIENT_EMAIL=your_email_to_receive_messages
 The frontend is optimized for deployment on Vercel:
 
 \`\`\`bash
-cd frontend
 vercel deploy
 \`\`\`
 
