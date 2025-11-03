@@ -1,50 +1,308 @@
 {
+  "nav": {
+    "home": "Inicio",
+    "technologies": "Tecnologías",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
   "hero": {
-    "title": "Franco Chavez",
-    "subtitle": "Full Stack Developer especializado en crear soluciones web modernas y aplicaciones inteligentes",
-    "contact": "Contacto",
-    "viewProjects": "Ver Proyectos"
-  },
-  "projects": {
-    "title": "Proyectos Destacados",
-    "subtitle": "Explora mis proyectos y prueba las aplicaciones en vivo"
-  },
-  "project": {
-    "ocr": {
-      "title": "OCR Marcacion",
-      "description": "Sistema de reconocimiento óptico de caracteres con múltiples estrategias de procesamiento",
-      "tech": "Tecnologías:",
-      "features": "Características:",
-      "feature1": "Múltiples estrategias de preprocesamiento",
-      "feature2": "Corrección inteligente de texto",
-      "feature3": "Comparación de resultados con confianza",
-      "feature4": "Interfaz web interactiva",
-      "tryApp": "Probar App",
-      "viewCode": "Ver Código"
+    "greeting": "Hola, soy",
+    "title": "Desarrollador Full Stack",
+    "animation": {
+      "nextjs": "Especializado en Next.js",
+      "express": "Experto en Express.js",
+      "mongodb": "Trabajando con MongoDB",
+      "solutions": "Creando soluciones innovadoras"
     },
-    "portfolio": {
-      "title": "Portfolio Full Stack",
-      "description": "Portfolio personal con backend Node.js, base de datos MongoDB y notificaciones por email",
-      "feature1": "Formulario de contacto con validación",
-      "feature2": "Backend modular con Express",
-      "feature3": "Persistencia en MongoDB Atlas",
-      "feature4": "Notificaciones por email automáticas",
-      "contact": "Contactar",
-      "github": "GitHub"
+    "description": "Desarrollador apasionado por crear aplicaciones web modernas y escalables. Especializado en el stack MERN y tecnologías de vanguardia.",
+    "cta": {
+      "projects": "Ver Proyectos",
+      "contact": "Contactar"
     }
   },
-  "skills": {
-    "title": "Tecnologías",
-    "frontend": "Frontend",
-    "frontend.desc": "Next.js, React, TypeScript, Tailwind CSS",
-    "backend": "Backend",
-    "backend.desc": "Node.js, Express, Python, Flask",
-    "database": "Database & AI",
-    "database.desc": "MongoDB, PostgreSQL, OpenCV, OCR"
+  "projects": {
+    "title": "Mis Proyectos",
+    "description": "Una selección de proyectos que demuestran mis habilidades en desarrollo full stack",
+    "status": {
+      "completed": "Completado",
+      "inProgress": "En Progreso"
+    },
+    "buttons": {
+      "github": "GitHub",
+      "demo": "Demo"
+    },
+    "items": {
+      "webScraper": {
+        "title": "Web Scraper Avanzado",
+        "description": "Sistema de scraping automatizado para extracción de datos web con Node.js, Puppeteer y SQL Server. Incluye interface web con React para gestión de productos."
+      },
+      "portfolio": {
+        "title": "Portfolio Full Stack",
+        "description": "Portfolio profesional con Next.js en el frontend y Express.js + MongoDB en el backend. Incluye formulario de contacto funcional y chatbot interactivo."
+      },
+      "ocr": {
+        "title": "OCR Marcación",
+        "description": "Sistema inteligente de reconocimiento óptico de caracteres con múltiples estrategias de preprocesamiento. Usa Tesseract y EasyOCR para extraer texto de etiquetas con alta precisión."
+      }
+    },
+    "projectDetails": {
+      "webscraper": {
+        "title": "🕷️ Web Scraper Avanzado",
+        "description": "Sistema de scraping automatizado para extracción de datos web con Node.js, Puppeteer y SQL Server. Incluye interface web con React para gestión de productos.",
+        "features": "✨ Características principales:",
+        "featuresList": [
+          "• Extracción automatizada de datos de múltiples sitios",
+          "• Base de datos SQL Server para almacenamiento eficiente",
+          "• Interface React para gestión de productos",
+          "• Puppeteer para manejo de contenido dinámico"
+        ],
+        "tech": "🛠️ Tecnologías:",
+        "buttons": "🔗 Enlaces:",
+        "github": "Ver en GitHub",
+        "demo": "Ver Demo"
+      },
+      "portfolio": {
+        "title": "💼 Portfolio Full Stack",
+        "description": "Portfolio profesional con Next.js en el frontend y Express.js + MongoDB en el backend. Incluye formulario de contacto funcional y chatbot interactivo.",
+        "features": "✨ Características principales:",
+        "featuresList": [
+          "• Diseño moderno y responsivo con Next.js",
+          "• API REST con Express.js y MongoDB",
+          "• Formulario de contacto funcional con validación",
+          "• Chatbot interactivo para navegación"
+        ],
+        "tech": "🛠️ Tecnologías:",
+        "buttons": "🔗 Enlaces:",
+        "github": "Ver en GitHub",
+        "demo": "Ver Demo"
+      },
+      "ocr": {
+        "title": "🔍 OCR Marcación",
+        "description": "Sistema inteligente de reconocimiento óptico de caracteres con múltiples estrategias de preprocesamiento. Usa Tesseract y EasyOCR para extraer texto de etiquetas con alta precisión.",
+        "features": "✨ Características principales:",
+        "featuresList": [
+          "• Múltiples estrategias de preprocesamiento",
+          "• Alta precisión en extracción de texto",
+          "• Soporte para Tesseract y EasyOCR",
+          "• API Flask para fácil integración"
+        ],
+        "tech": "🛠️ Tecnologías:",
+        "buttons": "🔗 Enlaces:",
+        "github": "Ver en GitHub",
+        "demo": "Ver Demo"
+      }
+    }
   },
-  "cta": {
-    "title": "Trabajemos juntos",
-    "subtitle": "¿Tienes un proyecto en mente? Hablemos y hagámoslo realidad",
-    "contact": "Contactar"
+  "technologies": {
+    "title": "Tecnologías que domino",
+    "description": "Herramientas y tecnologías que utilizo para crear aplicaciones web modernas y eficientes"
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "¿Tienes un proyecto en mente? ¡Hablemos y hagámoslo realidad!",
+    "info": {
+      "title": "Información de Contacto",
+      "email": "Email",
+      "phone": "Teléfono",
+      "location": "Ubicación",
+      "whatsapp": "WhatsApp"
+    },
+    "social": "Redes Sociales",
+    "form": {
+      "title": "Envíame un mensaje",
+      "name": "Nombre",
+      "email": "Email",
+      "subject": "Asunto",
+      "message": "Mensaje",
+      "required": "*",
+      "placeholders": {
+        "name": "Tu nombre completo",
+        "email": "tu@email.com",
+        "subject": "¿De qué quieres hablar?",
+        "message": "Cuéntame sobre tu proyecto o idea..."
+      },
+      "button": {
+        "send": "Enviar Mensaje",
+        "sending": "Enviando..."
+      },
+      "errors": {
+        "nameRequired": "El nombre es requerido",
+        "nameMin": "El nombre debe tener al menos 2 caracteres",
+        "emailRequired": "El email es requerido",
+        "emailInvalid": "Email inválido",
+        "subjectRequired": "El asunto es requerido",
+        "subjectMin": "El asunto debe tener al menos 3 caracteres",
+        "messageRequired": "El mensaje es requerido",
+        "messageMin": "El mensaje debe tener al menos 10 caracteres"
+      },
+      "success": "¡Mensaje enviado exitosamente!",
+      "error": "Error al enviar el mensaje. Por favor, intenta nuevamente."
+    },
+    "success": {
+      "title": "¡Mensaje Enviado!",
+      "description": "Gracias por contactarme. He recibido tu mensaje y te responderé lo antes posible.",
+      "sendAnother": "Enviar otro mensaje",
+      "backHome": "Volver al Inicio",
+      "responseTime": "Tiempo de respuesta promedio: 24 horas"
+    }
+  },
+  "chatbot": {
+    "title": "Asistente Virtual",
+    "placeholder": "Escribe tu mensaje...",
+    "send": "Enviar",
+    "welcome": {
+      "greeting": "¡Hola! 👋 Soy el asistente virtual de Franco.",
+      "question": "¿En qué puedo ayudarte hoy?",
+      "options": {
+        "skills": "Ver habilidades",
+        "projects": "Ver proyectos",
+        "contact": "Información de contacto"
+      }
+    },
+    "menu": {
+      "projects": "💼 Ver mis proyectos",
+      "skills": "🛠️ Conocer mis habilidades",
+      "contact": "📧 Contactar conmigo"
+    },
+    "projects": {
+      "title": "🚀 Aquí tienes mis proyectos principales. ¿Cuál te interesa más?",
+      "webscraper": "🕷️ Web Scraper",
+      "portfolio": "💼 Portfolio Full Stack",
+      "ocr": "🔍 OCR Marcación",
+      "viewAll": "👀 Ver todos los proyectos",
+      "back": "⬅️ Volver al menú"
+    },
+    "skills": {
+      "title": "💪 Estas son mis principales áreas de expertise. ¿Sobre cuál quieres saber más?",
+      "frontend": "⚛️ Frontend (React/Next.js)",
+      "backend": "🖥️ Backend (Node.js/Express)",
+      "database": "🗄️ Bases de datos",
+      "python": "🐍 Python & AI/ML",
+      "viewAll": "👀 Ver todas las tecnologías",
+      "back": "⬅️ Volver al menú"
+    },
+    "contact": {
+      "title": "📧 ¡Perfecto! Puedes contactarme a través de:",
+      "email": "📧 Enviar email",
+      "whatsapp": "💬 WhatsApp",
+      "linkedin": "💼 LinkedIn",
+      "github": "🐙 GitHub",
+      "back": "⬅️ Volver al menú",
+      "whatsappMessage": "Hola Franco, me gustaría contactarte sobre un proyecto"
+    },
+    "responses": {
+      "webscraper": "🕷️ Sistema de scraping automatizado con Node.js, Puppeteer y SQL Server. Extrae datos de múltiples sitios web con interface React para gestión.",
+      "portfolio": "💼 Portfolio profesional con Next.js, Express.js y MongoDB. Incluye formulario de contacto funcional y chatbot interactivo.",
+      "ocr": "🔍 Sistema inteligente de OCR con Python, Flask y OpenCV. Múltiples estrategias de preprocesamiento para alta precisión en extracción de texto.",
+      "frontend": "⚛️ Especializado en React, Next.js, TypeScript y Tailwind CSS para crear interfaces modernas, responsivas y de alto rendimiento.",
+      "backend": "🖥️ Experto en Node.js, Express.js y arquitecturas escalables. Enfocado en APIs REST, seguridad y optimización de rendimiento.",
+      "database": "🗄️ Trabajo con MongoDB, PostgreSQL y SQL Server. Diseño de esquemas eficientes y optimización de consultas para máximo rendimiento.",
+      "python": "🐍 Desarrollo con Python, Flask y librerías de IA/ML como OpenCV, Tesseract y EasyOCR para proyectos de visión por computadora.",
+      "viewProjects": "¡Perfecto! Te llevo a la sección de proyectos 🚀",
+      "viewTechnologies": "¡Excelente! Te muestro todas mis habilidades técnicas 💪",
+      "helpMore": "¿En qué más puedo ayudarte?"
+    },
+    "projectDetails": {
+      "webscraper": {
+        "title": "🕷️ Web Scraper Avanzado",
+        "description": "Sistema de scraping automatizado para extracción de datos web con Node.js, Puppeteer y SQL Server. Incluye interface web con React para gestión de productos.",
+        "features": "✨ Características principales:",
+        "featuresList": [
+          "• Extracción automatizada de datos de múltiples sitios",
+          "• Base de datos SQL Server para almacenamiento eficiente",
+          "• Interface React para gestión de productos",
+          "• Puppeteer para manejo de contenido dinámico"
+        ],
+        "tech": "🛠️ Tecnologías:",
+        "buttons": "🔗 Enlaces:",
+        "github": "Ver en GitHub",
+        "demo": "Ver Demo"
+      },
+      "portfolio": {
+        "title": "💼 Portfolio Full Stack",
+        "description": "Portfolio profesional con Next.js en el frontend y Express.js + MongoDB en el backend. Incluye formulario de contacto funcional y chatbot interactivo.",
+        "features": "✨ Características principales:",
+        "featuresList": [
+          "• Diseño moderno y responsivo con Next.js",
+          "• API REST con Express.js y MongoDB",
+          "• Formulario de contacto funcional con validación",
+          "• Chatbot interactivo para navegación"
+        ],
+        "tech": "🛠️ Tecnologías:",
+        "buttons": "🔗 Enlaces:",
+        "github": "Ver en GitHub",
+        "demo": "Ver Demo"
+      },
+      "ocr": {
+        "title": "🔍 OCR Marcación",
+        "description": "Sistema inteligente de reconocimiento óptico de caracteres con múltiples estrategias de preprocesamiento. Usa Tesseract y EasyOCR para extraer texto de etiquetas con alta precisión.",
+        "features": "✨ Características principales:",
+        "featuresList": [
+          "• Múltiples estrategias de preprocesamiento",
+          "• Alta precisión en extracción de texto",
+          "• Soporte para Tesseract y EasyOCR",
+          "• API Flask para fácil integración"
+        ],
+        "tech": "🛠️ Tecnologías:",
+        "buttons": "🔗 Enlaces:",
+        "github": "Ver en GitHub",
+        "demo": "Ver Demo"
+      }
+    },
+    "skillDetails": {
+      "frontend": {
+        "title": "⚛️ Desarrollo Frontend",
+        "description": "Especializado en crear interfaces de usuario modernas, responsivas y de alto rendimiento.",
+        "skills": "🎯 Habilidades principales:",
+        "skillsList": [
+          "• React & Next.js para aplicaciones modernas",
+          "• TypeScript para código type-safe",
+          "• Tailwind CSS para diseño responsivo",
+          "• Framer Motion para animaciones fluidas"
+        ],
+        "tech": "🛠️ Tecnologías:"
+      },
+      "backend": {
+        "title": "🖥️ Desarrollo Backend",
+        "description": "Experto en construir aplicaciones del lado del servidor escalables y seguras.",
+        "skills": "🎯 Habilidades principales:",
+        "skillsList": [
+          "• Node.js & Express.js para APIs REST",
+          "• Autenticación y autorización",
+          "• Optimización de rendimiento",
+          "• Diseño de arquitecturas escalables"
+        ],
+        "tech": "🛠️ Tecnologías:"
+      },
+      "database": {
+        "title": "🗄️ Gestión de Bases de Datos",
+        "description": "Trabajo con bases de datos SQL y NoSQL para almacenamiento eficiente de datos.",
+        "skills": "🎯 Habilidades principales:",
+        "skillsList": [
+          "• MongoDB para almacenamiento NoSQL flexible",
+          "• PostgreSQL para datos relacionales",
+          "• SQL Server para soluciones empresariales",
+          "• Optimización de consultas e indexación"
+        ],
+        "tech": "🛠️ Tecnologías:"
+      },
+      "python": {
+        "title": "🐍 Python & IA/ML",
+        "description": "Desarrollo con Python para proyectos de IA, ML y visión por computadora.",
+        "skills": "🎯 Habilidades principales:",
+        "skillsList": [
+          "• Flask para APIs web",
+          "• OpenCV para procesamiento de imágenes",
+          "• Tesseract & EasyOCR para extracción de texto",
+          "• Aplicaciones de visión por computadora"
+        ],
+        "tech": "🛠️ Tecnologías:"
+      }
+    }
+  },
+  "footer": {
+    "title": "¡Conectemos!",
+    "description": "Siempre estoy interesado en nuevas oportunidades y proyectos emocionantes.",
+    "copyright": "© 2025 Franco Chavez. Desarrollado con Next.js y Tailwind CSS."
   }
 }

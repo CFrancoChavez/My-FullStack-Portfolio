@@ -1,50 +1,262 @@
 {
+  "nav": {
+    "home": "Home",
+    "technologies": "Technologies",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
   "hero": {
-    "title": "Franco Chavez",
-    "subtitle": "Full Stack Developer specialized in creating modern web solutions and intelligent applications",
-    "contact": "Contact",
-    "viewProjects": "View Projects"
-  },
-  "projects": {
-    "title": "Featured Projects",
-    "subtitle": "Explore my projects and try the live applications"
-  },
-  "project": {
-    "ocr": {
-      "title": "OCR Marcacion",
-      "description": "Optical character recognition system with multiple processing strategies",
-      "tech": "Technologies:",
-      "features": "Features:",
-      "feature1": "Multiple preprocessing strategies",
-      "feature2": "Intelligent text correction",
-      "feature3": "Results comparison with confidence",
-      "feature4": "Interactive web interface",
-      "tryApp": "Try App",
-      "viewCode": "View Code"
+    "greeting": "Hi, I'm a",
+    "title": "Full Stack Developer",
+    "animation": {
+      "nextjs": "Specialized in Next.js",
+      "express": "Expert in Express.js",
+      "mongodb": "Working with MongoDB",
+      "solutions": "Creating innovative solutions"
     },
-    "portfolio": {
-      "title": "Full Stack Portfolio",
-      "description": "Personal portfolio with Node.js backend, MongoDB database and email notifications",
-      "feature1": "Contact form with validation",
-      "feature2": "Modular backend with Express",
-      "feature3": "Persistence in MongoDB Atlas",
-      "feature4": "Automatic email notifications",
-      "contact": "Contact",
-      "github": "GitHub"
+    "description": "Passionate developer creating modern and scalable web applications. Specialized in the MERN stack and cutting-edge technologies.",
+    "cta": {
+      "projects": "View Projects",
+      "contact": "Contact"
     }
   },
-  "skills": {
-    "title": "Technologies",
-    "frontend": "Frontend",
-    "frontend.desc": "Next.js, React, TypeScript, Tailwind CSS",
-    "backend": "Backend",
-    "backend.desc": "Node.js, Express, Python, Flask",
-    "database": "Database & AI",
-    "database.desc": "MongoDB, PostgreSQL, OpenCV, OCR"
+  "projects": {
+    "title": "My Projects",
+    "description": "A selection of projects that demonstrate my full stack development skills",
+    "status": {
+      "completed": "Completed",
+      "inProgress": "In Progress"
+    },
+    "buttons": {
+      "github": "GitHub",
+      "demo": "Demo"
+    },
+    "items": {
+      "webScraper": {
+        "title": "Advanced Web Scraper",
+        "description": "Automated scraping system for web data extraction with Node.js, Puppeteer and SQL Server. Includes React web interface for product management."
+      },
+      "portfolio": {
+        "title": "Full Stack Portfolio",
+        "description": "Professional portfolio with Next.js on the frontend and Express.js + MongoDB on the backend. Includes functional contact form and interactive chatbot."
+      },
+      "ocr": {
+        "title": "OCR Marcación",
+        "description": "Intelligent optical character recognition system with multiple preprocessing strategies. Uses Tesseract and EasyOCR to extract text from labels with high precision."
+      }
+    }
   },
-  "cta": {
-    "title": "Let's work together",
-    "subtitle": "Have a project in mind? Let's talk and make it happen",
-    "contact": "Contact"
+  "technologies": {
+    "title": "Technologies I Master",
+    "description": "Tools and technologies I use to create modern and efficient web applications"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Have a project in mind? Let's talk and make it happen!",
+    "info": {
+      "title": "Contact Information",
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location",
+      "whatsapp": "WhatsApp"
+    },
+    "social": "Social Media",
+    "form": {
+      "title": "Send me a message",
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "required": "*",
+      "placeholders": {
+        "name": "Your full name",
+        "email": "your@email.com",
+        "subject": "What would you like to talk about?",
+        "message": "Tell me about your project or idea..."
+      },
+      "button": {
+        "send": "Send Message",
+        "sending": "Sending..."
+      },
+      "errors": {
+        "nameRequired": "Name is required",
+        "nameMin": "Name must be at least 2 characters",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Invalid email",
+        "subjectRequired": "Subject is required",
+        "subjectMin": "Subject must be at least 3 characters",
+        "messageRequired": "Message is required",
+        "messageMin": "Message must be at least 10 characters"
+      },
+      "success": "Message sent successfully!",
+      "error": "Error sending message. Please try again."
+    },
+    "success": {
+      "title": "Message Sent!",
+      "description": "Thank you for contacting me. I have received your message and will respond as soon as possible.",
+      "sendAnother": "Send another message",
+      "backHome": "Back to Home",
+      "responseTime": "Average response time: 24 hours"
+    }
+  },
+  "chatbot": {
+    "title": "Virtual Assistant",
+    "placeholder": "Type your message...",
+    "send": "Send",
+    "welcome": {
+      "greeting": "Hi! 👋 I'm Franco's virtual assistant.",
+      "question": "How can I help you today?",
+      "options": {
+        "skills": "View skills",
+        "projects": "View projects",
+        "contact": "Contact information"
+      }
+    },
+    "menu": {
+      "projects": "💼 View my projects",
+      "skills": "🛠️ Learn about my skills",
+      "contact": "📧 Contact me"
+    },
+    "projects": {
+      "title": "🚀 Here are my main projects. Which one interests you most?",
+      "webscraper": "🕷️ Web Scraper",
+      "portfolio": "💼 Full Stack Portfolio",
+      "ocr": "🔍 OCR Marcación",
+      "viewAll": "👀 View all projects",
+      "back": "⬅️ Back to menu"
+    },
+    "skills": {
+      "title": "💪 These are my main areas of expertise. Which one would you like to know more about?",
+      "frontend": "⚛️ Frontend (React/Next.js)",
+      "backend": "🖥️ Backend (Node.js/Express)",
+      "database": "🗄️ Databases",
+      "python": "🐍 Python & AI/ML",
+      "viewAll": "👀 View all technologies",
+      "back": "⬅️ Back to menu"
+    },
+    "contact": {
+      "title": "📧 Perfect! You can contact me through:",
+      "email": "📧 Send email",
+      "whatsapp": "💬 WhatsApp",
+      "linkedin": "💼 LinkedIn",
+      "github": "🐙 GitHub",
+      "back": "⬅️ Back to menu",
+      "whatsappMessage": "Hi Franco, I would like to contact you about a project"
+    },
+    "responses": {
+      "webscraper": "🕷️ Automated scraping system with Node.js, Puppeteer and SQL Server. Extracts data from multiple websites with React interface for management.",
+      "portfolio": "💼 Professional portfolio with Next.js, Express.js and MongoDB. Includes functional contact form and interactive chatbot.",
+      "ocr": "🔍 Intelligent OCR system with Python, Flask and OpenCV. Multiple preprocessing strategies for high accuracy in text extraction.",
+      "frontend": "⚛️ Specialized in React, Next.js, TypeScript and Tailwind CSS to create modern, responsive and high-performance interfaces.",
+      "backend": "🖥️ Expert in Node.js, Express.js and scalable architectures. Focused on REST APIs, security and performance optimization.",
+      "database": "🗄️ Working with MongoDB, PostgreSQL and SQL Server. Efficient schema design and query optimization for maximum performance.",
+      "python": "🐍 Development with Python, Flask and AI/ML libraries like OpenCV, Tesseract and EasyOCR for computer vision projects.",
+      "viewProjects": "Perfect! Taking you to the projects section 🚀",
+      "viewTechnologies": "Excellent! Showing you all my technical skills 💪",
+      "helpMore": "What else can I help you with?"
+    },
+    "projectDetails": {
+      "webscraper": {
+        "title": "🕷️ Advanced Web Scraper",
+        "description": "Automated scraping system for web data extraction with Node.js, Puppeteer and SQL Server. Includes React web interface for product management.",
+        "features": "✨ Key Features:",
+        "featuresList": [
+          "• Automated data extraction from multiple websites",
+          "• SQL Server database for efficient storage",
+          "• React interface for product management",
+          "• Puppeteer for dynamic content handling"
+        ],
+        "tech": "🛠️ Technologies:",
+        "buttons": "🔗 Links:",
+        "github": "View on GitHub",
+        "demo": "See Demo"
+      },
+      "portfolio": {
+        "title": "💼 Full Stack Portfolio",
+        "description": "Professional portfolio with Next.js on the frontend and Express.js + MongoDB on the backend. Includes functional contact form and interactive chatbot.",
+        "features": "✨ Key Features:",
+        "featuresList": [
+          "• Modern responsive design with Next.js",
+          "• REST API with Express.js and MongoDB",
+          "• Functional contact form with validation",
+          "• Interactive chatbot for navigation"
+        ],
+        "tech": "🛠️ Technologies:",
+        "buttons": "🔗 Links:",
+        "github": "View on GitHub",
+        "demo": "See Demo"
+      },
+      "ocr": {
+        "title": "🔍 OCR Marcación",
+        "description": "Intelligent optical character recognition system with multiple preprocessing strategies. Uses Tesseract and EasyOCR to extract text from labels with high precision.",
+        "features": "✨ Key Features:",
+        "featuresList": [
+          "• Multiple preprocessing strategies",
+          "• High precision text extraction",
+          "• Support for Tesseract and EasyOCR",
+          "• Flask API for easy integration"
+        ],
+        "tech": "🛠️ Technologies:",
+        "buttons": "🔗 Links:",
+        "github": "View on GitHub",
+        "demo": "See Demo"
+      }
+    },
+    "skillDetails": {
+      "frontend": {
+        "title": "⚛️ Frontend Development",
+        "description": "Specialized in creating modern, responsive and high-performance user interfaces.",
+        "skills": "🎯 Main Skills:",
+        "skillsList": [
+          "• React & Next.js for modern applications",
+          "• TypeScript for type-safe code",
+          "• Tailwind CSS for responsive design",
+          "• Framer Motion for smooth animations"
+        ],
+        "tech": "🛠️ Technologies:"
+      },
+      "backend": {
+        "title": "🖥️ Backend Development",
+        "description": "Expert in building scalable and secure server-side applications.",
+        "skills": "🎯 Main Skills:",
+        "skillsList": [
+          "• Node.js & Express.js for REST APIs",
+          "• Authentication and authorization",
+          "• Performance optimization",
+          "• Scalable architecture design"
+        ],
+        "tech": "🛠️ Technologies:"
+      },
+      "database": {
+        "title": "🗄️ Database Management",
+        "description": "Working with SQL and NoSQL databases for efficient data storage.",
+        "skills": "🎯 Main Skills:",
+        "skillsList": [
+          "• MongoDB for flexible NoSQL storage",
+          "• PostgreSQL for relational data",
+          "• SQL Server for enterprise solutions",
+          "• Query optimization and indexing"
+        ],
+        "tech": "🛠️ Technologies:"
+      },
+      "python": {
+        "title": "🐍 Python & AI/ML",
+        "description": "Development with Python for AI, ML and computer vision projects.",
+        "skills": "🎯 Main Skills:",
+        "skillsList": [
+          "• Flask for web APIs",
+          "• OpenCV for image processing",
+          "• Tesseract & EasyOCR for text extraction",
+          "• Computer vision applications"
+        ],
+        "tech": "🛠️ Technologies:"
+      }
+    }
+  },
+  "footer": {
+    "title": "Let's Connect!",
+    "description": "I'm always interested in new opportunities and exciting projects.",
+    "copyright": "© 2025 Franco Chavez. Built with Next.js and Tailwind CSS."
   }
 }
+
