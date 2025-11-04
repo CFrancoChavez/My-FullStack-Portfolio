@@ -9,8 +9,8 @@
     "greeting": "Hi, I'm a",
     "title": "Full Stack Developer",
     "animation": {
-      "nextjs": "Specialized in Next.js",
-      "express": "Expert in Express.js",
+      "nextjs": "Working with Next.js",
+      "express": "Experience in Express.js",
       "mongodb": "Working with MongoDB",
       "solutions": "Creating innovative solutions"
     },
@@ -41,7 +41,7 @@
         "description": "Professional portfolio with Next.js on the frontend and Express.js + MongoDB on the backend. Includes functional contact form and interactive chatbot."
       },
       "ocr": {
-        "title": "OCR Marcación",
+        "title": "OCR Marking",
         "description": "Intelligent optical character recognition system with multiple preprocessing strategies. Uses Tesseract and EasyOCR to extract text from labels with high precision."
       }
     }
@@ -147,8 +147,8 @@
       "webscraper": "🕷️ Automated scraping system with Node.js, Puppeteer and SQL Server. Extracts data from multiple websites with React interface for management.",
       "portfolio": "💼 Professional portfolio with Next.js, Express.js and MongoDB. Includes functional contact form and interactive chatbot.",
       "ocr": "🔍 Intelligent OCR system with Python, Flask and OpenCV. Multiple preprocessing strategies for high accuracy in text extraction.",
-      "frontend": "⚛️ Specialized in React, Next.js, TypeScript and Tailwind CSS to create modern, responsive and high-performance interfaces.",
-      "backend": "🖥️ Expert in Node.js, Express.js and scalable architectures. Focused on REST APIs, security and performance optimization.",
+      "frontend": "⚛️ Experience with React, Next.js, TypeScript and Tailwind CSS to create modern, responsive and high-performance interfaces.",
+      "backend": "🖥️ Working with Node.js, Express.js and scalable architectures. Focused on REST APIs, security and performance optimization.",
       "database": "🗄️ Working with MongoDB, PostgreSQL and SQL Server. Efficient schema design and query optimization for maximum performance.",
       "python": "🐍 Development with Python, Flask and AI/ML libraries like OpenCV, Tesseract and EasyOCR for computer vision projects.",
       "viewProjects": "Perfect! Taking you to the projects section 🚀",
@@ -187,7 +187,7 @@
         "demo": "See Demo"
       },
       "ocr": {
-        "title": "🔍 OCR Marcación",
+        "title": "🔍 OCR Marking",
         "description": "Intelligent optical character recognition system with multiple preprocessing strategies. Uses Tesseract and EasyOCR to extract text from labels with high precision.",
         "features": "✨ Key Features:",
         "featuresList": [
@@ -205,7 +205,7 @@
     "skillDetails": {
       "frontend": {
         "title": "⚛️ Frontend Development",
-        "description": "Specialized in creating modern, responsive and high-performance user interfaces.",
+        "description": "Experience creating modern, responsive and high-performance user interfaces.",
         "skills": "🎯 Main Skills:",
         "skillsList": [
           "• React & Next.js for modern applications",
@@ -217,7 +217,7 @@
       },
       "backend": {
         "title": "🖥️ Backend Development",
-        "description": "Expert in building scalable and secure server-side applications.",
+        "description": "Building scalable and secure server-side applications.",
         "skills": "🎯 Main Skills:",
         "skillsList": [
           "• Node.js & Express.js for REST APIs",

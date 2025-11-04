@@ -9,12 +9,12 @@
     "greeting": "Hola, soy",
     "title": "Desarrollador Full Stack",
     "animation": {
-      "nextjs": "Especializado en Next.js",
-      "express": "Experto en Express.js",
+      "nextjs": "Desarrollo con Next.js",
+      "express": "Experiencia en Express.js",
       "mongodb": "Trabajando con MongoDB",
       "solutions": "Creando soluciones innovadoras"
     },
-    "description": "Desarrollador apasionado por crear aplicaciones web modernas y escalables. Especializado en el stack MERN y tecnologías de vanguardia.",
+    "description": "Desarrollador apasionado por crear aplicaciones web modernas y escalables. Trabajando con el stack MERN y tecnologías de vanguardia.",
     "cta": {
       "projects": "Ver Proyectos",
       "contact": "Contactar"
@@ -194,8 +194,8 @@
       "webscraper": "🕷️ Sistema de scraping automatizado con Node.js, Puppeteer y SQL Server. Extrae datos de múltiples sitios web con interface React para gestión.",
       "portfolio": "💼 Portfolio profesional con Next.js, Express.js y MongoDB. Incluye formulario de contacto funcional y chatbot interactivo.",
       "ocr": "🔍 Sistema inteligente de OCR con Python, Flask y OpenCV. Múltiples estrategias de preprocesamiento para alta precisión en extracción de texto.",
-      "frontend": "⚛️ Especializado en React, Next.js, TypeScript y Tailwind CSS para crear interfaces modernas, responsivas y de alto rendimiento.",
-      "backend": "🖥️ Experto en Node.js, Express.js y arquitecturas escalables. Enfocado en APIs REST, seguridad y optimización de rendimiento.",
+      "frontend": "⚛️ Experiencia en React, Next.js, TypeScript y Tailwind CSS para crear interfaces modernas, responsivas y de alto rendimiento.",
+      "backend": "🖥️ Desarrollo con Node.js, Express.js y arquitecturas escalables. Enfocado en APIs REST, seguridad y optimización de rendimiento.",
       "database": "🗄️ Trabajo con MongoDB, PostgreSQL y SQL Server. Diseño de esquemas eficientes y optimización de consultas para máximo rendimiento.",
       "python": "🐍 Desarrollo con Python, Flask y librerías de IA/ML como OpenCV, Tesseract y EasyOCR para proyectos de visión por computadora.",
       "viewProjects": "¡Perfecto! Te llevo a la sección de proyectos 🚀",
@@ -252,7 +252,7 @@
     "skillDetails": {
       "frontend": {
         "title": "⚛️ Desarrollo Frontend",
-        "description": "Especializado en crear interfaces de usuario modernas, responsivas y de alto rendimiento.",
+        "description": "Experiencia creando interfaces de usuario modernas, responsivas y de alto rendimiento.",
         "skills": "🎯 Habilidades principales:",
         "skillsList": [
           "• React & Next.js para aplicaciones modernas",
@@ -264,7 +264,7 @@
       },
       "backend": {
         "title": "🖥️ Desarrollo Backend",
-        "description": "Experto en construir aplicaciones del lado del servidor escalables y seguras.",
+        "description": "Desarrollo de aplicaciones del lado del servidor escalables y seguras.",
         "skills": "🎯 Habilidades principales:",
         "skillsList": [
           "• Node.js & Express.js para APIs REST",
