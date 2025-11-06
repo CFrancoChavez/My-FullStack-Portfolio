@@ -30,7 +30,7 @@ export default function Projects() {
       icon: PortfolioIcon,
       technologies: ["Next.js", "Node.js", "Express", "MongoDB", "Tailwind", "Framer Motion"],
       status: t("projects.status.completed"),
-      github: "https://github.com/CFrancoChavez/my-full-stack-portfolio",
+      github: "https://github.com/CFrancoChavez/My-FullStack-Portfolio",
       demo: "https://francochavez.dev",
     },
     {
