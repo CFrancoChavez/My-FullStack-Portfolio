@@ -43,26 +43,25 @@ Un sitio web de portfolio moderno y bilingüe (Inglés/Español) que muestra pro
 
 1. **Clonar el repositorio**
    \`\`\`bash
-   git clone https://github.com/CFrancoChavez/your-portfolio-repo.git
-   cd your-portfolio-repo
+   git clone https://github.com/CFrancoChavez/My-FullStack-Portfolio.git
+   cd My-FullStack-Portfolio
    \`\`\`
 
 2. **Instalar dependencias del frontend**
    \`\`\`bash
-   cd frontend
    npm install
    \`\`\`
 
 3. **Instalar dependencias del backend**
    \`\`\`bash
-   cd ../backend
+   cd backend
    npm install
    \`\`\`
 
 ### Variables de Entorno
 
 #### Frontend (.env.local)
-Crear un archivo `.env.local` en el directorio `frontend`:
+Crear un archivo `.env.local` en el directorio raíz:
 
 \`\`\`env
 NEXT_PUBLIC_API_URL=http://localhost:5000
@@ -78,6 +77,7 @@ BREVO_API_KEY=tu_clave_api_brevo
 SENDER_EMAIL=tu_email_verificado_remitente
 SENDER_NAME=Tu Nombre
 RECIPIENT_EMAIL=tu_email_para_recibir_mensajes
+FRONTEND_URL=http://localhost:3000
 \`\`\`
 
 ### Ejecutar Localmente
@@ -91,7 +91,6 @@ RECIPIENT_EMAIL=tu_email_para_recibir_mensajes
 
 2. **Iniciar el servidor de desarrollo frontend**
    \`\`\`bash
-   cd frontend
    npm run dev
    \`\`\`
    El frontend se ejecutará en `http://localhost:3000`
@@ -105,9 +104,12 @@ RECIPIENT_EMAIL=tu_email_para_recibir_mensajes
 El frontend está optimizado para despliegue en Vercel:
 
 \`\`\`bash
-cd frontend
 vercel deploy
 \`\`\`
+
+**Dominio Personalizado**: [https://francochavez.dev](https://francochavez.dev)
+
+El portfolio también es accesible a través de la URL predeterminada de Vercel, que redirige automáticamente al dominio personalizado.
 
 ### Backend (Railway/Render/Heroku)
 El backend puede desplegarse en cualquier plataforma de hosting Node.js:
