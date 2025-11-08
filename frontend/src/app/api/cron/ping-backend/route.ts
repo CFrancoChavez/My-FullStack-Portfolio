@@ -13,6 +13,7 @@ export async function GET() {
     console.log("[v0] Hugging Face URL:", HUGGINGFACE_URL)
 
     const [backendResponse, hfResponse] = await Promise.all([
+      // Ping backend
       fetch(BACKEND_URL, {
         method: "GET",
         headers: {
@@ -22,6 +23,7 @@ export async function GET() {
         console.error("[v0] Backend fetch error:", error.message)
         return { ok: false, status: 500, statusText: error.message }
       }),
+      // Ping Hugging Face Space
       fetch(HUGGINGFACE_URL, {
         method: "GET",
         headers: {
