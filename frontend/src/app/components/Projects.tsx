@@ -22,7 +22,7 @@ export default function Projects() {
       technologies: ["Node.js", "Puppeteer", "SQL Server", "React", "Express"],
       status: t("projects.status.completed"),
       github: "https://github.com/CFrancoChavez/Mi-App-Webscraper",
-      demo: "https://github.com/CFrancoChavez/Mi-App-Webscraper#readme",
+      demo: "https://youtu.be/_TcldXJD1Xc?si=eD0JcLLVqF-R5DN2",
     },
     {
       title: t("projects.items.portfolio.title"),
