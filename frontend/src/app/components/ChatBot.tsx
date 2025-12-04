@@ -428,7 +428,7 @@ export default function ChatBot() {
                     <button
                       key={index}
                       onClick={() => handleOptionClick(option.action)}
-                      className="w-full text-left p-2 text-sm bg-white border rounded hover:bg-gray-50 transition-colors"
+                      className="w-full text-left p-2 text-sm bg-white border rounded hover:bg-gray-50 transition-colors text-gray-800"
                     >
                       {option.text}
                     </button>
