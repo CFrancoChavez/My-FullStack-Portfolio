@@ -66,7 +66,6 @@ export default function ChatBot() {
     ],
     projects: [
       { text: t("chatbot.projects.webscraper"), action: "webscraper" },
-      { text: t("chatbot.projects.portfolio"), action: "portfolio" },
       { text: t("chatbot.projects.ocr"), action: "ocr" },
       { text: t("chatbot.projects.viewAll"), action: "view-projects" },
       { text: t("chatbot.projects.back"), action: "welcome" },
@@ -90,11 +89,6 @@ export default function ChatBot() {
         tech: ["Node.js", "Puppeteer", "SQL Server", "React", "Express"],
         github: "https://github.com/CFrancoChavez/Mi-App-Webscraper",
         demo: "https://github.com/CFrancoChavez/Mi-App-Webscraper#readme",
-      },
-      portfolio: {
-        tech: ["Next.js", "Node.js", "Express", "MongoDB", "Tailwind"],
-        github: "#",
-        demo: "#",
       },
       ocr: {
         tech: ["Python", "Flask", "OpenCV", "Tesseract", "EasyOCR"],
@@ -247,7 +241,7 @@ export default function ChatBot() {
       return
     }
 
-    if (action === "webscraper" || action === "portfolio" || action === "ocr") {
+    if (action === "webscraper" ||  action === "ocr") {
       const userText = chatOptions[currentStep]?.find((opt) => opt.action === action)?.text || ""
       setMessages([
         { type: "bot", content: t("chatbot.welcome.greeting") },
@@ -381,7 +375,7 @@ export default function ChatBot() {
                 <div className="space-y-2">
                   <button
                     onClick={() => navigateToPage("/contact")}
-                    className="w-full text-left p-2 text-sm bg-white border rounded hover:bg-gray-50 transition-colors"
+                    className="w-full text-left p-2 text-sm bg-white border rounded hover:bg-gray-50 transition-colors text-gray-800"
                   >
                     {t("chatbot.contact.email")}
                   </button>
@@ -390,25 +384,25 @@ export default function ChatBot() {
                       const message = encodeURIComponent(t("chatbot.contact.whatsappMessage"))
                       window.open(`https://wa.me/5493516273976?text=${message}`, "_blank")
                     }}
-                    className="w-full text-left p-2 text-sm bg-white border rounded hover:bg-gray-50 transition-colors"
+                    className="w-full text-left p-2 text-sm bg-white border rounded hover:bg-gray-50 transition-colors text-gray-800"
                   >
                     {t("chatbot.contact.whatsapp")}
                   </button>
                   <button
                     onClick={() => window.open("https://www.linkedin.com/in/franco-chavez-548b0a56/", "_blank")}
-                    className="w-full text-left p-2 text-sm bg-white border rounded hover:bg-gray-50 transition-colors"
+                    className="w-full text-left p-2 text-sm bg-white border rounded hover:bg-gray-50 transition-colors text-gray-800"
                   >
                     {t("chatbot.contact.linkedin")}
                   </button>
                   <button
                     onClick={() => window.open("https://github.com/CFrancoChavez", "_blank")}
-                    className="w-full text-left p-2 text-sm bg-white border rounded hover:bg-gray-50 transition-colors"
+                    className="w-full text-left p-2 text-sm bg-white border rounded hover:bg-gray-50 transition-colors text-gray-800"
                   >
                     {t("chatbot.contact.github")}
                   </button>
                   <button
                     onClick={resetToWelcome}
-                    className="w-full text-left p-2 text-sm bg-white border rounded hover:bg-gray-50 transition-colors"
+                    className="w-full text-left p-2 text-sm bg-white border rounded hover:bg-gray-50 transition-colors text-gray-800"
                   >
                     {t("chatbot.contact.back")}
                   </button>
