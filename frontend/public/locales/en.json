@@ -33,16 +33,24 @@
     },
     "items": {
       "webScraper": {
-        "title": "Advanced Web Scraper",
-        "description": "Automated scraping system for web data extraction with Node.js, Puppeteer and SQL Server. Includes React web interface for product management."
-      },
-      "portfolio": {
-        "title": "Full Stack Portfolio",
-        "description": "Professional portfolio with Next.js on the frontend and Express.js + MongoDB on the backend. Includes functional contact form and interactive chatbot."
+        "title": "Advanced Web Scraper & Data Automation System",
+        "description": "Automated data collection and processing system designed to eliminate manual workflows and improve decision-making.",
+        "details": [
+          "Developed a web scraping solution using Node.js and Puppeteer to collect and centralize market data from multiple sources.",
+          "Automated data processing and reporting, reducing manual effort and contributing to an 87% improvement in operational efficiency.",
+          "Built a web interface for managing and visualizing data using React and SQL Server.",
+          "Designed to support real business use cases with scalable and maintainable architecture."
+        ]
       },
       "ocr": {
-        "title": "OCR Marking",
-        "description": "Intelligent optical character recognition system with multiple preprocessing strategies. Uses Tesseract and EasyOCR to extract text from labels with high precision."
+        "title": "OCR Label Recognition Prototype",
+        "description": "Prototype system for automated label recognition using computer vision techniques.",
+        "details": [
+          "Developed an OCR solution using Python, OpenCV, and EasyOCR to extract information from product labels.",
+          "Implemented image preprocessing techniques to improve text detection accuracy under varying conditions.",
+          "Integrated the OCR pipeline into a web-based workflow for data processing and validation.",
+          "Explored automation of manual labeling processes to reduce human error and improve efficiency."
+        ]
       }
     }
   },
@@ -120,8 +128,7 @@
     "projects": {
       "title": "🚀 Here are my main projects. Which one interests you most?",
       "webscraper": "🕷️ Web Scraper",
-      "portfolio": "💼 Full Stack Portfolio",
-      "ocr": "🔍 OCR Marking",
+      "ocr": "🔍 OCR Label Recognition",
       "viewAll": "👀 View all projects",
       "back": "⬅️ Back to menu"
     },
@@ -144,9 +151,8 @@
       "whatsappMessage": "Hi Franco, I would like to contact you about a project"
     },
     "responses": {
-      "webscraper": "🕷️ Automated scraping system with Node.js, Puppeteer and SQL Server. Extracts data from multiple websites with React interface for management.",
-      "portfolio": "💼 Professional portfolio with Next.js, Express.js and MongoDB. Includes functional contact form and interactive chatbot.",
-      "ocr": "🔍 Intelligent OCR system with Python, Flask and OpenCV. Multiple preprocessing strategies for high accuracy in text extraction.",
+      "webscraper": "🕷️ Automated data collection system with Node.js, Puppeteer and SQL Server. Designed to eliminate manual workflows, contributing to an 87% improvement in operational efficiency.",
+      "ocr": "🔍 OCR prototype using Python, OpenCV and EasyOCR for automated label recognition. Implements image preprocessing techniques to improve text detection accuracy.",
       "frontend": "⚛️ Experience with React, Next.js, TypeScript and Tailwind CSS to create modern, responsive and high-performance interfaces.",
       "backend": "🖥️ Working with Node.js, Express.js and scalable architectures. Focused on REST APIs, security and performance optimization.",
       "database": "🗄️ Working with MongoDB, PostgreSQL and SQL Server. Efficient schema design and query optimization for maximum performance.",
@@ -157,29 +163,14 @@
     },
     "projectDetails": {
       "webscraper": {
-        "title": "🕷️ Advanced Web Scraper",
-        "description": "Automated scraping system for web data extraction with Node.js, Puppeteer and SQL Server. Includes React web interface for product management.",
+        "title": "🕷️ Advanced Web Scraper & Data Automation System",
+        "description": "Automated data collection and processing system designed to eliminate manual workflows and improve decision-making.",
         "features": "✨ Key Features:",
         "featuresList": [
-          "• Automated data extraction from multiple websites",
-          "• SQL Server database for efficient storage",
-          "• React interface for product management",
-          "• Puppeteer for dynamic content handling"
-        ],
-        "tech": "🛠️ Technologies:",
-        "buttons": "🔗 Links:",
-        "github": "View on GitHub",
-        "demo": "See Demo"
-      },
-      "portfolio": {
-        "title": "💼 Full Stack Portfolio",
-        "description": "Professional portfolio with Next.js on the frontend and Express.js + MongoDB on the backend. Includes functional contact form and interactive chatbot.",
-        "features": "✨ Key Features:",
-        "featuresList": [
-          "• Modern responsive design with Next.js",
-          "• REST API with Express.js and MongoDB",
-          "• Functional contact form with validation",
-          "• Interactive chatbot for navigation"
+          "• Data collection from multiple sources using Puppeteer",
+          "• Automated processing and reporting (87% efficiency improvement)",
+          "• React web interface for data management and visualization",
+          "• Scalable and maintainable architecture for real business use cases"
         ],
         "tech": "🛠️ Technologies:",
         "buttons": "🔗 Links:",
@@ -187,14 +178,14 @@
         "demo": "See Demo"
       },
       "ocr": {
-        "title": "🔍 OCR Marking",
-        "description": "Intelligent optical character recognition system with multiple preprocessing strategies. Uses Tesseract and EasyOCR to extract text from labels with high precision.",
+        "title": "🔍 OCR Label Recognition Prototype",
+        "description": "Prototype system for automated label recognition using computer vision techniques.",
         "features": "✨ Key Features:",
         "featuresList": [
-          "• Multiple preprocessing strategies",
-          "• High precision text extraction",
-          "• Support for Tesseract and EasyOCR",
-          "• Flask API for easy integration"
+          "• OCR solution with Python, OpenCV and EasyOCR",
+          "• Image preprocessing for improved text detection accuracy",
+          "• Web-based workflow for data processing and validation",
+          "• Automation of manual labeling processes"
         ],
         "tech": "🛠️ Technologies:",
         "buttons": "🔗 Links:",
@@ -259,4 +250,3 @@
     "copyright": "© 2025 Franco Chavez. Built with Next.js and Tailwind CSS."
   }
 }
-

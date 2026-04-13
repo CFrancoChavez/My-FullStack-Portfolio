@@ -1,10 +1,8 @@
-
 "use client"
 
 import { motion } from "framer-motion"
 import { useLanguage } from "@/contexts/LanguageContext"
 import WebScraperIcon from "./icons/WebScraperIcon"
-import PortfolioIcon from "./icons/PortfolioIcon"
 import OcrIcon from "./icons/OcrIcon"
 
 export default function Projects() {
@@ -23,15 +21,6 @@ export default function Projects() {
       status: t("projects.status.completed"),
       github: "https://github.com/CFrancoChavez/Mi-App-Webscraper",
       demo: "https://youtu.be/_TcldXJD1Xc?si=eD0JcLLVqF-R5DN2",
-    },
-    {
-      title: t("projects.items.portfolio.title"),
-      description: t("projects.items.portfolio.description"),
-      icon: PortfolioIcon,
-      technologies: ["Next.js", "Node.js", "Express", "MongoDB", "Tailwind", "Framer Motion"],
-      status: t("projects.status.completed"),
-      github: "https://github.com/CFrancoChavez/My-FullStack-Portfolio",
-      demo: "https://francochavez.dev",
     },
     {
       title: t("projects.items.ocr.title"),
@@ -57,7 +46,7 @@ export default function Projects() {
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">{t("projects.description")}</p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {projects.map((project, index) => {
             const IconComponent = project.icon
             return (
@@ -66,7 +55,7 @@ export default function Projects() {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col"
               >
                 <div className="relative h-64 bg-gradient-to-br from-gray-50 to-blue-50 flex items-center justify-center p-8">
                   <IconComponent className="w-48 h-48" />
@@ -83,9 +72,9 @@ export default function Projects() {
                   </div>
                 </div>
 
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-grow">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
-                  <p className="text-gray-600 mb-4 text-sm">{project.description}</p>
+                  <p className="text-gray-600 mb-4 text-sm flex-grow">{project.description}</p>
 
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech) => (
@@ -95,7 +84,7 @@ export default function Projects() {
                     ))}
                   </div>
 
-                  <div className="flex gap-4">
+                  <div className="flex gap-4 mt-auto">
                     <a
                       href={project.github}
                       target={project.github !== "#" ? "_blank" : undefined}
