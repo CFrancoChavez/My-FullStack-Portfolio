@@ -1,28 +1,89 @@
 {
   "nav": {
     "home": "Home",
-    "technologies": "Technologies",
+    "services": "Services",
     "projects": "Projects",
     "contact": "Contact"
   },
   "hero": {
-    "greeting": "Hi, I'm Franco Chávez a",
-    "title": "Full Stack Developer",
-    "animation": {
-      "nextjs": "Working with Next.js",
-      "express": "Experience in Express.js",
-      "mongodb": "Working with MongoDB",
-      "solutions": "Creating innovative solutions"
-    },
-    "description": "Passionate developer creating modern and scalable web applications. Specialized in the MERN stack and cutting-edge technologies.",
+    "title": "Custom Software & Automation Solutions",
+    "subtitle": "For businesses tired of manual workflows and scattered data",
+    "description": "I build custom software, automation systems, and internal tools that help operationally-heavy businesses streamline processes, reduce errors, and make better decisions.",
     "cta": {
-      "projects": "View Projects",
-      "contact": "Contact"
+      "primary": "Discuss Your Challenge",
+      "secondary": "View Case Studies"
     }
   },
+  "problems": {
+    "title": "Problems I Solve",
+    "description": "Does this sound like your business?",
+    "items": [
+      {
+        "title": "Manual Data Collection",
+        "description": "Your team manually collects data from multiple sources, spending hours copying, pasting, and consolidating information."
+      },
+      {
+        "title": "Data Quality Issues",
+        "description": "Manual entry leads to errors, duplicates, and inconsistencies that cascade through your operations and reporting."
+      },
+      {
+        "title": "Disconnected Systems",
+        "description": "Data lives in spreadsheets, emails, and disparate tools. There's no single source of truth."
+      },
+      {
+        "title": "Slow Reporting & Insights",
+        "description": "Reports take days to compile and are outdated before you can act on them."
+      }
+    ]
+  },
+  "services": {
+    "title": "What I Build",
+    "description": "End-to-end solutions tailored to your operational needs",
+    "items": [
+      {
+        "name": "Data Automation",
+        "description": "Automated systems that collect, process, and integrate data from multiple sources in real-time."
+      },
+      {
+        "name": "Internal Tools & Dashboards",
+        "description": "Custom web applications and dashboards that give your team visibility and control over operations."
+      },
+      {
+        "name": "Integration & ETL",
+        "description": "Connect your existing systems—databases, APIs, spreadsheets—into unified workflows."
+      },
+      {
+        "name": "Document & Image Processing",
+        "description": "Automate text extraction, label recognition, and document classification with computer vision."
+      }
+    ]
+  },
+  "capabilities": {
+    "title": "Business Domains I Work With",
+    "description": "While I work across industries, I specialize in:",
+    "domains": [
+      {
+        "name": "Supply Chain & Logistics",
+        "description": "Order tracking, inventory automation, shipment data integration"
+      },
+      {
+        "name": "Reporting & Analytics",
+        "description": "Business intelligence, KPI dashboards, real-time performance monitoring"
+      },
+      {
+        "name": "Quality & Compliance",
+        "description": "Data validation, error detection, automated compliance reporting"
+      },
+      {
+        "name": "Content & Document Management",
+        "description": "OCR, metadata extraction, document organization and retrieval"
+      }
+    ],
+    "tech_note": "Built with modern tech: Node.js, React, Python, PostgreSQL, and cloud infrastructure—but the technology is always a means to solve your business problem."
+  },
   "projects": {
-    "title": "My Projects",
-    "description": "A selection of projects that demonstrate my full stack development skills",
+    "title": "Case Studies",
+    "description": "Real problems, real solutions, measurable results",
     "status": {
       "completed": "Completed",
       "inProgress": "In Progress"
@@ -34,33 +95,64 @@
     "items": {
       "webScraper": {
         "title": "Advanced Web Scraper & Data Automation System",
+        "subtitle": "Market Data Integration & Automated Reporting",
         "description": "Automated data collection and processing system designed to eliminate manual workflows and improve decision-making.",
         "details": [
           "Developed a web scraping solution using Node.js and Puppeteer to collect and centralize market data from multiple sources.",
           "Automated data processing and reporting, reducing manual effort and contributing to an 87% improvement in operational efficiency.",
           "Built a web interface for managing and visualizing data using React and SQL Server.",
           "Designed to support real business use cases with scalable and maintainable architecture."
-        ]
+        ],
+        "business_impact": "87% reduction in manual reporting time | Single source of truth for market data | Real-time decision making"
       },
       "ocr": {
         "title": "OCR Label Recognition Prototype",
+        "subtitle": "Automated Product Label Data Extraction",
         "description": "Prototype system for automated label recognition using computer vision techniques.",
         "details": [
           "Developed an OCR solution using Python, OpenCV, and EasyOCR to extract information from product labels.",
           "Implemented image preprocessing techniques to improve text detection accuracy under varying conditions.",
           "Integrated the OCR pipeline into a web-based workflow for data processing and validation.",
           "Explored automation of manual labeling processes to reduce human error and improve efficiency."
-        ]
+        ],
+        "business_impact": "Eliminated manual label transcription | Improved data accuracy | Scalable to thousands of labels"
       }
     }
   },
-  "technologies": {
-    "title": "Technologies I Master",
-    "description": "Tools and technologies I use to create modern and efficient web applications"
+  "process": {
+    "title": "How I Work",
+    "description": "A straightforward approach to solving your operational challenges",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Discovery & Audit",
+        "description": "Understand your current workflows, pain points, data sources, and success metrics."
+      },
+      {
+        "number": "02",
+        "title": "Solution Design",
+        "description": "Propose a tailored solution with clear scope, timeline, and expected outcomes."
+      },
+      {
+        "number": "03",
+        "title": "Development & Integration",
+        "description": "Build and integrate with your existing systems. Ongoing communication and transparency."
+      },
+      {
+        "number": "04",
+        "title": "Testing & Deployment",
+        "description": "Rigorous testing, staff training, and smooth deployment to production."
+      },
+      {
+        "number": "05",
+        "title": "Support & Iteration",
+        "description": "Post-launch support and continuous optimization based on real-world usage."
+      }
+    ]
   },
   "contact": {
-    "title": "Contact",
-    "subtitle": "Have a project in mind? Let's talk and make it happen!",
+    "title": "Let's Talk About Your Challenge",
+    "subtitle": "Whether you need a quick consultation or a full custom solution, I'm here to help.",
     "info": {
       "title": "Contact Information",
       "email": "Email",
@@ -79,8 +171,8 @@
       "placeholders": {
         "name": "Your full name",
         "email": "your@email.com",
-        "subject": "What would you like to talk about?",
-        "message": "Tell me about your project or idea..."
+        "subject": "What challenge are you facing?",
+        "message": "Tell me about your operational challenge or project..."
       },
       "button": {
         "send": "Send Message",
@@ -101,7 +193,7 @@
     },
     "success": {
       "title": "Message Sent!",
-      "description": "Thank you for contacting me. I have received your message and will respond as soon as possible.",
+      "description": "Thank you for reaching out. I'll review your message and get back to you as soon as possible.",
       "sendAnother": "Send another message",
       "backHome": "Back to Home",
       "responseTime": "Average response time: 24 hours"
@@ -115,30 +207,30 @@
       "greeting": "Hi! 👋 I'm Franco's virtual assistant.",
       "question": "How can I help you today?",
       "options": {
-        "skills": "View skills",
-        "projects": "View projects",
+        "services": "View services",
+        "projects": "View case studies",
         "contact": "Contact information"
       }
     },
     "menu": {
-      "projects": "💼 View my projects",
-      "skills": "🛠️ Learn about my skills",
+      "services": "💼 View my services",
+      "projects": "📊 View case studies",
       "contact": "📧 Contact me"
     },
     "projects": {
-      "title": "🚀 Here are my main projects. Which one interests you most?",
-      "webscraper": "🕷️ Web Scraper",
+      "title": "🚀 Here are my main case studies. Which one interests you?",
+      "webscraper": "🕷️ Data Automation System",
       "ocr": "🔍 OCR Label Recognition",
       "viewAll": "👀 View all projects",
       "back": "⬅️ Back to menu"
     },
-    "skills": {
-      "title": "💪 These are my main areas of expertise. Which one would you like to know more about?",
-      "frontend": "⚛️ Frontend (React/Next.js)",
-      "backend": "🖥️ Backend (Node.js/Express)",
-      "database": "🗄️ Databases",
-      "python": "🐍 Python & AI/ML",
-      "viewAll": "👀 View all technologies",
+    "services": {
+      "title": "💼 I specialize in these services. Which one would you like to know more about?",
+      "dataAutomation": "🔄 Data Automation",
+      "internalTools": "🛠️ Internal Tools & Dashboards",
+      "integration": "🔗 Integration & ETL",
+      "documentProcessing": "📄 Document & Image Processing",
+      "viewAll": "👀 View all services",
       "back": "⬅️ Back to menu"
     },
     "contact": {
@@ -148,29 +240,29 @@
       "linkedin": "💼 LinkedIn",
       "github": "🐙 GitHub",
       "back": "⬅️ Back to menu",
-      "whatsappMessage": "Hi Franco, I would like to contact you about a project"
+      "whatsappMessage": "Hi Franco, I would like to discuss a project with you"
     },
     "responses": {
-      "webscraper": "🕷️ Automated data collection system with Node.js, Puppeteer and SQL Server. Designed to eliminate manual workflows, contributing to an 87% improvement in operational efficiency.",
-      "ocr": "🔍 OCR prototype using Python, OpenCV and EasyOCR for automated label recognition. Implements image preprocessing techniques to improve text detection accuracy.",
-      "frontend": "⚛️ Experience with React, Next.js, TypeScript and Tailwind CSS to create modern, responsive and high-performance interfaces.",
-      "backend": "🖥️ Working with Node.js, Express.js and scalable architectures. Focused on REST APIs, security and performance optimization.",
-      "database": "🗄️ Working with MongoDB, PostgreSQL and SQL Server. Efficient schema design and query optimization for maximum performance.",
-      "python": "🐍 Development with Python, Flask and AI/ML libraries like OpenCV, Tesseract and EasyOCR for computer vision projects.",
-      "viewProjects": "Perfect! Taking you to the projects section 🚀",
-      "viewTechnologies": "Excellent! Showing you all my technical skills 💪",
+      "webscraper": "🕷️ Automated data collection system that integrates market data from multiple sources. Reduced manual reporting time by 87% and enabled real-time decision making.",
+      "ocr": "🔍 OCR system using Python and computer vision to automate product label data extraction. Eliminates manual transcription and improves data accuracy.",
+      "dataAutomation": "🔄 I build systems that automatically collect, process, and integrate data from multiple sources. Perfect for businesses drowning in manual data work.",
+      "internalTools": "🛠️ Custom dashboards and web applications that give your team visibility and control over operations. Real-time insights instead of manual reports.",
+      "integration": "🔗 I connect your existing systems—databases, APIs, spreadsheets, tools—into unified workflows that actually work.",
+      "documentProcessing": "📄 Automate text extraction, label recognition, and document classification using computer vision. Process thousands of documents faster.",
+      "viewProjects": "Perfect! Taking you to the case studies 📊",
+      "viewServices": "Excellent! Showing you all my services 💼",
       "helpMore": "What else can I help you with?"
     },
     "projectDetails": {
       "webscraper": {
         "title": "🕷️ Advanced Web Scraper & Data Automation System",
-        "description": "Automated data collection and processing system designed to eliminate manual workflows and improve decision-making.",
+        "description": "Market data integration and automated reporting solution that eliminated manual workflows.",
         "features": "✨ Key Features:",
         "featuresList": [
-          "• Data collection from multiple sources using Puppeteer",
+          "• Real-time data collection from multiple sources",
           "• Automated processing and reporting (87% efficiency improvement)",
           "• React web interface for data management and visualization",
-          "• Scalable and maintainable architecture for real business use cases"
+          "• Scalable architecture for growing data volumes"
         ],
         "tech": "🛠️ Technologies:",
         "buttons": "🔗 Links:",
@@ -179,74 +271,24 @@
       },
       "ocr": {
         "title": "🔍 OCR Label Recognition Prototype",
-        "description": "Prototype system for automated label recognition using computer vision techniques.",
+        "description": "Automated product label data extraction using computer vision.",
         "features": "✨ Key Features:",
         "featuresList": [
-          "• OCR solution with Python, OpenCV and EasyOCR",
-          "• Image preprocessing for improved text detection accuracy",
-          "• Web-based workflow for data processing and validation",
-          "• Automation of manual labeling processes"
+          "• High-accuracy text extraction from images",
+          "• Works with varying lighting and label conditions",
+          "• Web-based workflow for easy data validation",
+          "• Scalable to process thousands of labels"
         ],
         "tech": "🛠️ Technologies:",
         "buttons": "🔗 Links:",
         "github": "View on GitHub",
         "demo": "See Demo"
       }
-    },
-    "skillDetails": {
-      "frontend": {
-        "title": "⚛️ Frontend Development",
-        "description": "Experience creating modern, responsive and high-performance user interfaces.",
-        "skills": "🎯 Main Skills:",
-        "skillsList": [
-          "• React & Next.js for modern applications",
-          "• TypeScript for type-safe code",
-          "• Tailwind CSS for responsive design",
-          "• Framer Motion for smooth animations"
-        ],
-        "tech": "🛠️ Technologies:"
-      },
-      "backend": {
-        "title": "🖥️ Backend Development",
-        "description": "Building scalable and secure server-side applications.",
-        "skills": "🎯 Main Skills:",
-        "skillsList": [
-          "• Node.js & Express.js for REST APIs",
-          "• Authentication and authorization",
-          "• Performance optimization",
-          "• Scalable architecture design"
-        ],
-        "tech": "🛠️ Technologies:"
-      },
-      "database": {
-        "title": "🗄️ Database Management",
-        "description": "Working with SQL and NoSQL databases for efficient data storage.",
-        "skills": "🎯 Main Skills:",
-        "skillsList": [
-          "• MongoDB for flexible NoSQL storage",
-          "• PostgreSQL for relational data",
-          "• SQL Server for enterprise solutions",
-          "• Query optimization and indexing"
-        ],
-        "tech": "🛠️ Technologies:"
-      },
-      "python": {
-        "title": "🐍 Python & AI/ML",
-        "description": "Development with Python for AI, ML and computer vision projects.",
-        "skills": "🎯 Main Skills:",
-        "skillsList": [
-          "• Flask for web APIs",
-          "• OpenCV for image processing",
-          "• Tesseract & EasyOCR for text extraction",
-          "• Computer vision applications"
-        ],
-        "tech": "🛠️ Technologies:"
-      }
     }
   },
   "footer": {
-    "title": "Let's Connect!",
-    "description": "I'm always interested in new opportunities and exciting projects.",
-    "copyright": "© 2025 Franco Chavez. Built with Next.js and Tailwind CSS."
+    "title": "Ready to Solve Your Operational Challenge?",
+    "description": "Let's discuss how automation and custom software can transform your business.",
+    "copyright": "© 2025 Franco Chavez. Built with Next.js and modern web technologies."
   }
 }
