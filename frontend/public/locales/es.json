@@ -1,28 +1,89 @@
 {
   "nav": {
     "home": "Inicio",
-    "technologies": "Tecnologías",
+    "services": "Servicios",
     "projects": "Proyectos",
     "contact": "Contacto"
   },
   "hero": {
-    "greeting": "Hola, soy Franco Chávez un",
-    "title": "Desarrollador Full Stack",
-    "animation": {
-      "nextjs": "Desarrollo con Next.js",
-      "express": "Experiencia en Express.js",
-      "mongodb": "Trabajando con MongoDB",
-      "solutions": "Creando soluciones innovadoras"
-    },
-    "description": "Desarrollador apasionado por crear aplicaciones web modernas y escalables. Trabajando con el stack MERN y tecnologías de vanguardia.",
+    "title": "Soluciones Personalizadas de Software y Automatización",
+    "subtitle": "Para negocios cansados de flujos de trabajo manuales y datos dispersos",
+    "description": "Construyo software personalizado, sistemas de automatización y herramientas internas que ayudan a empresas con operaciones pesadas a optimizar procesos, reducir errores y tomar mejores decisiones.",
     "cta": {
-      "projects": "Ver Proyectos",
-      "contact": "Contactar"
+      "primary": "Discute Tu Desafío",
+      "secondary": "Ver Casos de Estudio"
     }
   },
+  "problems": {
+    "title": "Problemas que Resuelvo",
+    "description": "¿Esto suena familiar?",
+    "items": [
+      {
+        "title": "Recolección Manual de Datos",
+        "description": "Tu equipo recolecta datos manualmente de múltiples fuentes, gastando horas copiando, pegando y consolidando información."
+      },
+      {
+        "title": "Problemas de Calidad de Datos",
+        "description": "La entrada manual genera errores, duplicados e inconsistencias que se propagan en tus operaciones y reportes."
+      },
+      {
+        "title": "Sistemas Desconectados",
+        "description": "Los datos viven en hojas de cálculo, correos y herramientas dispersas. No hay una única fuente de verdad."
+      },
+      {
+        "title": "Reportes e Insights Lentos",
+        "description": "Los reportes tardan días en compilarse y están obsoletos antes de poder actuar."
+      }
+    ]
+  },
+  "services": {
+    "title": "Lo que Construyo",
+    "description": "Soluciones end-to-end adaptadas a tus necesidades operacionales",
+    "items": [
+      {
+        "name": "Automatización de Datos",
+        "description": "Sistemas automatizados que recolectan, procesan e integran datos de múltiples fuentes en tiempo real."
+      },
+      {
+        "name": "Herramientas Internas y Dashboards",
+        "description": "Aplicaciones web personalizadas y dashboards que dan a tu equipo visibilidad y control de operaciones."
+      },
+      {
+        "name": "Integración y ETL",
+        "description": "Conecta tus sistemas existentes—bases de datos, APIs, hojas de cálculo—en flujos de trabajo unificados."
+      },
+      {
+        "name": "Procesamiento de Documentos e Imágenes",
+        "description": "Automatiza extracción de texto, reconocimiento de etiquetas y clasificación de documentos con visión por computadora."
+      }
+    ]
+  },
+  "capabilities": {
+    "title": "Dominios de Negocio en los que Trabajo",
+    "description": "Aunque trabajo en múltiples industrias, me especializo en:",
+    "domains": [
+      {
+        "name": "Cadena de Suministro y Logística",
+        "description": "Seguimiento de pedidos, automatización de inventario, integración de datos de envíos"
+      },
+      {
+        "name": "Reportes y Analytics",
+        "description": "Business intelligence, dashboards de KPIs, monitoreo de rendimiento en tiempo real"
+      },
+      {
+        "name": "Calidad y Cumplimiento",
+        "description": "Validación de datos, detección de errores, reportes de cumplimiento automatizados"
+      },
+      {
+        "name": "Gestión de Contenido y Documentos",
+        "description": "OCR, extracción de metadatos, organización y recuperación de documentos"
+      }
+    ],
+    "tech_note": "Construido con tecnología moderna: Node.js, React, Python, PostgreSQL e infraestructura en la nube—pero la tecnología siempre es un medio para resolver tu problema de negocio."
+  },
   "projects": {
-    "title": "Mis Proyectos",
-    "description": "Una selección de proyectos que demuestran mis habilidades en desarrollo full stack",
+    "title": "Casos de Estudio",
+    "description": "Problemas reales, soluciones reales, resultados medibles",
     "status": {
       "completed": "Completado",
       "inProgress": "En Progreso"
@@ -34,65 +95,64 @@
     "items": {
       "webScraper": {
         "title": "Sistema Avanzado de Web Scraping y Automatización de Datos",
+        "subtitle": "Integración de Datos de Mercado y Reportes Automatizados",
         "description": "Sistema automatizado de recolección y procesamiento de datos diseñado para eliminar flujos de trabajo manuales y mejorar la toma de decisiones.",
         "details": [
           "Desarrollé una solución de web scraping usando Node.js y Puppeteer para recolectar y centralizar datos de mercado de múltiples fuentes.",
           "Automaticé el procesamiento de datos e informes, reduciendo el esfuerzo manual y contribuyendo a una mejora del 87% en eficiencia operacional.",
           "Construí una interfaz web para gestionar y visualizar datos usando React y SQL Server.",
           "Diseñado para soportar casos de uso reales de negocio con arquitectura escalable y mantenible."
-        ]
+        ],
+        "business_impact": "87% de reducción en tiempo de reportes manuales | Fuente única de verdad para datos | Toma de decisiones en tiempo real"
       },
       "ocr": {
         "title": "Prototipo de Reconocimiento de Etiquetas OCR",
+        "subtitle": "Extracción Automatizada de Datos de Etiquetas de Productos",
         "description": "Sistema prototipo para reconocimiento automatizado de etiquetas usando técnicas de visión por computadora.",
         "details": [
           "Desarrollé una solución OCR usando Python, OpenCV y EasyOCR para extraer información de etiquetas de productos.",
           "Implementé técnicas de preprocesamiento de imágenes para mejorar la precisión de detección de texto bajo condiciones variables.",
           "Integré el pipeline OCR en un flujo de trabajo web para procesamiento y validación de datos.",
           "Exploré la automatización de procesos de etiquetado manual para reducir errores humanos y mejorar la eficiencia."
-        ]
-      }
-    },
-    "projectDetails": {
-      "webScraper": {
-        "title": "🕷️ Sistema Avanzado de Web Scraping y Automatización de Datos",
-        "description": "Sistema automatizado de recolección y procesamiento de datos diseñado para eliminar flujos de trabajo manuales y mejorar la toma de decisiones.",
-        "features": "✨ Características principales:",
-        "featuresList": [
-          "• Recolección de datos de múltiples fuentes usando Puppeteer",
-          "• Procesamiento y reportes automatizados (mejora de eficiencia del 87%)",
-          "• Interfaz web con React para gestión y visualización de datos",
-          "• Arquitectura escalable y mantenible para casos de uso reales"
         ],
-        "tech": "🛠️ Tecnologías:",
-        "buttons": "🔗 Enlaces:",
-        "github": "Ver en GitHub",
-        "demo": "Ver Demo"
-      },
-      "ocr": {
-        "title": "🔍 Prototipo de Reconocimiento de Etiquetas OCR",
-        "description": "Sistema prototipo para reconocimiento automatizado de etiquetas usando técnicas de visión por computadora.",
-        "features": "✨ Características principales:",
-        "featuresList": [
-          "• Solución OCR con Python, OpenCV y EasyOCR",
-          "• Preprocesamiento de imágenes para mejorar la precisión de detección de texto",
-          "• Flujo de trabajo web para procesamiento y validación de datos",
-          "• Automatización de procesos de etiquetado manual"
-        ],
-        "tech": "🛠️ Tecnologías:",
-        "buttons": "🔗 Enlaces:",
-        "github": "Ver en GitHub",
-        "demo": "Ver Demo"
+        "business_impact": "Eliminó transcripción manual de etiquetas | Mejoró precisión de datos | Escalable a miles de etiquetas"
       }
     }
   },
-  "technologies": {
-    "title": "Tecnologías que domino",
-    "description": "Herramientas y tecnologías que utilizo para crear aplicaciones web modernas y eficientes"
+  "process": {
+    "title": "Cómo Trabajo",
+    "description": "Un enfoque directo para resolver tus desafíos operacionales",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Discovery y Auditoría",
+        "description": "Entiendo tus flujos de trabajo actuales, puntos débiles, fuentes de datos y métricas de éxito."
+      },
+      {
+        "number": "02",
+        "title": "Diseño de Solución",
+        "description": "Propongo una solución personalizada con alcance claro, timeline y resultados esperados."
+      },
+      {
+        "number": "03",
+        "title": "Desarrollo e Integración",
+        "description": "Construyo e integro con tus sistemas existentes. Comunicación transparente y continua."
+      },
+      {
+        "number": "04",
+        "title": "Testing y Despliegue",
+        "description": "Testing riguroso, capacitación de personal y despliegue suave a producción."
+      },
+      {
+        "number": "05",
+        "title": "Soporte e Iteración",
+        "description": "Soporte post-lanzamiento y optimización continua basada en uso real."
+      }
+    ]
   },
   "contact": {
-    "title": "Contacto",
-    "subtitle": "¿Tienes un proyecto en mente? ¡Hablemos y hagámoslo realidad!",
+    "title": "Hablemos Sobre Tu Desafío",
+    "subtitle": "Ya sea que necesites una consulta rápida o una solución personalizada completa, estoy aquí para ayudarte.",
     "info": {
       "title": "Información de Contacto",
       "email": "Email",
@@ -111,8 +171,8 @@
       "placeholders": {
         "name": "Tu nombre completo",
         "email": "tu@email.com",
-        "subject": "¿De qué quieres hablar?",
-        "message": "Cuéntame sobre tu proyecto o idea..."
+        "subject": "¿Qué desafío estás enfrentando?",
+        "message": "Cuéntame sobre tu desafío operacional o proyecto..."
       },
       "button": {
         "send": "Enviar Mensaje",
@@ -133,7 +193,7 @@
     },
     "success": {
       "title": "¡Mensaje Enviado!",
-      "description": "Gracias por contactarme. He recibido tu mensaje y te responderé lo antes posible.",
+      "description": "Gracias por contactarme. Revisaré tu mensaje y te responderé lo antes posible.",
       "sendAnother": "Enviar otro mensaje",
       "backHome": "Volver al Inicio",
       "responseTime": "Tiempo de respuesta promedio: 24 horas"
@@ -147,30 +207,30 @@
       "greeting": "¡Hola! 👋 Soy el asistente virtual de Franco.",
       "question": "¿En qué puedo ayudarte hoy?",
       "options": {
-        "skills": "Ver habilidades",
-        "projects": "Ver proyectos",
+        "services": "Ver servicios",
+        "projects": "Ver casos de estudio",
         "contact": "Información de contacto"
       }
     },
     "menu": {
-      "projects": "💼 Ver mis proyectos",
-      "skills": "🛠️ Conocer mis habilidades",
-      "contact": "📧 Contactar conmigo"
+      "services": "💼 Ver mis servicios",
+      "projects": "📊 Ver casos de estudio",
+      "contact": "📧 Contactarme"
     },
     "projects": {
-      "title": "🚀 Aquí tienes mis proyectos principales. ¿Cuál te interesa más?",
-      "webscraper": "🕷️ Web Scraper",
-      "ocr": "🔍 OCR Marcación",
+      "title": "🚀 Aquí están mis principales casos de estudio. ¿Cuál te interesa?",
+      "webscraper": "🕷️ Sistema de Automatización de Datos",
+      "ocr": "🔍 OCR Reconocimiento de Etiquetas",
       "viewAll": "👀 Ver todos los proyectos",
       "back": "⬅️ Volver al menú"
     },
-    "skills": {
-      "title": "💪 Estas son mis principales áreas de expertise. ¿Sobre cuál quieres saber más?",
-      "frontend": "⚛️ Frontend (React/Next.js)",
-      "backend": "🖥️ Backend (Node.js/Express)",
-      "database": "🗄️ Bases de datos",
-      "python": "🐍 Python & AI/ML",
-      "viewAll": "👀 Ver todas las tecnologías",
+    "services": {
+      "title": "💼 Me especializo en estos servicios. ¿Cuál te gustaría conocer más?",
+      "dataAutomation": "🔄 Automatización de Datos",
+      "internalTools": "🛠️ Herramientas Internas y Dashboards",
+      "integration": "🔗 Integración y ETL",
+      "documentProcessing": "📄 Procesamiento de Documentos e Imágenes",
+      "viewAll": "👀 Ver todos los servicios",
       "back": "⬅️ Volver al menú"
     },
     "contact": {
@@ -180,29 +240,29 @@
       "linkedin": "💼 LinkedIn",
       "github": "🐙 GitHub",
       "back": "⬅️ Volver al menú",
-      "whatsappMessage": "Hola Franco, me gustaría contactarte sobre un proyecto"
+      "whatsappMessage": "Hola Franco, me gustaría discutir un proyecto contigo"
     },
     "responses": {
-      "webscraper": "🕷️ Sistema automatizado de recolección y procesamiento de datos con Node.js y Puppeteer. Automatiza reportes y mejora la eficiencia operacional en un 87%.",
-      "ocr": "🔍 Sistema prototipo de reconocimiento de etiquetas con Python, OpenCV y EasyOCR. Implementa preprocesamiento de imágenes para mejorar la precisión de detección de texto.",
-      "frontend": "⚛️ Experiencia en React, Next.js, TypeScript y Tailwind CSS para crear interfaces modernas, responsivas y de alto rendimiento.",
-      "backend": "🖥️ Desarrollo con Node.js, Express.js y arquitecturas escalables. Enfocado en APIs REST, seguridad y optimización de rendimiento.",
-      "database": "🗄️ Trabajo con MongoDB, PostgreSQL y SQL Server. Diseño de esquemas eficientes y optimización de consultas para máximo rendimiento.",
-      "python": "🐍 Desarrollo con Python, Flask y librerías de IA/ML como OpenCV, Tesseract y EasyOCR para proyectos de visión por computadora.",
-      "viewProjects": "¡Perfecto! Te llevo a la sección de proyectos 🚀",
-      "viewTechnologies": "¡Excelente! Te muestro todas mis habilidades técnicas 💪",
+      "webscraper": "🕷️ Sistema de recolección automatizada de datos que integra información de mercado de múltiples fuentes. Redujo el tiempo de reportes manuales en 87% y habilitó toma de decisiones en tiempo real.",
+      "ocr": "🔍 Sistema OCR usando Python y visión por computadora para automatizar extracción de datos de etiquetas. Elimina transcripción manual y mejora precisión de datos.",
+      "dataAutomation": "🔄 Construyo sistemas que automáticamente recolectan, procesan e integran datos de múltiples fuentes. Perfecto para negocios ahogados en trabajo de datos manual.",
+      "internalTools": "🛠️ Dashboards personalizados y aplicaciones web que dan a tu equipo visibilidad y control de operaciones. Insights en tiempo real en lugar de reportes manuales.",
+      "integration": "🔗 Conecto tus sistemas existentes—bases de datos, APIs, hojas de cálculo, herramientas—en flujos de trabajo unificados que realmente funcionan.",
+      "documentProcessing": "📄 Automatiza extracción de texto, reconocimiento de etiquetas y clasificación de documentos usando visión por computadora. Procesa miles de documentos más rápido.",
+      "viewProjects": "¡Perfecto! Te llevo a los casos de estudio 📊",
+      "viewServices": "¡Excelente! Te muestro todos mis servicios 💼",
       "helpMore": "¿En qué más puedo ayudarte?"
     },
     "projectDetails": {
-      "webScraper": {
+      "webscraper": {
         "title": "🕷️ Sistema Avanzado de Web Scraping y Automatización de Datos",
-        "description": "Sistema automatizado de recolección y procesamiento de datos diseñado para eliminar flujos de trabajo manuales y mejorar la toma de decisiones.",
-        "features": "✨ Características principales:",
+        "description": "Solución de integración de datos de mercado y reportes automatizados que eliminó flujos de trabajo manuales.",
+        "features": "✨ Características Principales:",
         "featuresList": [
-          "• Recolección de datos de múltiples fuentes usando Puppeteer",
+          "• Recolección de datos en tiempo real de múltiples fuentes",
           "• Procesamiento y reportes automatizados (mejora de eficiencia del 87%)",
-          "• Interfaz web con React para gestión y visualización de datos",
-          "• Arquitectura escalable y mantenible para casos de uso reales"
+          "• Interfaz web React para gestión y visualización de datos",
+          "• Arquitectura escalable para volúmenes de datos crecientes"
         ],
         "tech": "🛠️ Tecnologías:",
         "buttons": "🔗 Enlaces:",
@@ -211,74 +271,24 @@
       },
       "ocr": {
         "title": "🔍 Prototipo de Reconocimiento de Etiquetas OCR",
-        "description": "Sistema prototipo para reconocimiento automatizado de etiquetas usando técnicas de visión por computadora.",
-        "features": "✨ Características principales:",
+        "description": "Extracción automatizada de datos de etiquetas de productos usando visión por computadora.",
+        "features": "✨ Características Principales:",
         "featuresList": [
-          "• Solución OCR con Python, OpenCV y EasyOCR",
-          "• Preprocesamiento de imágenes para mejorar la precisión de detección de texto",
-          "• Flujo de trabajo web para procesamiento y validación de datos",
-          "• Automatización de procesos de etiquetado manual"
+          "• Extracción de texto de alta precisión desde imágenes",
+          "• Funciona con variaciones de iluminación y condiciones de etiquetas",
+          "• Flujo de trabajo web para fácil validación de datos",
+          "• Escalable para procesar miles de etiquetas"
         ],
         "tech": "🛠️ Tecnologías:",
         "buttons": "🔗 Enlaces:",
         "github": "Ver en GitHub",
         "demo": "Ver Demo"
       }
-    },
-    "skillDetails": {
-      "frontend": {
-        "title": "⚛️ Desarrollo Frontend",
-        "description": "Experiencia creando interfaces de usuario modernas, responsivas y de alto rendimiento.",
-        "skills": "🎯 Habilidades principales:",
-        "skillsList": [
-          "• React & Next.js para aplicaciones modernas",
-          "• TypeScript para código type-safe",
-          "• Tailwind CSS para diseño responsivo",
-          "• Framer Motion para animaciones fluidas"
-        ],
-        "tech": "🛠️ Tecnologías:"
-      },
-      "backend": {
-        "title": "🖥️ Desarrollo Backend",
-        "description": "Desarrollo de aplicaciones del lado del servidor escalables y seguras.",
-        "skills": "🎯 Habilidades principales:",
-        "skillsList": [
-          "• Node.js & Express.js para APIs REST",
-          "• Autenticación y autorización",
-          "• Optimización de rendimiento",
-          "• Diseño de arquitecturas escalables"
-        ],
-        "tech": "🛠️ Tecnologías:"
-      },
-      "database": {
-        "title": "🗄️ Gestión de Bases de Datos",
-        "description": "Trabajo con bases de datos SQL y NoSQL para almacenamiento eficiente de datos.",
-        "skills": "🎯 Habilidades principales:",
-        "skillsList": [
-          "• MongoDB para almacenamiento NoSQL flexible",
-          "• PostgreSQL para datos relacionales",
-          "• SQL Server para soluciones empresariales",
-          "• Optimización de consultas e indexación"
-        ],
-        "tech": "🛠️ Tecnologías:"
-      },
-      "python": {
-        "title": "🐍 Python & IA/ML",
-        "description": "Desarrollo con Python para proyectos de IA, ML y visión por computadora.",
-        "skills": "🎯 Habilidades principales:",
-        "skillsList": [
-          "• Flask para APIs web",
-          "• OpenCV para procesamiento de imágenes",
-          "• Tesseract & EasyOCR para extracción de texto",
-          "• Aplicaciones de visión por computadora"
-        ],
-        "tech": "🛠️ Tecnologías:"
-      }
     }
   },
   "footer": {
-    "title": "¡Conectemos!",
-    "description": "Siempre estoy interesado en nuevas oportunidades y proyectos emocionantes.",
-    "copyright": "© 2025 Franco Chavez. Desarrollado con Next.js y Tailwind CSS."
+    "title": "¿Listo para Resolver tu Desafío Operacional?",
+    "description": "Discutamos cómo la automatización y el software personalizado pueden transformar tu negocio.",
+    "copyright": "© 2025 Franco Chavez. Construido con Next.js y tecnologías web modernas."
   }
 }
