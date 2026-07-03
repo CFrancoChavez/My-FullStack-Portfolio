@@ -6,13 +6,19 @@
     "contact": "Contacto"
   },
   "hero": {
+    "badge": "Automatización y Sistemas de Negocio",
     "title": "Soluciones Personalizadas de Software y Automatización",
-    "subtitle": "Para negocios cansados de flujos de trabajo manuales y datos dispersos",
-    "description": "Construyo software personalizado, sistemas de automatización y herramientas internas que ayudan a empresas con operaciones pesadas a optimizar procesos, reducir errores y tomar mejores decisiones.",
+    "subtitle": "Para empresas que buscan optimizar procesos y centralizar información",
+    "description": "Desarrollo software personalizado, automatizaciones y herramientas internas para mejorar flujos de trabajo, integrar procesos y organizar información operativa.",
     "cta": {
-      "primary": "Discute Tu Desafío",
-      "secondary": "Ver Casos de Estudio"
-    }
+      "primary": "Hablemos de tu proyecto",
+      "secondary": "Ver Proyectos"
+    },
+    "highlights": [
+      { "value": "En producción", "label": "Solución usada por un cliente real" },
+      { "value": "De horas a minutos", "label": "Procesos manuales automatizados" },
+      { "value": "Escalable", "label": "Diseñado para crecer con el negocio" }
+    ]
   },
   "problems": {
     "title": "Problemas que Resuelvo",
@@ -42,19 +48,19 @@
     "items": [
       {
         "name": "Automatización de Datos",
-        "description": "Sistemas automatizados que recolectan, procesan e integran datos de múltiples fuentes en tiempo real."
+        "description": "Sistemas automatizados que recolectan, procesan e integran datos de múltiples fuentes."
       },
       {
-        "name": "Herramientas Internas y Dashboards",
+        "name": "Aplicaciones Internas y Dashboards",
         "description": "Aplicaciones web personalizadas y dashboards que dan a tu equipo visibilidad y control de operaciones."
       },
       {
-        "name": "Integración y ETL",
-        "description": "Conecta tus sistemas existentes—bases de datos, APIs, hojas de cálculo—en flujos de trabajo unificados."
+        "name": "Integración de Sistemas y Datos",
+        "description": "Conecta bases de datos, APIs y aplicaciones para unificar procesos y eliminar tareas repetitivas."
       },
       {
-        "name": "Procesamiento de Documentos e Imágenes",
-        "description": "Automatiza extracción de texto, reconocimiento de etiquetas y clasificación de documentos con visión por computadora."
+        "name": "Procesamiento Inteligente de Documentos",
+        "description": "Automatiza la extracción y organización de información desde documentos e imágenes mediante OCR y técnicas de inteligencia artificial, reduciendo tareas manuales y errores."
       }
     ]
   },
@@ -82,8 +88,8 @@
     "tech_note": "Construido con tecnología moderna: Node.js, React, Python, PostgreSQL e infraestructura en la nube—pero la tecnología siempre es un medio para resolver tu problema de negocio."
   },
   "projects": {
-    "title": "Casos de Estudio",
-    "description": "Problemas reales, soluciones reales, resultados medibles",
+    "title": "Proyectos Seleccionados",
+    "description": "Soluciones reales y exploración técnica",
     "status": {
       "completed": "Completado",
       "inProgress": "En Progreso"
@@ -95,19 +101,19 @@
     "items": {
       "webScraper": {
         "title": "Sistema Avanzado de Web Scraping y Automatización de Datos",
-        "subtitle": "Integración de Datos de Mercado y Reportes Automatizados",
-        "description": "Sistema automatizado de recolección y procesamiento de datos diseñado para eliminar flujos de trabajo manuales y mejorar la toma de decisiones.",
+        "subtitle": "Caso real · Integración de Datos de Mercado",
+        "description": "Sistema de recolección y procesamiento de datos diseñado para eliminar flujos de trabajo manuales y mejorar la toma de decisiones.",
         "details": [
           "Desarrollé una solución de web scraping usando Node.js y Puppeteer para recolectar y centralizar datos de mercado de múltiples fuentes.",
-          "Automaticé el procesamiento de datos e informes, reduciendo el esfuerzo manual y contribuyendo a una mejora del 87% en eficiencia operacional.",
+          "Automaticé el procesamiento de datos e informes, reduciendo significativamente el esfuerzo manual mensual.",
           "Construí una interfaz web para gestionar y visualizar datos usando React y SQL Server.",
           "Diseñado para soportar casos de uso reales de negocio con arquitectura escalable y mantenible."
         ],
-        "business_impact": "87% de reducción en tiempo de reportes manuales | Fuente única de verdad para datos | Toma de decisiones en tiempo real"
+        "business_impact": "En producción para un cliente | Carga automática de 125+ precios (5 supermercados × 25 productos) | Tarea mensual reducida de horas a minutos"
       },
       "ocr": {
         "title": "Prototipo de Reconocimiento de Etiquetas OCR",
-        "subtitle": "Extracción Automatizada de Datos de Etiquetas de Productos",
+        "subtitle": "Prototipo · Exploración Técnica",
         "description": "Sistema prototipo para reconocimiento automatizado de etiquetas usando técnicas de visión por computadora.",
         "details": [
           "Desarrollé una solución OCR usando Python, OpenCV y EasyOCR para extraer información de etiquetas de productos.",
@@ -115,7 +121,7 @@
           "Integré el pipeline OCR en un flujo de trabajo web para procesamiento y validación de datos.",
           "Exploré la automatización de procesos de etiquetado manual para reducir errores humanos y mejorar la eficiencia."
         ],
-        "business_impact": "Eliminó transcripción manual de etiquetas | Mejoró precisión de datos | Escalable a miles de etiquetas"
+        "business_impact": "Prueba de concepto con demo pública | Explora extracción de texto con visión por computadora | Desarrollo no finalizado"
       }
     }
   },
@@ -208,17 +214,17 @@
       "question": "¿En qué puedo ayudarte hoy?",
       "options": {
         "services": "Ver servicios",
-        "projects": "Ver casos de estudio",
+        "projects": "Ver proyectos",
         "contact": "Información de contacto"
       }
     },
     "menu": {
       "services": "💼 Ver mis servicios",
-      "projects": "📊 Ver casos de estudio",
+      "projects": "📊 Ver proyectos",
       "contact": "📧 Contactarme"
     },
     "projects": {
-      "title": "🚀 Aquí están mis principales casos de estudio. ¿Cuál te interesa?",
+      "title": "🚀 Aquí están mis proyectos. ¿Cuál te interesa?",
       "webscraper": "🕷️ Sistema de Automatización de Datos",
       "ocr": "🔍 OCR Reconocimiento de Etiquetas",
       "viewAll": "👀 Ver todos los proyectos",
@@ -227,9 +233,9 @@
     "services": {
       "title": "💼 Me especializo en estos servicios. ¿Cuál te gustaría conocer más?",
       "dataAutomation": "🔄 Automatización de Datos",
-      "internalTools": "🛠️ Herramientas Internas y Dashboards",
-      "integration": "🔗 Integración y ETL",
-      "documentProcessing": "📄 Procesamiento de Documentos e Imágenes",
+      "internalTools": "🛠️ Aplicaciones Internas y Dashboards",
+      "integration": "🔗 Integración de Sistemas y Datos",
+      "documentProcessing": "📄 Procesamiento Inteligente de Documentos",
       "viewAll": "👀 Ver todos los servicios",
       "back": "⬅️ Volver al menú"
     },
@@ -243,26 +249,26 @@
       "whatsappMessage": "Hola Franco, me gustaría discutir un proyecto contigo"
     },
     "responses": {
-      "webscraper": "🕷️ Sistema de recolección automatizada de datos que integra información de mercado de múltiples fuentes. Redujo el tiempo de reportes manuales en 87% y habilitó toma de decisiones en tiempo real.",
-      "ocr": "🔍 Sistema OCR usando Python y visión por computadora para automatizar extracción de datos de etiquetas. Elimina transcripción manual y mejora precisión de datos.",
-      "dataAutomation": "🔄 Construyo sistemas que automáticamente recolectan, procesan e integran datos de múltiples fuentes. Perfecto para negocios ahogados en trabajo de datos manual.",
+      "webscraper": "🕷️ Sistema de recolección de datos que integra información de mercado de múltiples fuentes. Reemplazó una tarea manual mensual, ahora resuelta en minutos. En producción para un cliente real.",
+      "ocr": "🔍 Prototipo OCR usando Python y visión por computadora para extraer datos de etiquetas. Prueba de concepto con demo pública (desarrollo no finalizado).",
+      "dataAutomation": "🔄 Construyo sistemas que recolectan, procesan e integran datos de múltiples fuentes. Perfecto para negocios ahogados en trabajo de datos manual.",
       "internalTools": "🛠️ Dashboards personalizados y aplicaciones web que dan a tu equipo visibilidad y control de operaciones. Insights en tiempo real en lugar de reportes manuales.",
-      "integration": "🔗 Conecto tus sistemas existentes—bases de datos, APIs, hojas de cálculo, herramientas—en flujos de trabajo unificados que realmente funcionan.",
-      "documentProcessing": "📄 Automatiza extracción de texto, reconocimiento de etiquetas y clasificación de documentos usando visión por computadora. Procesa miles de documentos más rápido.",
-      "viewProjects": "¡Perfecto! Te llevo a los casos de estudio 📊",
+      "integration": "🔗 Conecto tus bases de datos, APIs y aplicaciones para unificar procesos y eliminar tareas repetitivas.",
+      "documentProcessing": "📄 Automatiza la extracción y organización de información desde documentos e imágenes con OCR e inteligencia artificial.",
+      "viewProjects": "¡Perfecto! Te llevo a los proyectos 📊",
       "viewServices": "¡Excelente! Te muestro todos mis servicios 💼",
       "helpMore": "¿En qué más puedo ayudarte?"
     },
     "projectDetails": {
       "webscraper": {
         "title": "🕷️ Sistema Avanzado de Web Scraping y Automatización de Datos",
-        "description": "Solución de integración de datos de mercado y reportes automatizados que eliminó flujos de trabajo manuales.",
+        "description": "Solución de integración de datos de mercado que reemplazó una tarea manual mensual. En producción para un cliente real.",
         "features": "✨ Características Principales:",
         "featuresList": [
-          "• Recolección de datos en tiempo real de múltiples fuentes",
-          "• Procesamiento y reportes automatizados (mejora de eficiencia del 87%)",
+          "• Recolección de datos de múltiples fuentes (supermercados)",
+          "• Carga automática de 125+ precios bajo demanda",
           "• Interfaz web React para gestión y visualización de datos",
-          "• Arquitectura escalable para volúmenes de datos crecientes"
+          "• Arquitectura escalable en productos y fuentes"
         ],
         "tech": "🛠️ Tecnologías:",
         "buttons": "🔗 Enlaces:",
@@ -271,13 +277,13 @@
       },
       "ocr": {
         "title": "🔍 Prototipo de Reconocimiento de Etiquetas OCR",
-        "description": "Extracción automatizada de datos de etiquetas de productos usando visión por computadora.",
+        "description": "Prueba de concepto de extracción de datos de etiquetas usando visión por computadora. Desarrollo no finalizado.",
         "features": "✨ Características Principales:",
         "featuresList": [
-          "• Extracción de texto de alta precisión desde imágenes",
-          "• Funciona con variaciones de iluminación y condiciones de etiquetas",
-          "• Flujo de trabajo web para fácil validación de datos",
-          "• Escalable para procesar miles de etiquetas"
+          "• Extracción de texto desde imágenes con OpenCV y EasyOCR",
+          "• Preprocesamiento de imágenes para mejorar la precisión",
+          "• Demo pública para subir imágenes y probar",
+          "• Exploración técnica de visión por computadora"
         ],
         "tech": "🛠️ Tecnologías:",
         "buttons": "🔗 Enlaces:",

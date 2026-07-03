@@ -39,7 +39,7 @@ export default function Navbar() {
 
   const navItems = [
     { name: t("nav.home"), href: "#home" },
-    { name: t("nav.technologies"), href: "#technologies" },
+    { name: t("nav.services"), href: "#services" },
     { name: t("nav.projects"), href: "#projects" },
     { name: t("nav.contact"), href: "/contact" },
   ]
@@ -50,7 +50,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <Link href="/" className="text-2xl font-bold text-gray-900">
-              Portfolio
+              Franco Chávez
             </Link>
             <div className="hidden md:flex space-x-8">
               {navItems.map((item) => (
@@ -76,7 +76,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <Link href="/" className="text-2xl font-bold text-gray-900">
-            Portfolio
+            Franco Chávez
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
