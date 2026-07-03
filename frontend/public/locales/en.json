@@ -6,13 +6,19 @@
     "contact": "Contact"
   },
   "hero": {
+    "badge": "Automation & Business Systems",
     "title": "Custom Software & Automation Solutions",
-    "subtitle": "For businesses tired of manual workflows and scattered data",
-    "description": "I build custom software, automation systems, and internal tools that help operationally-heavy businesses streamline processes, reduce errors, and make better decisions.",
+    "subtitle": "For businesses looking to optimize processes and centralize information",
+    "description": "Custom software development, automation systems, and internal tools to improve workflows, integrate processes, and organize operational data.",
     "cta": {
-      "primary": "Discuss Your Challenge",
-      "secondary": "View Case Studies"
-    }
+      "primary": "Let's Talk About Your Project",
+      "secondary": "View Projects"
+    },
+    "highlights": [
+      { "value": "In production", "label": "Used by a real client" },
+      { "value": "Hours to minutes", "label": "Manual processes automated" },
+      { "value": "Scalable", "label": "Built to grow with the business" }
+    ]
   },
   "problems": {
     "title": "Problems I Solve",
@@ -42,19 +48,19 @@
     "items": [
       {
         "name": "Data Automation",
-        "description": "Automated systems that collect, process, and integrate data from multiple sources in real-time."
+        "description": "Automated systems that collect, process, and integrate data from multiple sources."
       },
       {
-        "name": "Internal Tools & Dashboards",
+        "name": "Internal Applications & Dashboards",
         "description": "Custom web applications and dashboards that give your team visibility and control over operations."
       },
       {
-        "name": "Integration & ETL",
-        "description": "Connect your existing systems—databases, APIs, spreadsheets—into unified workflows."
+        "name": "Systems & Data Integration",
+        "description": "Connect databases, APIs, and applications to unify processes and eliminate repetitive tasks.."
       },
       {
-        "name": "Document & Image Processing",
-        "description": "Automate text extraction, label recognition, and document classification with computer vision."
+        "name": "Intelligent Document Processing",
+        "description": "Automate data extraction and organization from documents and images using OCR and artificial intelligence techniques, reducing manual work and errors."
       }
     ]
   },
@@ -82,8 +88,8 @@
     "tech_note": "Built with modern tech: Node.js, React, Python, PostgreSQL, and cloud infrastructure—but the technology is always a means to solve your business problem."
   },
   "projects": {
-    "title": "Case Studies",
-    "description": "Real problems, real solutions, measurable results",
+    "title": "Selected Projects",
+    "description": "Real solutions and technical exploration",
     "status": {
       "completed": "Completed",
       "inProgress": "In Progress"
@@ -95,19 +101,19 @@
     "items": {
       "webScraper": {
         "title": "Advanced Web Scraper & Data Automation System",
-        "subtitle": "Market Data Integration & Automated Reporting",
-        "description": "Automated data collection and processing system designed to eliminate manual workflows and improve decision-making.",
+        "subtitle": "Real project · Market Data Integration",
+        "description": "Data collection and processing system designed to eliminate manual workflows and improve decision-making.",
         "details": [
           "Developed a web scraping solution using Node.js and Puppeteer to collect and centralize market data from multiple sources.",
-          "Automated data processing and reporting, reducing manual effort and contributing to an 87% improvement in operational efficiency.",
+          "Automated data processing and reporting, significantly reducing the monthly manual effort.",
           "Built a web interface for managing and visualizing data using React and SQL Server.",
           "Designed to support real business use cases with scalable and maintainable architecture."
         ],
-        "business_impact": "87% reduction in manual reporting time | Single source of truth for market data | Real-time decision making"
+        "business_impact": "In production for a client | Automatic collection of 125+ prices (5 supermarkets × 25 products) | Monthly task reduced from hours to minutes"
       },
       "ocr": {
         "title": "OCR Label Recognition Prototype",
-        "subtitle": "Automated Product Label Data Extraction",
+        "subtitle": "Prototype · Technical Exploration",
         "description": "Prototype system for automated label recognition using computer vision techniques.",
         "details": [
           "Developed an OCR solution using Python, OpenCV, and EasyOCR to extract information from product labels.",
@@ -115,7 +121,7 @@
           "Integrated the OCR pipeline into a web-based workflow for data processing and validation.",
           "Explored automation of manual labeling processes to reduce human error and improve efficiency."
         ],
-        "business_impact": "Eliminated manual label transcription | Improved data accuracy | Scalable to thousands of labels"
+        "business_impact": "Proof of concept with public demo | Explores text extraction with computer vision | Development not finalized"
       }
     }
   },
@@ -208,17 +214,17 @@
       "question": "How can I help you today?",
       "options": {
         "services": "View services",
-        "projects": "View case studies",
+        "projects": "View projects",
         "contact": "Contact information"
       }
     },
     "menu": {
       "services": "💼 View my services",
-      "projects": "📊 View case studies",
+      "projects": "📊 View projects",
       "contact": "📧 Contact me"
     },
     "projects": {
-      "title": "🚀 Here are my main case studies. Which one interests you?",
+      "title": "🚀 Here are my projects. Which one interests you?",
       "webscraper": "🕷️ Data Automation System",
       "ocr": "🔍 OCR Label Recognition",
       "viewAll": "👀 View all projects",
@@ -227,9 +233,9 @@
     "services": {
       "title": "💼 I specialize in these services. Which one would you like to know more about?",
       "dataAutomation": "🔄 Data Automation",
-      "internalTools": "🛠️ Internal Tools & Dashboards",
-      "integration": "🔗 Integration & ETL",
-      "documentProcessing": "📄 Document & Image Processing",
+      "internalTools": "🛠️ Internal Applications & Dashboards",
+      "integration": "🔗 Systems & Data Integration",
+      "documentProcessing": "📄 Intelligent Document Processing",
       "viewAll": "👀 View all services",
       "back": "⬅️ Back to menu"
     },
@@ -243,26 +249,26 @@
       "whatsappMessage": "Hi Franco, I would like to discuss a project with you"
     },
     "responses": {
-      "webscraper": "🕷️ Automated data collection system that integrates market data from multiple sources. Reduced manual reporting time by 87% and enabled real-time decision making.",
-      "ocr": "🔍 OCR system using Python and computer vision to automate product label data extraction. Eliminates manual transcription and improves data accuracy.",
-      "dataAutomation": "🔄 I build systems that automatically collect, process, and integrate data from multiple sources. Perfect for businesses drowning in manual data work.",
+      "webscraper": "🕷️ Data collection system that integrates market data from multiple sources. Replaced a monthly manual task, now solved in minutes. In production for a real client.",
+      "ocr": "🔍 OCR prototype using Python and computer vision to extract label data. Proof of concept with public demo (development not finalized).",
+      "dataAutomation": "🔄 I build systems that collect, process, and integrate data from multiple sources. Perfect for businesses drowning in manual data work.",
       "internalTools": "🛠️ Custom dashboards and web applications that give your team visibility and control over operations. Real-time insights instead of manual reports.",
-      "integration": "🔗 I connect your existing systems—databases, APIs, spreadsheets, tools—into unified workflows that actually work.",
-      "documentProcessing": "📄 Automate text extraction, label recognition, and document classification using computer vision. Process thousands of documents faster.",
-      "viewProjects": "Perfect! Taking you to the case studies 📊",
+      "integration": "🔗 I connect your databases, APIs, and applications to unify processes and eliminate repetitive tasks.",
+      "documentProcessing": "📄 Automate data extraction and organization from documents and images using OCR and AI",
+      "viewProjects": "Perfect! Taking you to the projects 📊",
       "viewServices": "Excellent! Showing you all my services 💼",
       "helpMore": "What else can I help you with?"
     },
     "projectDetails": {
       "webscraper": {
         "title": "🕷️ Advanced Web Scraper & Data Automation System",
-        "description": "Market data integration and automated reporting solution that eliminated manual workflows.",
+        "description": "Market data integration solution that replaced a monthly manual task. In production for a real client.",
         "features": "✨ Key Features:",
         "featuresList": [
-          "• Real-time data collection from multiple sources",
-          "• Automated processing and reporting (87% efficiency improvement)",
+          "• Data collection from multiple sources (supermarkets)",
+          "• Automatic collection of 125+ prices on demand",
           "• React web interface for data management and visualization",
-          "• Scalable architecture for growing data volumes"
+          "• Scalable architecture across products and sources"
         ],
         "tech": "🛠️ Technologies:",
         "buttons": "🔗 Links:",
@@ -271,13 +277,13 @@
       },
       "ocr": {
         "title": "🔍 OCR Label Recognition Prototype",
-        "description": "Automated product label data extraction using computer vision.",
+        "description": "Proof of concept for label data extraction using computer vision. Development not finalized.",
         "features": "✨ Key Features:",
         "featuresList": [
-          "• High-accuracy text extraction from images",
-          "• Works with varying lighting and label conditions",
-          "• Web-based workflow for easy data validation",
-          "• Scalable to process thousands of labels"
+          "• Text extraction from images with OpenCV and EasyOCR",
+          "• Image preprocessing to improve accuracy",
+          "• Public demo to upload images and test",
+          "• Technical exploration of computer vision"
         ],
         "tech": "🛠️ Technologies:",
         "buttons": "🔗 Links:",

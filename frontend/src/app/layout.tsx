@@ -7,9 +7,23 @@ import ClientLayout from "./components/ClientLayout"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Mi Portfolio - Desarrollador Full Stack",
-  description: "Portfolio profesional de desarrollador Full Stack especializado en Next.js, Express y MongoDB",
-  keywords: "desarrollador, full stack, next.js, express, mongodb, portfolio",
+  title: "Franco Chávez | Custom Software & Automation",
+  description:
+    "Custom software development, business process automation, system integrations and internal applications that help companies work more efficiently.",
+  keywords: [
+    "custom software development",
+    "software automation",
+    "business process automation",
+    "system integration",
+    "full stack developer",
+    "backend developer",
+    "react",
+    "next.js",
+    "node.js",
+    "typescript",
+    "sql",
+    "dashboard development",
+  ],
 }
 
 export default function RootLayout({
