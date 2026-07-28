@@ -246,7 +246,7 @@
       "linkedin": "💼 LinkedIn",
       "github": "🐙 GitHub",
       "back": "⬅️ Back to menu",
-      "whatsappMessage": "Hi Franco, I would like to discuss a project with you"
+      "whatsappMessage": "Hi Franco. I visited your website and would like to know how you could help me with a project."
     },
     "responses": {
       "webscraper": "🕷️ Data collection system that integrates market data from multiple sources. Replaced a monthly manual task, now solved in minutes. In production for a real client.",

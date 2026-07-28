@@ -1,9 +1,14 @@
 "use client"
 
+import { useLanguage } from "@/contexts/LanguageContext"
+
 export default function WhatsAppButton() {
+  const { t, isLoading } = useLanguage()
+
+  if (isLoading) return null
+
   const phone = "5493516273976"
-  const message =
-    "Hola Franco. Visité tu sitio web y me gustaría conocer cómo podrías ayudarme con un proyecto."
+  const message = t("chatbot.contact.whatsappMessage")
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`
 
   return (
@@ -11,7 +16,7 @@ export default function WhatsAppButton() {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Contactar por WhatsApp"
+      aria-label="WhatsApp"
       className="fixed bottom-8 right-8 z-[9999] flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg transition-transform duration-200 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-[#25D366]/40"
     >
       <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
