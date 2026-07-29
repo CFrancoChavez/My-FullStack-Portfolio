@@ -3,7 +3,7 @@
 import { useLanguage } from "@/contexts/LanguageContext"
 
 export default function WhatsAppButton() {
-  const { t, isLoading } = useLanguage()
+  const { t, isLoading, language } = useLanguage()
 
   if (isLoading) return null
 
@@ -13,6 +13,7 @@ export default function WhatsAppButton() {
 
   return (
     <a
+      key={language}
       href={url}
       target="_blank"
       rel="noopener noreferrer"
