@@ -122,7 +122,7 @@ export default function ContactPage() {
     }
   }
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-950 dark:to-gray-900 pt-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -130,8 +130,8 @@ export default function ContactPage() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{t("contact.title")}</h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">{t("contact.subtitle")}</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">{t("contact.title")}</h1>
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">{t("contact.subtitle")}</p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -142,7 +142,7 @@ export default function ContactPage() {
             className="space-y-8"
           >
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">{t("contact.info.title")}</h2>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">{t("contact.info.title")}</h2>
 
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
@@ -157,8 +157,8 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <p className="font-medium text-gray-900">{t("contact.info.email")}</p>
-                    <a href="mailto:cfrancochavezdev@gmail.com" className="text-gray-600 hover:text-blue-600">
+                    <p className="font-medium text-gray-900 dark:text-white">{t("contact.info.email")}</p>
+                    <a href="mailto:cfrancochavezdev@gmail.com" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
                       cfrancochavezdev@gmail.com
                     </a>
                   </div>
@@ -171,12 +171,12 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <p className="font-medium text-gray-900">{t("contact.info.whatsapp")}</p>
+                    <p className="font-medium text-gray-900 dark:text-white">{t("contact.info.whatsapp")}</p>
                     <a
                       href="https://wa.me/5493516273976"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-600 hover:text-green-600"
+                      className="text-gray-600 dark:text-gray-300 hover:text-green-600"
                     >
                       +54 9 351 627-3976
                     </a>
@@ -201,15 +201,15 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <p className="font-medium text-gray-900">{t("contact.info.location")}</p>
-                    <p className="text-gray-600">Córdoba, Argentina</p>
+                    <p className="font-medium text-gray-900 dark:text-white">{t("contact.info.location")}</p>
+                    <p className="text-gray-600 dark:text-gray-300">Córdoba, Argentina</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">{t("contact.social")}</h3>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">{t("contact.social")}</h3>
               <div className="flex space-x-4">
                 <a
                   href="https://www.linkedin.com/in/franco-chavez-548b0a56/"
@@ -257,24 +257,24 @@ export default function ContactPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-xl p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">{t("contact.form.title")}</h2>
+            <form onSubmit={handleSubmit} className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">{t("contact.form.title")}</h2>
 
               {submitStatus === "success" && (
-                <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-                  <p className="text-green-800">{submitMessage}</p>
+                <div className="mb-6 p-4 bg-green-50 dark:bg-green-950 border border-green-200 dark:border-green-800 rounded-lg">
+                  <p className="text-green-800 dark:text-green-300">{submitMessage}</p>
                 </div>
               )}
 
               {submitStatus === "error" && (
-                <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
-                  <p className="text-red-800">{submitMessage}</p>
+                <div className="mb-6 p-4 bg-red-50 dark:bg-red-950 border border-red-200 dark:border-red-800 rounded-lg">
+                  <p className="text-red-800 dark:text-red-300">{submitMessage}</p>
                 </div>
               )}
 
               <div className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
                     {t("contact.form.name")} {t("contact.form.required")}
                   </label>
                   <input
@@ -283,8 +283,8 @@ export default function ContactPage() {
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-gray-900 bg-white ${
-                      errors.name ? "border-red-500" : "border-gray-300"
+                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-gray-900 dark:text-white bg-white dark:bg-gray-900 ${
+                    errors.name ? "border-red-500" : "border-gray-300 dark:border-gray-600"
                     }`}
                     placeholder={t("contact.form.placeholders.name")}
                   />
@@ -292,7 +292,7 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
                     {t("contact.form.email")} {t("contact.form.required")}
                   </label>
                   <input
@@ -301,8 +301,8 @@ export default function ContactPage() {
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-gray-900 bg-white ${
-                      errors.email ? "border-red-500" : "border-gray-300"
+                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-gray-900 dark:text-white bg-white dark:bg-gray-900 ${
+                    errors.email ? "border-red-500" : "border-gray-300 dark:border-gray-600"
                     }`}
                     placeholder={t("contact.form.placeholders.email")}
                   />
@@ -310,7 +310,7 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
                     {t("contact.form.subjectOptions.label")} {t("contact.form.required")}
                   </label>
                   <select
@@ -318,7 +318,8 @@ export default function ContactPage() {
                     name="subject"
                     value={subjectOption}
                     onChange={(e) => setSubjectOption(e.target.value)}
-                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-gray-900 bg-white ${errors.subject ? "border-red-500" : "border-gray-300"
+                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-gray-900 dark:text-white bg-white dark:bg-gray-900 ${
+                    errors.subject ? "border-red-500" : "border-gray-300 dark:border-gray-600"
                       }`}
                   >
                     <option value="" disabled>
@@ -338,7 +339,8 @@ export default function ContactPage() {
                       type="text"
                       value={subjectOther}
                       onChange={(e) => setSubjectOther(e.target.value)}
-                      className={`mt-3 w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-gray-900 bg-white ${errors.subject ? "border-red-500" : "border-gray-300"
+                      className={`mt-3 w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-gray-900 dark:text-white bg-white dark:bg-gray-900 ${
+                      errors.subject ? "border-red-500" : "border-gray-300 dark:border-gray-600"
                         }`}
                       placeholder={t("contact.form.subjectOptions.otherPlaceholder")}
                     />
@@ -348,7 +350,7 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
                     {t("contact.form.messageLabel")} {t("contact.form.required")}
                   </label>
                   <textarea
@@ -357,7 +359,7 @@ export default function ContactPage() {
                     value={formData.message}
                     onChange={handleInputChange}
                     rows={6}
-                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-gray-900 bg-white ${errors.message ? "border-red-500" : "border-gray-300"
+                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-gray-900 dark:text-white bg-white dark:bg-gray-900 ${errors.message ? "border-red-500" : "border-gray-300 dark:border-gray-600"
                       }`}
                     placeholder={
                       subjectOption

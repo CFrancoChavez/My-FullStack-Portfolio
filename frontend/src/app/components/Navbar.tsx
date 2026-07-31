@@ -6,6 +6,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useTranslation } from "@/hooks/useTranslation"
 import LanguageToggle from "./LanguageToggle"
+import ThemeToggle from "./ThemeToggle"
 
 export default function Navbar() {
   const { t } = useTranslation()
@@ -46,15 +47,15 @@ export default function Navbar() {
 
   if (!mounted) {
     return (
-      <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md shadow-lg">
+      <nav className="fixed top-0 w-full z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-            <Link href="/" className="text-2xl font-bold text-gray-900">
+            <Link href="/" className="text-2xl font-bold text-gray-900 dark:text-white">
               Franco Chávez
             </Link>
             <div className="hidden md:flex space-x-8">
               {navItems.map((item) => (
-                <span key={item.href} className="text-gray-700">
+                <span key={item.href} className="text-gray-700 dark:text-gray-200">
                   {item.name}
                 </span>
               ))}
@@ -70,12 +71,12 @@ export default function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/90 backdrop-blur-md shadow-lg" : "bg-transparent"
+        isScrolled ? "bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg" : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <Link href="/" className="text-2xl font-bold text-gray-900">
+          <Link href="/" className="text-2xl font-bold text-gray-900 dark:text-white">
             Franco Chávez
           </Link>
 
@@ -84,24 +85,27 @@ export default function Navbar() {
               <button
                 key={item.href}
                 onClick={() => handleNavigation(item.href)}
-                className="text-gray-700 hover:text-blue-600 transition-colors duration-200 cursor-pointer"
+                className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 cursor-pointer"
               >
                 {item.name}
               </button>
             ))}
-            <LanguageToggle />
+            <div className="flex items-center gap-2">
+              <ThemeToggle />
+              <LanguageToggle />
+            </div>
           </div>
 
           <button className="md:hidden" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             <div className="w-6 h-6 flex flex-col justify-center items-center">
               <span
-                className={`bg-gray-900 block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isMobileMenuOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"}`}
+                className={`bg-gray-900 dark:bg-white block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isMobileMenuOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"}`}
               ></span>
               <span
-                className={`bg-gray-900 block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${isMobileMenuOpen ? "opacity-0" : "opacity-100"}`}
+                className={`bg-gray-900 dark:bg-white block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${isMobileMenuOpen ? "opacity-0" : "opacity-100"}`}
               ></span>
               <span
-                className={`bg-gray-900 block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isMobileMenuOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"}`}
+                className={`bg-gray-900 dark:bg-white block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isMobileMenuOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"}`}
               ></span>
             </div>
           </button>
@@ -111,18 +115,19 @@ export default function Navbar() {
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="md:hidden bg-white rounded-lg shadow-lg p-4 mb-4"
+            className="md:hidden bg-white dark:bg-gray-900 rounded-lg shadow-lg p-4 mb-4"
           >
             {navItems.map((item) => (
               <button
                 key={item.href}
                 onClick={() => handleNavigation(item.href)}
-                className="block w-full text-left py-2 text-gray-700 hover:text-blue-600"
+                className="block w-full text-left py-2 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
               >
                 {item.name}
               </button>
             ))}
-            <div className="pt-2 border-t border-gray-200 mt-2">
+            <div className="pt-2 border-t border-gray-200 dark:border-gray-700 mt-2 flex items-center gap-2">
+              <ThemeToggle />
               <LanguageToggle />
             </div>
           </motion.div>

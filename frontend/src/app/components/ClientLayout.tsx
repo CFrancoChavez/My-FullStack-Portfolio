@@ -7,6 +7,7 @@ import Navbar from "./Navbar"
 import Footer from "./Footer"
 // import ChatBot from "./ChatBot"   // oculto temporalmente, no borrar
 import WhatsAppButton from "./WhatsAppButton"
+import { ThemeProvider } from "@/contexts/ThemeContext"
 
 export default function ClientLayout({
   children,
@@ -21,6 +22,7 @@ export default function ClientLayout({
 
   if (!mounted) {
     return (
+      <ThemeProvider>
       <LanguageProvider>
         <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md shadow-lg">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -42,16 +44,19 @@ export default function ClientLayout({
           </div>
         </footer>
       </LanguageProvider>
+      </ThemeProvider>
     )
   }
 
-  return (
-    <LanguageProvider>
-      <Navbar />
-      <main className="min-h-screen">{children}</main>
-      <Footer />
-      {/* <ChatBot /> */}  {/* oculto temporalmente, no borrar */}
-      <WhatsAppButton />
-    </LanguageProvider>
+   return (
+    <ThemeProvider>
+      <LanguageProvider>
+        <Navbar />
+        <main className="min-h-screen">{children}</main>
+        <Footer />
+        {/* <ChatBot /> */}  {/* oculto temporalmente, no borrar */}
+        <WhatsAppButton />
+      </LanguageProvider>
+    </ThemeProvider>
   )
 }
