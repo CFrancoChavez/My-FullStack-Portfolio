@@ -180,6 +180,17 @@
         "subject": "What challenge are you facing?",
         "message": "Tell me about your operational challenge or project..."
       },
+      "subjectOptions": {
+        "label": "How can I help you?",
+        "automate": "Automate a process",
+        "internalApp": "Build an internal application",
+        "integration": "Integrate systems and data",
+        "documents": "Intelligent document processing",
+        "modernize": "Modernize an existing system",
+        "consulting": "Technical consulting",
+        "other": "Other",
+        "otherPlaceholder": "Briefly tell me what you need..."
+      },
       "button": {
         "send": "Send Message",
         "sending": "Sending..."

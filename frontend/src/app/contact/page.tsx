@@ -17,7 +17,8 @@ export default function ContactPage() {
     subject: "",
     message: "",
   })
-
+  const [subjectOption, setSubjectOption] = useState("")
+  const [subjectOther, setSubjectOther] = useState("")
   const [errors, setErrors] = useState<FormErrors>({})
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
@@ -40,9 +41,11 @@ export default function ContactPage() {
       newErrors.email = t("contact.form.errors.emailInvalid")
     }
 
-    if (!formData.subject.trim()) {
+    
+    // Asunto: obligatorio elegir una opción
+    if (!subjectOption) {
       newErrors.subject = t("contact.form.errors.subjectRequired")
-    } else if (formData.subject.trim().length < 5) {
+    } else if (subjectOption === "other" && subjectOther.trim().length < 5) {
       newErrors.subject = t("contact.form.errors.subjectMin")
     }
 
@@ -64,7 +67,8 @@ export default function ContactPage() {
     }))
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  
+    const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
     if (!validateForm()) {
@@ -73,6 +77,12 @@ export default function ContactPage() {
 
     setIsSubmitting(true)
     setSubmitStatus("idle")
+
+    // 1. AGREGAR AQUÍ: calcular el asunto final
+    const finalSubject =
+      subjectOption === "other"
+        ? subjectOther.trim()
+        : t(`contact.form.subjectOptions.${subjectOption}`)
 
     try {
       const response = await fetch(getApiUrl("/api/contact"), {
@@ -83,7 +93,7 @@ export default function ContactPage() {
         body: JSON.stringify({
           name: formData.name.trim(),
           email: formData.email.trim(),
-          subject: formData.subject.trim(),
+          subject: finalSubject,   // 2. CAMBIAR: usar finalSubject en vez de formData.subject.trim()
           message: formData.message.trim(),
         }),
       })
@@ -94,6 +104,8 @@ export default function ContactPage() {
         setSubmitStatus("success")
         setSubmitMessage(t("contact.form.success"))
         setFormData({ name: "", email: "", subject: "", message: "" })
+        setSubjectOption("")   // 3. AGREGAR: reset del desplegable
+        setSubjectOther("")    // 3. AGREGAR: reset del campo "otro"
 
         setTimeout(() => {
           router.push("/contact/success")
@@ -109,7 +121,6 @@ export default function ContactPage() {
       setIsSubmitting(false)
     }
   }
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -300,19 +311,39 @@ export default function ContactPage() {
 
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                    {t("contact.form.subject")} {t("contact.form.required")}
+                    {t("contact.form.subjectOptions.label")} {t("contact.form.required")}
                   </label>
-                  <input
-                    type="text"
+                  <select
                     id="subject"
                     name="subject"
-                    value={formData.subject}
-                    onChange={handleInputChange}
-                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-gray-900 bg-white${
-                      errors.subject ? "border-red-500" : "border-gray-300"
-                    }`}
-                    placeholder={t("contact.form.placeholders.subject")}
-                  />
+                    value={subjectOption}
+                    onChange={(e) => setSubjectOption(e.target.value)}
+                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-gray-900 bg-white ${errors.subject ? "border-red-500" : "border-gray-300"
+                      }`}
+                  >
+                    <option value="" disabled>
+                      {t("contact.form.subjectOptions.label")}
+                    </option>
+                    <option value="automate">{t("contact.form.subjectOptions.automate")}</option>
+                    <option value="internalApp">{t("contact.form.subjectOptions.internalApp")}</option>
+                    <option value="integration">{t("contact.form.subjectOptions.integration")}</option>
+                    <option value="documents">{t("contact.form.subjectOptions.documents")}</option>
+                    <option value="modernize">{t("contact.form.subjectOptions.modernize")}</option>
+                    <option value="consulting">{t("contact.form.subjectOptions.consulting")}</option>
+                    <option value="other">{t("contact.form.subjectOptions.other")}</option>
+                  </select>
+
+                  {subjectOption === "other" && (
+                    <input
+                      type="text"
+                      value={subjectOther}
+                      onChange={(e) => setSubjectOther(e.target.value)}
+                      className={`mt-3 w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-gray-900 bg-white ${errors.subject ? "border-red-500" : "border-gray-300"
+                        }`}
+                      placeholder={t("contact.form.subjectOptions.otherPlaceholder")}
+                    />
+                  )}
+
                   {errors.subject && <p className="mt-1 text-sm text-red-600">{errors.subject}</p>}
                 </div>
 
