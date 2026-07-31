@@ -349,18 +349,21 @@ export default function ContactPage() {
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    {t("contact.form.message")} {t("contact.form.required")}
+                    {t("contact.form.messageLabel")} {t("contact.form.required")}
                   </label>
                   <textarea
                     id="message"
                     name="message"
-                    rows={5}
                     value={formData.message}
                     onChange={handleInputChange}
-                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none text-gray-900 bg-white ${
-                      errors.message ? "border-red-500" : "border-gray-300"
-                    }`}
-                    placeholder={t("contact.form.placeholders.message")}
+                    rows={6}
+                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-gray-900 bg-white ${errors.message ? "border-red-500" : "border-gray-300"
+                      }`}
+                    placeholder={
+                      subjectOption
+                        ? t(`contact.form.messagePlaceholders.${subjectOption}`)
+                        : t("contact.form.messagePlaceholders.default")
+                    }
                   />
                   {errors.message && <p className="mt-1 text-sm text-red-600">{errors.message}</p>}
                 </div>

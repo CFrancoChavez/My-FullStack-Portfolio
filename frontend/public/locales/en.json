@@ -167,12 +167,13 @@
       "whatsapp": "WhatsApp"
     },
     "social": "Social Media",
-    "form": {
+        "form": {
       "title": "Send me a message",
       "name": "Name",
       "email": "Email",
       "subject": "Subject",
       "message": "Message",
+      "messageLabel": "Project details",
       "required": "*",
       "placeholders": {
         "name": "Your full name",
@@ -189,7 +190,17 @@
         "modernize": "Modernize an existing system",
         "consulting": "Technical consulting",
         "other": "Other",
-        "otherPlaceholder": "Briefly tell me what you need..."
+        "otherPlaceholder": "Please specify"
+      },
+      "messagePlaceholders": {
+        "default": "Briefly describe your current process, challenge, or goal. The more context you provide, the better I can help.",
+        "automate": "What process would you like to automate? Tell me how it works today and what you'd like to improve.",
+        "internalApp": "What type of application do you need? Who will use it and what problem should it solve?",
+        "integration": "Which systems or platforms do you need to connect?",
+        "documents": "What type of documents do you need to process and what information do you want to extract?",
+        "modernize": "Tell me about your current system and the improvements you're looking for.",
+        "consulting": "Describe your technical challenge or the advice you're looking for.",
+        "other": "Please describe your project or inquiry."
       },
       "button": {
         "send": "Send Message",

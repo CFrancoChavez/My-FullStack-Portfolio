@@ -167,12 +167,13 @@
       "whatsapp": "WhatsApp"
     },
     "social": "Redes Sociales",
-    "form": {
+        "form": {
       "title": "Envíame un mensaje",
       "name": "Nombre",
       "email": "Email",
       "subject": "Asunto",
       "message": "Mensaje",
+      "messageLabel": "Detalles del proyecto",
       "required": "*",
       "placeholders": {
         "name": "Tu nombre completo",
@@ -189,7 +190,17 @@
         "modernize": "Modernizar un sistema existente",
         "consulting": "Asesoramiento técnico",
         "other": "Otro",
-        "otherPlaceholder": "Cuéntame brevemente qué necesitas..."
+        "otherPlaceholder": "Especifica el motivo"
+      },
+      "messagePlaceholders": {
+        "default": "Describe brevemente tu proceso actual, el desafío que querés resolver o el objetivo que buscás alcanzar. Cuanto más contexto brindes, mejor podré ayudarte.",
+        "automate": "¿Qué proceso te gustaría automatizar? Contame cómo funciona hoy y qué te gustaría mejorar.",
+        "internalApp": "¿Qué tipo de aplicación necesitás? ¿Quién la usará y qué problema debería resolver?",
+        "integration": "¿Qué sistemas o plataformas necesitás conectar?",
+        "documents": "¿Qué tipo de documentos necesitás procesar y qué información querés extraer?",
+        "modernize": "Contame sobre tu sistema actual y las mejoras que estás buscando.",
+        "consulting": "Describí tu desafío técnico o el asesoramiento que estás buscando.",
+        "other": "Describe tu proyecto o consulta."
       },
       "button": {
         "send": "Enviar Mensaje",
