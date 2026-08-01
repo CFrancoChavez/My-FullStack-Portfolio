@@ -62,13 +62,13 @@ export default function Projects() {
                 className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col border border-gray-100 dark:border-gray-700"
               >
                 <div className="p-6 flex flex-col flex-1">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 flex items-center justify-center bg-blue-50 dark:bg-blue-950 rounded-lg">
-                      <IconComponent />
-                    </div>
-                    <span className="text-xs font-medium px-3 py-1 rounded-full bg-green-50 dark:bg-green-950 text-green-700 dark:text-green-400">
+                  <div className="relative bg-gray-50 dark:bg-gray-900 rounded-xl p-6 mb-6 flex items-center justify-center">
+                    <span className="absolute top-3 right-3 text-xs font-medium px-3 py-1 rounded-full bg-green-50 dark:bg-green-950 text-green-700 dark:text-green-400">
                       {project.status}
                     </span>
+                    <div className="w-40 h-40">
+                      <IconComponent />
+                    </div>
                   </div>
 
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
