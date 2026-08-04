@@ -17,8 +17,6 @@ export default function Projects() {
       title: t("projects.items.webScraper.title"),
       description: t("projects.items.webScraper.description"),
       icon: WebScraperIcon,
-      technologies: ["Node.js", "Puppeteer", "SQL Server", "React", "Express"],
-      status: t("projects.status.completed"),
       github: "https://github.com/CFrancoChavez/Mi-App-Webscraper",
       demo: "https://youtu.be/_TcldXJD1Xc?si=eD0JcLLVqF-R5DN2",
     },
@@ -26,8 +24,6 @@ export default function Projects() {
       title: t("projects.items.ocr.title"),
       description: t("projects.items.ocr.description"),
       icon: OcrIcon,
-      technologies: ["Python", "Flask", "OpenCV", "Tesseract", "EasyOCR"],
-      status: t("projects.status.completed"),
       github: "https://github.com/CFrancoChavez/OCR-Marcacion",
       demo: "https://huggingface.co/spaces/FrancoCH/ocr-marcacion",
     },
@@ -62,11 +58,8 @@ export default function Projects() {
                 className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col border border-gray-100 dark:border-gray-700"
               >
                 <div className="p-6 flex flex-col flex-1">
-                  <div className="relative bg-gray-50 dark:bg-gray-900 rounded-xl p-6 mb-6 flex items-center justify-center">
-                    <span className="absolute top-3 right-3 text-xs font-medium px-3 py-1 rounded-full bg-green-50 dark:bg-green-950 text-green-700 dark:text-green-400">
-                      {project.status}
-                    </span>
-                    <div className="w-40 h-40">
+                  <div className="bg-gray-50 dark:bg-gray-900 rounded-xl p-6 mb-6 flex items-center justify-center min-h-[280px]">
+                    <div className="w-56 h-56">
                       <IconComponent />
                     </div>
                   </div>
@@ -78,17 +71,7 @@ export default function Projects() {
                     {project.description}
                   </p>
 
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="text-xs px-3 py-1 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-
+                 
                   <div className="flex gap-3 mt-auto">
                     <a
                       href={project.github}
