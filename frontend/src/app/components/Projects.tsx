@@ -55,11 +55,11 @@ export default function Projects() {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col border border-gray-100 dark:border-gray-700"
+                className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col border border-gray-100 dark:border-gray-700 max-w-md mx-auto w-full"
               >
                 <div className="p-6 flex flex-col flex-1">
-                  <div className="bg-gray-50 dark:bg-gray-900 rounded-xl p-6 mb-6 flex items-center justify-center min-h-[280px]">
-                    <div className="w-56 h-56">
+                  <div className="bg-gray-50 dark:bg-gray-900 rounded-xl p-6 mb-6 flex items-center justify-center min-h-[320px]">
+                    <div className="w-52 h-52">
                       <IconComponent />
                     </div>
                   </div>
