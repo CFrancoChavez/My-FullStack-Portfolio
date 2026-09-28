@@ -9,7 +9,7 @@
     "badge": "Automatización y Sistemas de Negocio",
     "title": "Soluciones Personalizadas de Software y Automatización",
     "subtitle": "Para empresas que buscan optimizar procesos y centralizar información",
-    "description": "Desarrollo software personalizado, automatizaciones y herramientas internas para mejorar flujos de trabajo, integrar procesos y organizar información operativa.",
+    "description": "Desarrollo software personalizado, automatizaciones e integraciones para reducir trabajo manual, conectar sistemas y organizar información operativa.",
     "cta": {
       "primary": "Hablemos de tu proyecto",
       "secondary": "Ver Proyectos"
@@ -44,7 +44,7 @@
   },
   "services": {
     "title": "Lo que Construyo",
-    "description": "Soluciones end-to-end adaptadas a tus necesidades operacionales",
+    "description": "Soluciones end-to-end adaptadas a tus necesidades operativas",
     "items": [
       {
         "name": "Automatización de Datos",
@@ -126,36 +126,28 @@
     }
   },
   "process": {
-    "title": "Cómo Trabajo",
-    "description": "Un enfoque directo para resolver tus desafíos operacionales",
-    "steps": [
-      {
-        "number": "01",
-        "title": "Discovery y Auditoría",
-        "description": "Entiendo tus flujos de trabajo actuales, puntos débiles, fuentes de datos y métricas de éxito."
-      },
-      {
-        "number": "02",
-        "title": "Diseño de Solución",
-        "description": "Propongo una solución personalizada con alcance claro, timeline y resultados esperados."
-      },
-      {
-        "number": "03",
-        "title": "Desarrollo e Integración",
-        "description": "Construyo e integro con tus sistemas existentes. Comunicación transparente y continua."
-      },
-      {
-        "number": "04",
-        "title": "Testing y Despliegue",
-        "description": "Testing riguroso, capacitación de personal y despliegue suave a producción."
-      },
-      {
-        "number": "05",
-        "title": "Soporte e Iteración",
-        "description": "Soporte post-lanzamiento y optimización continua basada en uso real."
-      }
-    ]
-  },
+  "title": "Cómo Trabajo",
+  "intro": "Parto de cómo funciona hoy tu operación para diseñar una solución alineada con tus necesidades y forma de trabajo.",
+  "aiLine": "Integro IA con tus datos, sistemas y procesos para resolver necesidades concretas de tu operación, validando los resultados antes de incorporarlos al flujo de trabajo.",
+  "flow": ["Entender", "Diseñar", "Validar"],
+  "steps": [
+    {
+      "icon": "search",
+      "title": "Entender el proceso",
+      "description": "Identifico cómo se trabaja hoy, qué información interviene, dónde se pierde tiempo y qué resultado necesita mejorar."
+    },
+    {
+      "icon": "wrench",
+      "title": "Diseñar la solución",
+      "description": "Defino cómo automatizar tareas, conectar sistemas y organizar la información utilizando las tecnologías adecuadas para cada caso."
+    },
+    {
+      "icon": "check",
+      "title": "Validar y ajustar",
+      "description": "Pruebo la solución en condiciones reales de uso y la ajusto antes de llevarla a producción."
+    }
+  ]
+},
   "contact": {
     "title": "Hablemos Sobre Tu Desafío",
     "subtitle": "Ya sea que necesites una consulta rápida o una solución personalizada completa, estoy aquí para ayudarte.",

@@ -9,7 +9,7 @@
     "badge": "Automation & Business Systems",
     "title": "Custom Software & Automation Solutions",
     "subtitle": "For businesses looking to optimize processes and centralize information",
-    "description": "Custom software development, automation systems, and internal tools to improve workflows, integrate processes, and organize operational data.",
+    "description": "Custom software, automations, and integrations to reduce manual work, connect systems, and organize operational information.",
     "cta": {
       "primary": "Let's Talk About Your Project",
       "secondary": "View Projects"
@@ -126,36 +126,28 @@
     }
   },
   "process": {
-    "title": "How I Work",
-    "description": "A straightforward approach to solving your operational challenges",
-    "steps": [
-      {
-        "number": "01",
-        "title": "Discovery & Audit",
-        "description": "Understand your current workflows, pain points, data sources, and success metrics."
-      },
-      {
-        "number": "02",
-        "title": "Solution Design",
-        "description": "Propose a tailored solution with clear scope, timeline, and expected outcomes."
-      },
-      {
-        "number": "03",
-        "title": "Development & Integration",
-        "description": "Build and integrate with your existing systems. Ongoing communication and transparency."
-      },
-      {
-        "number": "04",
-        "title": "Testing & Deployment",
-        "description": "Rigorous testing, staff training, and smooth deployment to production."
-      },
-      {
-        "number": "05",
-        "title": "Support & Iteration",
-        "description": "Post-launch support and continuous optimization based on real-world usage."
-      }
-    ]
-  },
+  "title": "How I Work",
+  "intro": "I start from how your operation works today to design a solution aligned with your needs and way of working.",
+  "aiLine": "I integrate AI with your data, systems, and processes to address specific operational needs, validating the results before incorporating them into the workflow.",
+  "flow": ["Understand", "Design", "Validate"],
+  "steps": [
+    {
+      "icon": "search",
+      "title": "Understand the Process",
+      "description": "I identify how work is done today, what information is involved, where time is being lost, and what outcome needs to improve."
+    },
+    {
+      "icon": "wrench",
+      "title": "Design the Solution",
+      "description": "I define how to automate tasks, connect systems, and organize information using the technologies that best fit each case."
+    },
+    {
+      "icon": "check",
+      "title": "Validate and Refine",
+      "description": "I test the solution under real usage conditions and refine it before taking it to production."
+    }
+  ]
+},
   "contact": {
     "title": "Let's Talk About Your Challenge",
     "subtitle": "Whether you need a quick consultation or a full custom solution, I'm here to help.",
