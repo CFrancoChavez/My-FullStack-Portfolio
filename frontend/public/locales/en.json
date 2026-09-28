@@ -2,6 +2,7 @@
   "nav": {
     "home": "Home",
     "services": "Services",
+    "process": "How I Work",
     "projects": "Projects",
     "contact": "Contact"
   },
@@ -309,6 +310,6 @@
   "footer": {
     "title": "Ready to Solve Your Operational Challenge?",
     "description": "Let's discuss how automation and custom software can transform your business.",
-    "copyright": "© 2025 Franco Chavez. Built with Next.js and modern web technologies."
+    "copyright": "© 2025 Franco Chavez. Software and automation solutions."
   }
 }

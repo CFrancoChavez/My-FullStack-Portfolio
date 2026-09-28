@@ -2,6 +2,7 @@
   "nav": {
     "home": "Inicio",
     "services": "Servicios",
+    "process": "Cómo Trabajo",
     "projects": "Proyectos",
     "contact": "Contacto"
   },
@@ -309,6 +310,6 @@
   "footer": {
     "title": "¿Listo para Resolver tu Desafío Operacional?",
     "description": "Discutamos cómo la automatización y el software personalizado pueden transformar tu negocio.",
-    "copyright": "© 2025 Franco Chavez. Construido con Next.js y tecnologías web modernas."
+    "copyright": "© 2025 Franco Chavez. Soluciones de software y automatización."
   }
 }
