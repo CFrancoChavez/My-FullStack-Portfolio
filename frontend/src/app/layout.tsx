@@ -7,6 +7,7 @@ import ClientLayout from "./components/ClientLayout"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://francochavez.dev"),
   title: "Franco Chávez | Custom Software & Automation",
   description:
     "Custom software development, business process automation, system integrations and internal applications that help companies work more efficiently.",
@@ -24,6 +25,21 @@ export const metadata: Metadata = {
     "sql",
     "dashboard development",
   ],
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: "Franco Chávez",
+    title: "Franco Chávez | Custom Software & Automation",
+    description:
+      "Custom software development, business process automation, system integrations and internal applications that help companies work more efficiently.",
+    locale: "es_ES",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Franco Chávez | Custom Software & Automation",
+    description:
+      "Custom software development, business process automation, system integrations and internal applications that help companies work more efficiently.",
+  },
 }
 
 export default function RootLayout({
